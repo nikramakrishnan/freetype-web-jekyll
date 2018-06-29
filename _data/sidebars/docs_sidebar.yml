@@ -1,0 +1,84 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar
+  levels: one
+  folders:
+
+  - title: Home
+    output: web
+    folderitems:
+    - title: Documentation Home
+      url: docs
+      absolute: true
+      output: web
+
+  - title: FreeType Glyph Conventions
+    output: web
+    folderitems:
+    - title: TOC
+      url: glyphs
+      output: web
+    - title: Basic Typographic Concepts
+      url: glyphs#i-basic-typographic-concepts
+      output: web
+    - title: Glyph Outlines
+      url: glyphs#ii-glyph-outlines
+      output: web
+    - title: Glyph Metrics
+      url: glyphs#iii-glyph-metrics
+      output: web
+    - title: Kerning
+      url: glyphs#iv-kerning
+      output: web
+    - title: Text Processing
+      url: glyphs#v-text-processing
+      output: web
+    - title: FreeType outlines
+      url: glyphs#vi-freetype-outlines
+      output: web
+    - title: FreeType Bitmaps
+      url: glyphs#vii-freetype-bitmaps
+      output: web
+
+  - title: FreeType 2 FAQ
+    output: web
+    folderitems:
+    - title: TOC
+      url: faq
+      output: web
+    - title: General Questions
+      url: faq#general-questions
+      output: web
+    - title: Compilation & Configuration
+      url: faq#compilation--configuration
+      output: web
+    - title: The FreeType 2 auto-hinter
+      url: faq#the-freetype-2-auto-hinter
+      output: web
+    - title: Other questions
+      url: faq#other-questions
+      output: web
+
+  - title: The FreeType Tutorial
+    output: web
+    folderitems:
+    - title: TOC
+      url: tutorial
+      output: web
+    - title: Simple Glyph Loading
+      url: tutorial#i-simple-glyph-loading
+      output: web
+    - title: Managing Glyphs
+      url: tutorial#ii-managing-glyphs
+      output: web
+    - title: Examples
+      url: tutorial#iii-examples
+      output: web
+
+  - title: The Design of FreeType
+    output: web
+    folderitems:
+    - title: TOC
+      url: design
+      output: web

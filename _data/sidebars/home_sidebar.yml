@@ -1,0 +1,96 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: The FreeType Project
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Home
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: index.html
+      output: web, pdf
+      type: homepage
+
+    - title: News
+      url: index.html#news
+      output: web, pdf
+
+    - title: Links
+      url: index.html#links
+      output: web, pdf
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: What is FreeType?
+      url: overview.html
+      output: web, pdf
+
+    - title: Features
+      url: overview.html#features
+      output: web, pdf
+
+    - title: Requirements
+      url: overview.html#requirements
+      output: web, pdf
+
+    - title: Patent Issues
+      url: overview.html#patents
+      output: web, pdf
+
+  - title: Contact
+    output: web, pdf
+    folderitems:
+
+    - title: Contact Information
+      url: contact.html
+      output: web, pdf
+
+  - title: Licenses
+    output: web, pdf
+
+    folderitems:
+    - title: License Information
+      url: license.html
+      output: web, pdf
+
+  - title: History
+    output: web, pdf
+
+    folderitems:
+    - title: FreeType History
+      url: history.html
+      output: web, pdf
+
+  - title: Download
+    output: web, pdf
+
+    folderitems:
+    - title: Download Page
+      url: download.html
+      output: web, pdf
+
+  - title: Development
+    output: web, pdf
+
+    folderitems:
+    - title: FreeType Development
+      url: development.html
+      output: web, pdf

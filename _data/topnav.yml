@@ -1,0 +1,15 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: Home
+      url: /index.html
+    - title: Documentation
+      url: /docs
+    - title: Download
+      url: /download
+    - title: Development
+      url: /development
+    - title: Git
+      external_url: http://git.savannah.gnu.org/cgit/freetype/
