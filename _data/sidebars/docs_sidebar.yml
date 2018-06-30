@@ -3,13 +3,14 @@
 entries:
 - title: Sidebar
   levels: one
+  folder: docs
   folders:
 
   - title: Home
     output: web
     folderitems:
     - title: Documentation Home
-      url: docs
+      url: 
       absolute: true
       output: web
 

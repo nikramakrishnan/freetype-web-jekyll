@@ -57,6 +57,7 @@ entries:
 
   - title: Contact
     output: web, pdf
+    url: contact.html
     folderitems:
 
     - title: Contact Information
@@ -65,6 +66,7 @@ entries:
 
   - title: Licenses
     output: web, pdf
+    url: license.html
 
     folderitems:
     - title: License Information
@@ -73,6 +75,7 @@ entries:
 
   - title: History
     output: web, pdf
+    url: history.html
 
     folderitems:
     - title: FreeType History
@@ -81,7 +84,7 @@ entries:
 
   - title: Download
     output: web, pdf
-
+    url: download.html
     folderitems:
     - title: Download Page
       url: download.html
@@ -89,6 +92,7 @@ entries:
 
   - title: Development
     output: web, pdf
+    url: development.html
 
     folderitems:
     - title: FreeType Development
