@@ -2,7 +2,7 @@
 /*body.print .container {max-width: 650px;}*/
 
 body {
-    font-size:14px;
+    font-size:large;
 }
 .nav ul li a {border-top:0px; background-color:transparent; color: #808080; }
 #navig a[href] {color: #595959 !important;}

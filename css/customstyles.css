@@ -1,5 +1,7 @@
 body {
-    font-size:15px;
+    font-size: large;
+    font-family: "Droid Serif", "serif";
+    line-height: 140%;
 }
 
 .bs-callout {
