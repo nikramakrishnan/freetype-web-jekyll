@@ -3,7 +3,7 @@ title: FreeType Documentation
 sidebar: docs_sidebar
 permalink: docs/index
 toc: false
-nav: docs
+nav: 
 ---
 
 {% include note.html content="The FreeType documentation is also available as a single archive from our [download page](../download)." %}

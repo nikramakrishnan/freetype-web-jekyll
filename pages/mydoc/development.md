@@ -28,15 +28,21 @@ packages.
     Enter these commands for anonymous read-only access of the
     repositories:
 
-    `git clone git://git.sv.nongnu.org/freetype/freetype2.git`  
-    `git clone git://git.sv.nongnu.org/freetype/freetype2-demos.git`
-
+    ```bash
+    git clone git://git.sv.nongnu.org/freetype/freetype2.git
+    ```
+    ```bash
+    git clone git://git.sv.nongnu.org/freetype/freetype2-demos.git
+    ```
     If you are behind a Firewall which disables port 9418, you might try
     the HTTP protocol:
 
-    `git clone http://git.sv.nongnu.org/r/freetype/freetype2.git`  
-    `git clone http://git.sv.nongnu.org/r/freetype/freetype2-demos.git`
-
+    ```bash
+    git clone http://git.sv.nongnu.org/r/freetype/freetype2.git
+    ```
+    ```bash
+    git clone http://git.sv.nongnu.org/r/freetype/freetype2-demos.git
+    ```
     Please read
 
     <http://sv.nongnu.org/maintenance/UsingGit>

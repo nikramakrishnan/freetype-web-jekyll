@@ -102,7 +102,7 @@ which transparently supports multiple platforms *and* compilers.
 Binaries are available from the [download page on
 SourceForge](https://sourceforge.net/projects/freetype/files).
 
-[This page](jam/index.html) gives more information regarding Jam and
+[This page](jam.html) gives more information regarding Jam and
 FreeType.
 
 {% include callout.html content="Due to lack of resources, there is no Jam
