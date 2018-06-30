@@ -4,6 +4,11 @@ body {
     line-height: 140%;
 }
 
+p{
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
