@@ -1,5 +1,6 @@
 ---
 title: "The FreeType Project"
+theme: blue
 keywords: FreeType fonts renderer TrueType OpenType Type1 CFF TTF OTF TTC OTC library free fast quality
 sidebar: home_sidebar
 permalink: index.html

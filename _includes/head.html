@@ -14,8 +14,11 @@
 <link rel="stylesheet" href="{{site.baseurl}}/css/customstyles.css">
 <link rel="stylesheet" href="{{site.baseurl}}/css/boxshadowproperties.css">
 <!-- most color styles are extracted out to here -->
-<link rel="stylesheet" href="{{site.baseurl}}/css/theme-blue.css">
-
+{% if (page.theme | downcase) == "blue" %}
+<link rel="stylesheet" href="{{site.baseurl}}/css/theme-freetype.css">
+{% else                                   %}
+<link rel="stylesheet" href="{{site.baseurl}}/css/theme-freetype-green.css">
+{% endif                                  %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -28,9 +31,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
 <script src="{{site.baseurl}}/js/toc.js"></script>
 <script src="{{site.baseurl}}/js/customscripts.js"></script>
-
+{% if (page.theme | downcase) == "blue" %}
 <link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.ico">
-
+<!-- {{page.theme|downcase}} -->
+{% else                                   %}
+<link rel="shortcut icon" href="{{site.baseurl}}/images/favicon_-60.ico">
+{% endif                                  %}
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

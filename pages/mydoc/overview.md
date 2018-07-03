@@ -1,6 +1,5 @@
 ---
 title: FreeType Overview
-tags: [getting_started, overview]
 sidebar: home_sidebar
 permalink: overview.html
 folder: mydoc
