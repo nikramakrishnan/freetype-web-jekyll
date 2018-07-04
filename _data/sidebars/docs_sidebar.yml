@@ -21,25 +21,25 @@ entries:
       url: glyphs
       output: web
     - title: Basic Typographic Concepts
-      url: glyphs#i-basic-typographic-concepts
+      url: glyphs/glyphs-1.html
       output: web
     - title: Glyph Outlines
-      url: glyphs#ii-glyph-outlines
+      url: glyphs/glyphs-2.html
       output: web
     - title: Glyph Metrics
-      url: glyphs#iii-glyph-metrics
+      url: glyphs/glyphs-3.html
       output: web
     - title: Kerning
-      url: glyphs#iv-kerning
+      url: glyphs/glyphs-4.html
       output: web
     - title: Text Processing
-      url: glyphs#v-text-processing
+      url: glyphs/glyphs-5.html
       output: web
     - title: FreeType outlines
-      url: glyphs#vi-freetype-outlines
+      url: glyphs/glyphs-6.html
       output: web
     - title: FreeType Bitmaps
-      url: glyphs#vii-freetype-bitmaps
+      url: glyphs/glyphs-7.html
       output: web
 
   - title: FreeType 2 FAQ
