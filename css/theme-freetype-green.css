@@ -41,7 +41,7 @@ a[data-toggle="tooltip"] {
 
 .navbar-inverse {
     background: #065E23 url("../images/fond3_-60.png") no-repeat right top;
-    height: 134px;
+    min-height: 134px !important;
     border-color: #065E24;
     font-family: "Droid Sans", "sans-serif";
 }
@@ -49,7 +49,7 @@ a[data-toggle="tooltip"] {
     color: white;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+.navbar-inverse .navbar-nav>li>a:hover, a.fa-lg.navbar-brand:hover {
      color: #f0f0f0;
 }
 

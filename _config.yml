@@ -5,7 +5,7 @@ baseurl: /freetype-web-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: The FreeType Project
+topnav_title: FreeType
 # this appears on the top navigation bar next to the home button
 
 site_title: The FreeType Project
