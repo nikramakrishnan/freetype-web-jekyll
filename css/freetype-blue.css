@@ -126,3 +126,12 @@ li.sidebarTitle {
 .navbar-inverse .navbar-toggle {
     border-color: #015CAE;
 }
+
+.bottom-bar {
+    background: #06435E url("../images/fond3.png") no-repeat right top;
+    min-height: 134px !important;
+    border-color: #015CAE;
+    font-family: "Droid Sans", "sans-serif";
+    padding: 0;
+    margin: 0;
+}
