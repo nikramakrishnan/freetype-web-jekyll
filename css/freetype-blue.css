@@ -70,18 +70,18 @@ a.navbar-brand:hover {
     border-color: #248ec2 !important;
 }
 
-.btn-primary {
-    color: #ffffff;
-    background-color: #347DBE;
-    border-color: #347DBE;
-}
-
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #347DBE;
 }
 
 .sidebar {
     font-family: "Droid Sans", "sans-serif";
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #347DBE;
+    border-color: #347DBE;
 }
 
 .btn-primary:hover,
@@ -111,13 +111,12 @@ div.sidebarTitle {
 }
 
 li.sidebarTitle {
-  margin-top:20px;
+    margin-top:20px;
     font-weight:normal;
     font-size:130%;
     color: #ED1951;
     margin-bottom:10px;
     margin-left: 5px;
-
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {

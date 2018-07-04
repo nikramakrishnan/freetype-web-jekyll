@@ -2,34 +2,34 @@
 
 .summary {
     color: #808080;
-    border-left: 5px solid #ED1951;
+    border-left: 5px solid #E50E51;
     font-size:16px;
 }
 
 
-h3 {color: #ED1951; }
+h3 {color: #E50E51; }
 h4 {color: #808080; }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #328F51;
+    background-color: #248ec2;
     color: white;
 }
 
 .nav > li.active > a {
-    background-color: #1A783A;
+    background-color: #72ac4a;
 }
 
 .nav > li > a:hover {
-    background-color: #328F51;
+    background-color: #72ac4a;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
-    background-color: #1A783A;
+    background-color: #72ac4a;
 }
 
 .nav li.thirdlevel > a {
     background-color: #FAFAFA !important;
-    color: #328F51;
+    color: #248EC2;
     font-weight: bold;
 }
 
@@ -42,7 +42,7 @@ a[data-toggle="tooltip"] {
 .navbar-inverse {
     background: #065E23 url("../images/fond3_-60.png") no-repeat right top;
     min-height: 134px !important;
-    border-color: #065E24;
+    border-color: #015CAE;
     font-family: "Droid Sans", "sans-serif";
 }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
@@ -58,30 +58,30 @@ a.navbar-brand:hover {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #065E24;
+    color: #5b893c;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #065E24;
+    background-color: #5b893c;
     color: #ffffff;
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #328F51 !important;
-}
-
-.btn-primary {
-    color: #ffffff;
-    background-color: #1A783A;
-    border-color: #1A783A;
+    border-color: #72ac4a !important;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #1A783A;
+    background-color: #72ac4a;
 }
 
 .sidebar {
     font-family: "Droid Sans", "sans-serif";
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #5b893c;
+    border-color: #5b893c;
 }
 
 .btn-primary:hover,
@@ -89,41 +89,40 @@ a.navbar-brand:hover {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-color: #328F51;
-    border-color: #1A783A;
+    background-color: #72ac4a;
+    border-color: #5b893c;
 }
 
 .printTitle {
-    color: #065E24 !important;
+    color: #5b893c !important;
 }
 
-body.print h1 {color: #065E24 !important; font-size:28px !important;}
-body.print h2 {color: #595959 !important; font-size:20px !important;}
-body.print h3 {color: #E50E51 !important; font-size:14px !important;}
-body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !important;}
+body.print h1 {color: #5b893c !important; font-size:28px;}
+body.print h2 {color: #595959 !important; font-size:24px;}
+body.print h3 {color: #E50E51 !important; font-size:14px;}
+body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic;}
 
 .anchorjs-link:hover {
-    color: #216f9b;
+    color: #4f7233;
 }
 
 div.sidebarTitle {
-    color: #065E24;
+    color: #E50E51;
 }
 
 li.sidebarTitle {
-  margin-top:20px;
+    margin-top:20px;
     font-weight:normal;
     font-size:130%;
     color: #ED1951;
     margin-bottom:10px;
     margin-left: 5px;
-
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #065E24;
+    background-color: #E50E51;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #065E24;
+    border-color: #E50E51;
 }

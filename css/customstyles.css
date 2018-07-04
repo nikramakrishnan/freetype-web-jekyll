@@ -91,7 +91,10 @@ margin-top: -40px
 }
 
 .post-content img {
-    margin: 12px 0px 3px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 3px;
     width: auto;
     height: auto;
     max-width: 100%;
@@ -121,70 +124,66 @@ margin-top: -40px
     color: gray;
 }
 
+/* tables */
+
 table {
-    background-color: transparent;
+    border-collapse: collapse;
+    /* the next two lines center the table horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-caption {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #777;
-    text-align: left;
+
+table.vertical-space {
+    border-collapse: collapse;
+    /* the next two lines center the table horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4ex;
+    margin-bottom: 4ex;
 }
+
+td {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+thead {
+    /* a horizontal rule between table head and body */
+    border-bottom: solid thin;
+}
+
 th {
-    text-align: left;
-}
-table {
-    max-width: 90%;
-    margin-bottom: 20px;
-    border: 1px solid #dedede;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    /* some vertical space before the horizontal rule */
+    padding-bottom: 1ex;
 }
 
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-}
-table > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #ddd;
-    text-transform: none;
-    background-color: #777;
-    color: white;
-    text-align: left;
-}
-table > caption + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > th,
-table > thead:first-child > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > td {
-    border-top: 0;
+tbody tr:first-child td {
+    /* some vertical space after the horizontal rule */
+    /* or at the beginning of the table */
+    padding-top: 1ex;
 }
 
-table > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
+tbody tr:last-child td {
+    /* some vertical space after the table */
+    padding-bottom: 1ex;
 }
 
-table col[class*="col-"] {
-    position: static;
-    display: table-column;
-    float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-    position: static;
-    display: table-cell;
-    float: none;
+
+/* if we have paragraphs in a table, */
+
+
+/* suppress first and last vertical space */
+
+table tr:first-of-type p:first-of-type {
+    margin-top: 0;
 }
 
-table tr td {
-    hyphens: auto;
+table tr:last-of-type p:last-of-type {
+    margin-bottom: 0;
 }
 
 
@@ -882,22 +881,17 @@ span.soft {
 
 
 .post-content img {
-    margin: 12px 0px 3px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    display: block;
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
 }
 .col-md-9 img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-.post-content img {
-    margin: 12px 0px 3px 0px;
-    width: auto;
-    height: auto;
     max-width: 100%;
     max-height: 100%;
 }
