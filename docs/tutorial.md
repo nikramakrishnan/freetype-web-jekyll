@@ -1,6 +1,7 @@
 ---
 layout: page
 title: FreeType 2 Tutorial
+theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/tutorial.html
 nav: tutorial

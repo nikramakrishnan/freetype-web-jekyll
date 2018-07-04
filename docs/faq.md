@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FreeType 2 FAQ
-subpage: true
+theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/faq.html
 toc: false

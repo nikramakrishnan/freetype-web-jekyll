@@ -2,7 +2,7 @@
 title: FreeType Overview
 sidebar: home_sidebar
 permalink: overview.html
-folder: mydoc
+folder: pages
 nav: overview.html
 ---
 

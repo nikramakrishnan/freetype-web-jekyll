@@ -2,7 +2,7 @@
 title: FreeType Downloads
 sidebar: home_sidebar
 permalink: download.html
-folder: mydoc
+folder: pages
 last_updated: June 29, 2018
 nav: download.html
 ---

@@ -2,7 +2,7 @@
 title: FreeType Licenses
 sidebar: home_sidebar
 permalink: license.html
-folder: mydoc
+folder: pages
 nav: license.html
 ---
 

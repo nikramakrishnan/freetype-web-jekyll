@@ -2,7 +2,7 @@
 title: FreeType Development
 sidebar: home_sidebar
 permalink: development.html
-folder: mydoc
+folder: pages
 toc: false
 last_updated: June 29, 2018
 nav: development.html

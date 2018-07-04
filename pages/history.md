@@ -2,7 +2,7 @@
 title: FreeType History
 sidebar: home_sidebar
 permalink: history.html
-folder: mydoc
+folder: pages
 nav: history.html
 ---
 

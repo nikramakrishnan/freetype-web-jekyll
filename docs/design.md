@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FreeType Design
-subpage: true
+theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/design.html
 nav: design
