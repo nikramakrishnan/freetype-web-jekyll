@@ -9,6 +9,12 @@ p{
     margin-bottom: 1.5ex;
 }
 
+.fixed{
+    position: fixed;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -380,7 +386,7 @@ a.accordion-toggle, a.accordion-collapsed {
     padding: 4px 10px;
 }
 
-ul#mysidebar {
+ul#ft_sidebar {
     border-radius:0px;
 }
 
@@ -714,7 +720,7 @@ ol.series li {
     border-color: #248ec2 !important;
 }
 
-#mysidebar .nav ul {
+#ft_sidebar .nav ul {
     background-color: #FAFAFA;
 }
 .nav ul.series li {
@@ -763,6 +769,7 @@ pre, table code {
 
 pre {
     margin: 25px 0px;
+    font-family: 'Roboto Mono', monospace;
     font-size: large;
 }
 
@@ -855,21 +862,21 @@ span.soft {
 }
 
 @media (max-width: 990px) {
-    #mysidebar {
+    #ft_sidebar {
         position: relative;
     }
 }
 
 @media (min-width: 1000px) {
 
-    ul#mysidebar {
+    ul#ft_sidebar {
         width: 225px;
     }
 }
 
 @media (max-width: 900px) {
 
-    ul#mysidebar {
+    ul#ft_sidebar {
         max-width: 100%;
     }
 }

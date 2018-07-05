@@ -5,7 +5,7 @@
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
+            $("#ft_sidebar").navgoco({
                 caretHtml: '',
                 accordion: false,
                 openClass: 'active', // open
@@ -23,12 +23,12 @@
 
             $("#collapseAll").click(function(e) {
                 e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
+                $("#ft_sidebar").navgoco('toggle', false);
             });
 
             $("#expandAll").click(function(e) {
                 e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
+                $("#ft_sidebar").navgoco('toggle', true);
             });
 
         });
