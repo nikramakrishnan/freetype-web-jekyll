@@ -763,6 +763,7 @@ pre, table code {
 
 pre {
     margin: 25px 0px;
+    font-size: large;
 }
 
 #json-box-container pre {
