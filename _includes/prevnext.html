@@ -1,0 +1,12 @@
+{% if page.prev or page.next %}
+  <center>
+  {% if page.prev %}
+    <a href="{{page.prev}}">← Prev</a>
+    {% assign has_prev = 1 %}
+  {% endif %}
+  {% if page.next %}
+    {% if has_prev == 1 %} | {% endif %}
+    <a href="{{page.next}}">Next →</a>
+  {% endif %}
+  </center>
+{% endif %}
