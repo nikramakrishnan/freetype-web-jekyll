@@ -1166,6 +1166,7 @@ h4.panel-title {
     }
     .navbar-inverse{
         background-size: cover;
+        height: auto;
     }
     .navbar-left,.navbar-right {
         float: none !important;
