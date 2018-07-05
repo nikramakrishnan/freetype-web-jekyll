@@ -5,6 +5,9 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-3.html
 nav: glyphs/glyphs-3.html
+
+prev: glyphs-2.html
+next: glyphs-4.html
 ---
 
 ### 1\. Baseline, pens and layouts {#section-1}

@@ -6,6 +6,9 @@ last_updated: 13-Feb-2018
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-6.html
 nav: glyphs/glyphs-6.html
+
+prev: glyphs-5.html
+next: glyphs-7.html
 ---
 
 The purpose of this section is to present the way FreeType manages vectorial

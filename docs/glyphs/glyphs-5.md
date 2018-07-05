@@ -5,6 +5,9 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-5.html
 nav: glyphs/glyphs-5.html
+
+prev: glyphs-4.html
+next: glyphs-6.html
 ---
 
 This section demonstrate algorithms which use the concepts previously defined

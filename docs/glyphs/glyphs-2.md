@@ -5,6 +5,9 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-2.html
 nav: glyphs/glyphs-2.html
+
+prev: glyphs-1.html
+next: glyphs-3.html
 ---
 
 This section describes the way scalable representations of glyph images, called

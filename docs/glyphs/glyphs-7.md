@@ -6,6 +6,8 @@ last_updated: 13-Feb-2018
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-7.html
 nav: glyphs/glyphs-7.html
+
+prev: glyphs-6.html
 ---
 
 The purpose of this section is to present the way FreeType manages bitmaps and

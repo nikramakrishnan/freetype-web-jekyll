@@ -5,6 +5,9 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-4.html
 nav: glyphs/glyphs-4.html
+
+prev: glyphs-3.html
+next: glyphs-5.html
 ---
 
 The term _kerning_ refers to specific information used to adjust the relative

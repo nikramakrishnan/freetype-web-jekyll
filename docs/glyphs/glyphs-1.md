@@ -5,6 +5,9 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/glyphs/glyphs-1.html
 nav: glyphs/glyphs-1.html
+
+prev: index.html
+next: glyphs-2.html
 ---
 
 ### 1\. Font files, format and information {#section-1}
