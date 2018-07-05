@@ -1,6 +1,6 @@
 body {
     font-size: large;
-    font-family: "Droid Serif", "serif";
+    font-family: 'Noto Serif', serif;
     line-height: 140%;
 }
 
@@ -1165,8 +1165,7 @@ h4.panel-title {
         min-height: 134px;
     }
     .navbar-inverse{
-        background-size: cover;
-        height: auto;
+        background-size: contain !important;
     }
     .navbar-left,.navbar-right {
         float: none !important;

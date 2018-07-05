@@ -43,7 +43,6 @@ a[data-toggle="tooltip"] {
     background: #065E23 url("../images/fond3_-60.png") no-repeat right top;
     min-height: 134px !important;
     border-color: #015CAE;
-    font-family: "Droid Sans", "sans-serif";
 }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
     color: white;
@@ -72,10 +71,6 @@ a.navbar-brand:hover {
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #72ac4a;
-}
-
-.sidebar {
-    font-family: "Droid Sans", "sans-serif";
 }
 
 .btn-primary {
@@ -113,7 +108,7 @@ div.sidebarTitle {
 li.sidebarTitle {
     margin-top:20px;
     font-weight:normal;
-    font-size:130%;
+    font-size:120%;
     color: #ED1951;
     margin-bottom:10px;
     margin-left: 5px;
@@ -131,7 +126,6 @@ li.sidebarTitle {
     background: #065E23 url("../images/fond3_-60.png") no-repeat right top;
     min-height: 134px !important;
     border-color: #015CAE;
-    font-family: "Droid Sans", "sans-serif";
     padding: 0;
     margin: 0;
 }
