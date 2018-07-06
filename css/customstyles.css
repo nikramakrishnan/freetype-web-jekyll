@@ -769,8 +769,8 @@ pre, table code {
 
 pre {
     margin: 25px 0px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: large;
+    word-break: normal;
+    font-size: inherit;
 }
 
 #json-box-container pre {

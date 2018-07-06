@@ -8,7 +8,7 @@ folder: jam
 
 ## Introduction {#intro}
 
-[FT Jam](http://www.freetype.org/jam/index.html) is an enhanced version
+[FT Jam](http://www.freetype.org/jam) is an enhanced version
 of the [Jam](http://www.perforce.com/jam/jam.html) build tool. This
 document lists the differences between these two programs. Note that
 these changes come from the need of real-world cases that can\'t be
