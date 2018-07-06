@@ -87,6 +87,16 @@ units on its sides, is very important for two reasons:
       pixel_size = point_size * resolution / 72
       pixel_coord = grid_coord * pixel_size / EM_size
     ```
+```
+ Lorem ipsum dolor sit amet,  consectetur adipiscing elit.  Phasellus sed
+ hendrerit augue, et mollis leo. Duis dapibus, leo et fermentum ullamcorper,
+ orci purus lacinia sem, imperdiet  rutrum lectus sem  sit amet augue. Proin ut
+ est at libero malesuada aliquet. Ut in ultrices nisi, eu elementum orci. Sed
+ interdum tempus odio, id euismod tellus tincidunt eu. Fusce aliquam magna quis
+ lacus porta aliquet. Donec suscipit nisi dolor, eu euismod risus rhoncus sit
+ amet. Nulla cursus sollicitudin vulputate. Praesent venenatis lorem eget justo
+ fringilla gravida. 
+```
 
 * The greater the EM size is, the larger resolution the designer can use when
   digitizing outlines.  For example, in the extreme example of an EM size of 4
