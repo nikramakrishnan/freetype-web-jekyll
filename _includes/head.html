@@ -17,7 +17,7 @@
 {% assign themes = "blue,green,dark-green" | split:"," %}
 {% if themes contains (page.theme | downcase)          %}
 <!-- {{page.theme|downcase}} theme color styles -->
-<link rel="stylesheet" href="{{site.baseurl}}/css/freetype-{{page.theme}}.css">
+<link rel="stylesheet" href="{{site.baseurl}}/css/freetype-{{page.theme | downcase}}.css">
 {% else %}
 <!-- green theme color styles -->
 <link rel="stylesheet" href="{{site.baseurl}}/css/freetype-green.css">
