@@ -273,4 +273,3 @@ stays unchanged: it already is normalized and color-balanced. It is
 sharper than the default one but less tolerant of uncalibrated screens
 and rendering systems without linear alpha blending, producing more
 color fringes.
-:::

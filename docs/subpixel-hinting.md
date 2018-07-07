@@ -148,4 +148,3 @@ harmonizes much better internally and is equipped with much better
 ClearType-ready hinting. Fedora still ships some 1.x version; you can
 get the newer 2.x with improved hinting and glyph coverage from
 [here](https://fedorahosted.org/liberation-fonts).
-:::
