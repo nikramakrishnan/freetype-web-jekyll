@@ -1,0 +1,22 @@
+/* CMU Fonts from fontlibrary.org. Only contains fonts required by the website */
+
+@font-face {
+    font-family: 'CMUTypewriterTextRegular';
+        src: url('https://fontlibrary.org/assets/fonts/cmu-typewriter/b6d120f7029a2f8b50af39054e05f1ef/c6d367cd3cb9d5b4c8fd3aca0fd169c7/CMUTypewriterTextRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CMUTypewriterTextItalic';
+        src: url('https://fontlibrary.org/assets/fonts/cmu-typewriter/b6d120f7029a2f8b50af39054e05f1ef/9a7a88b16bf673baf46c52b0f5bac62f/CMUTypewriterTextItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CMUTypewriterTextBold';
+        src: url('https://fontlibrary.org/assets/fonts/cmu-typewriter/b6d120f7029a2f8b50af39054e05f1ef/fdab30263b551810677d2e93a5168442/CMUTypewriterTextBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

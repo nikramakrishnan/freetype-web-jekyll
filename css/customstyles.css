@@ -767,9 +767,12 @@ pre, table code {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-pre {
+pre, code {
     margin: 25px 0px;
     word-break: normal;
+    font-family: 'CMUTypewriterTextRegular';
+    font-weight: normal;
+    font-style: normal;
     font-size: inherit;
 }
 
