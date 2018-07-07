@@ -8,6 +8,7 @@ entries:
 
   - title: Home
     output: web
+    url: index.html
     folderitems:
     - title: Documentation Home
       url: 
@@ -46,19 +47,19 @@ entries:
     output: web
     folderitems:
     - title: TOC
-      url: faq
+      url: faq.html
       output: web
     - title: General Questions
-      url: faq#general-questions
+      url: faq.html#general-questions
       output: web
     - title: Compilation & Configuration
-      url: faq#compilation--configuration
+      url: faq.html#compilation--configuration
       output: web
     - title: The FreeType 2 auto-hinter
-      url: faq#the-freetype-2-auto-hinter
+      url: faq.html#the-freetype-2-auto-hinter
       output: web
     - title: Other questions
-      url: faq#other-questions
+      url: faq.html#other-questions
       output: web
 
   - title: The FreeType Tutorial
@@ -68,13 +69,13 @@ entries:
       url: tutorial
       output: web
     - title: Simple Glyph Loading
-      url: tutorial#i-simple-glyph-loading
+      url: tutorial/step1.html
       output: web
     - title: Managing Glyphs
-      url: tutorial#ii-managing-glyphs
+      url: tutorial/step2.html
       output: web
     - title: Examples
-      url: tutorial#iii-examples
+      url: tutorial/step3.html
       output: web
 
   - title: The Design of FreeType
@@ -83,3 +84,33 @@ entries:
     - title: TOC
       url: design
       output: web
+    - title: Introduction
+      url: design/design-1.html
+      output: web
+    - title: Components and APIs
+      url: design/design-2.html
+      output: web
+    - title: Public Objects and Classes
+      url: design/design-3.html
+      output: web
+    - title: Internal Objects and Classes
+      url: design/design-4.html
+      output: web
+    - title: Module Classes
+      url: design/design-5.html
+      output: web
+    - title: Interfaces and Services
+      url: design/design-6.html
+      output: web
+
+  - title: On Slight Hinting, ...
+    output: web
+    url: text-rendering-general.html
+
+  - title: The v40 TrueType interpreter mode
+    output: web
+    url: subpixel-hinting.html
+
+  - title: The RasterInfo Font
+    output: web
+    url: rasterinfo/rasterinfo.html

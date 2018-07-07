@@ -104,7 +104,7 @@ however, no font driver of FreeType produces such outlines currently.
 #### b. The `FT_Outline` descriptor
 
 A FreeType outline is described through a simple structure called
-[`FT_Outline`](../reference/ft2-outline_processing.html#FT_Outline).  Right
+[`FT_Outline`](../reference/ft2-outline_processing#FT_Outline).  Right
 now, the following fields are of interest:
 
 Field        | Description
@@ -116,7 +116,7 @@ Field        | Description
 `tags`       | Array of point flags
 
 Here, `points` is a pointer to an array of
-[`FT_Vector`](../reference/ft2-basic_types.html#FT_Vector) records, used to
+[`FT_Vector`](../reference/ft2-basic_types#FT_Vector) records, used to
 store the vectorial coordinates of each outline point.  These are expressed in
 1/64th of a pixel, which is also known as the _26.6 fixed-point format_.
 
@@ -124,7 +124,7 @@ store the vectorial coordinates of each outline point.  These are expressed in
 For example, the first contour always starts at point 0, and ends at point
 `contours[0]`.  The second contour starts at point `contours[0]+1` and ends at
 `contours[1]`, etc.  To traverse these points in a callback based manner, use
-[`FT_Outline_Decompose`](../reference/ft2-outline_processing.html#FT_Outline_Decompose).
+[`FT_Outline_Decompose`](../reference/ft2-outline_processing#FT_Outline_Decompose).
 
 Note that each contour is closed, and that the value of `n_points` should be equal
 to `contours[n_contours-1]+1` for a valid outline.
@@ -171,9 +171,9 @@ Unlike the bbox, the cbox is much faster to compute.
 </table>
 
 Control and bounding boxes can be computed automatically using the functions
-[`FT_Outline_Get_CBox`](../reference/ft2-outline_processing.html#FT_Outline_Get_CBox)
+[`FT_Outline_Get_CBox`](../reference/ft2-outline_processing#FT_Outline_Get_CBox)
 and
-[`FT_Outline_Get_BBox`](../reference/ft2-outline_processing.html#FT_Outline_Get_BBox).
+[`FT_Outline_Get_BBox`](../reference/ft2-outline_processing#FT_Outline_Get_BBox).
 The former function is always very fast, while the latter _may_ be slow in the
 case of 'outside' control points (as it needs to find the extreme of conic and
 cubic arcs for 'perfect' computations).  If this isn't the case, it is as fast

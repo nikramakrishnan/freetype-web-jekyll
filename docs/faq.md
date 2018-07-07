@@ -5,7 +5,7 @@ theme: dark-green
 sidebar: docs_sidebar
 permalink: docs/faq.html
 toc: false
-nav: faq
+nav: faq.html
 ---
 
 * TOC

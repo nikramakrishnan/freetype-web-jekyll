@@ -44,7 +44,7 @@ length is 10.
 ### 2\. The `FT_Bitmap` descriptor {#section-2}
 
 In FreeType, a bitmap or pixmap is described through a single structure, called
-[`FT_Bitmap`](../reference/ft2-basic_types.html#FT_Bitmap).  The fields we are
+[`FT_Bitmap`](../reference/ft2-basic_types#FT_Bitmap).  The fields we are
 interested in are:
 
 Field        | Description
@@ -149,7 +149,7 @@ follows:
   translating with a vector `(-ROUND(xMin), -ROUND(yMin))`.
 
 * Call the rendering function (it can be
-  [`FT_Outline_Render`](../reference/ft2-outline_processing.html#FT_Outline_Render),
+  [`FT_Outline_Render`](../reference/ft2-outline_processing#FT_Outline_Render),
   for example).
 
 In the case where one wants to write glyph images directly into a large bitmap,

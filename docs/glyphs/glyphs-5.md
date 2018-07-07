@@ -82,7 +82,7 @@ letters isn't fixed, but determined by the accumulation of previous rounding
 errors in glyph positioning.  For auto-hinted glyphs, this problem can be
 alleviated by using the `lsb_delta` and `rsb_delta` values (see the
 documentation of the
-[FT_GlyphSlotRec](../reference/ft2-base_interface.html#FT_GlyphSlotRec)
+[FT_GlyphSlotRec](../reference/ft2-base_interface#FT_GlyphSlotRec)
 structure for more details).
 
 TODO: Real subpixel positioning with glyph shifting before hinting.

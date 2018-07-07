@@ -3,7 +3,7 @@ title: FreeType Documentation
 sidebar: docs_sidebar
 permalink: docs/index
 toc: false
-nav: 
+nav: index.html
 ---
 
 {% include note.html content="The FreeType documentation is also available as a single archive from our [download page](../download)." %}
@@ -18,8 +18,8 @@ This document is a *must-read* for any user of the library.
 
 ### The FreeType API Reference
 
--   [Table Of Contents](reference/ft2-toc.html)
--   [Index](reference/ft2-index.html)
+-   [Table Of Contents](reference/ft2-toc)
+-   [Index](reference/ft2-index)
 
 ### [The Design of FreeType](design)
 

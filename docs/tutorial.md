@@ -42,7 +42,7 @@ FreeType 2 library.
    of the FreeType 2 API.
 
    You can read [this section of the FreeType 2 API
-   Reference](../reference/ft2-header_file_macros.html) for a complete listing
+   Reference](../reference/ft2-header_file_macros) for a complete listing
    of the header macros.
 
 The use of macros in `#include` statements is ANSI-compliant.  It is used for
@@ -57,9 +57,9 @@ several reasons.
 ### 2\. Library Initialization
 
 To initialize the FreeType library, create a variable of type
-[`FT_Library`](../reference/ft2-base_interface.html#FT_Library) named, for
+[`FT_Library`](../reference/ft2-base_interface#FT_Library) named, for
 example, `library`, and call the function
-[`FT_Init_FreeType`](../reference/ft2-base_interface.html#FT_Init_FreeType).
+[`FT_Init_FreeType`](../reference/ft2-base_interface#FT_Init_FreeType).
 
     #include <ft2build.h>
     #include FT_FREETYPE_H
@@ -92,7 +92,7 @@ error, and `library` is set to NULL.
 #### a. From a Font File
 
 Create a new `face` object by calling
-[`FT_New_Face`](../reference/ft2-base_interface.html#FT_New_Face).  A _face_
+[`FT_New_Face`](../reference/ft2-base_interface#FT_New_Face).  A _face_
 describes a given typeface and style.  For example, 'Times New Roman Regular'
 and 'Times New Roman Italic' correspond to two different faces.
 
@@ -134,7 +134,7 @@ file.
 
 In the case where you have already loaded the font file into memory, you can
 similarly create a new face object for it by calling
-[`FT_New_Memory_Face`](../reference/ft2-base_interface.html#FT_New_Memory_Face).
+[`FT_New_Memory_Face`](../reference/ft2-base_interface#FT_New_Memory_Face).
 
     FT_Library  library;   /* handle to library     */
     FT_Face     face;      /* handle to face object */
@@ -154,7 +154,7 @@ and its size in bytes instead of a file pathname.  Other than that, it has
 exactly the same semantics as `FT_New_Face`.
 
 Note that you must not deallocate the memory before calling
-[`FT_Done_Face`](../reference/ft2-base_interface.html#FT_Done_Face).
+[`FT_Done_Face`](../reference/ft2-base_interface#FT_Done_Face).
 
 #### c. From Other Sources (Compressed Files, Network, etc.)
 
@@ -163,11 +163,11 @@ is not sufficient.  With FreeType 2, it is possible to provide your own
 implementation of I/O routines.
 
 This is done through the
-[`FT_Open_Face`](../reference/ft2-base_interface.html#FT_Open_Face) function,
+[`FT_Open_Face`](../reference/ft2-base_interface#FT_Open_Face) function,
 which can be used to open a new font face with a custom input stream, select a
 specific driver for opening, or even pass extra parameters to the font driver
 when creating the object.  We advise you to look up the [FreeType 2 reference
-manual](../reference/ft2-toc.html) in order to learn how to use it.
+manual](../reference/ft2-toc) in order to learn how to use it.
 
 ### 4\. Accessing the Face Data
 
@@ -176,14 +176,14 @@ Usually, this data can be accessed directly by dereferencing a handle, like in
 `face−>num_glyphs`.
 
 The complete list of available fields is in the
-[`FT_FaceRec`](../reference/ft2-base_interface.html#FT_FaceRec) structure
+[`FT_FaceRec`](../reference/ft2-base_interface#FT_FaceRec) structure
 description.  However, we describe here a few of them in more detail.
 
 `num_glyphs` | This variable gives the number of _glyphs_ available in the font face. A glyph is a character image, nothing more – it thus doesn't necessarily correspond to a _character code_.
-`face_flags` | A 32-bit integer containing bit flags that describe some face properties. For example, the flag `FT_FACE_FLAG_SCALABLE` indicates that the face's font format is scalable and that glyph images can be rendered for all character pixel sizes. For more information on face flags, please read the [FreeType 2 API Reference](../reference/ft2-base_interface.html#FT_FACE_FLAG_XXX).
+`face_flags` | A 32-bit integer containing bit flags that describe some face properties. For example, the flag `FT_FACE_FLAG_SCALABLE` indicates that the face's font format is scalable and that glyph images can be rendered for all character pixel sizes. For more information on face flags, please read the [FreeType 2 API Reference](../reference/ft2-base_interface#FT_FACE_FLAG_XXX).
 `units_per_EM` | This field is only valid for scalable formats (it is set to 0 otherwise). It indicates the number of font units covered by the EM.
 `num_fixed_sizes` | This field gives the number of embedded bitmap strikes in the current face. A _strike_ is a series of glyph images for a given character pixel size. For example, a font face could include strikes for pixel sizes 10, 12, and 14\. Note that even scalable font formats can have embedded bitmap strikes!
-`available_sizes` | A pointer to an array of [`FT_Bitmap_Size`](../reference/ft2-base_interface.html#FT_Bitmap_Size) elements.  Each `FT_Bitmap_Size` indicates the horizontal and vertical _character pixel sizes_ for each of the strikes that are present in the face.
+`available_sizes` | A pointer to an array of [`FT_Bitmap_Size`](../reference/ft2-base_interface#FT_Bitmap_Size) elements.  Each `FT_Bitmap_Size` indicates the horizontal and vertical _character pixel sizes_ for each of the strikes that are present in the face.
 
 Note that, generally speaking, these are _not_ the _cell size_ of the bitmap
 strikes.
@@ -207,7 +207,7 @@ face) while keeping this feature available through additional functions.
 When a new face object is created, all elements are set to 0 during
 initialization.  To populate the structure with sensible values, you should
 call
-[`FT_Set_Char_Size`](../reference/ft2-base_interface.html#FT_Set_Char_Size).
+[`FT_Set_Char_Size`](../reference/ft2-base_interface#FT_Set_Char_Size).
 Here is an example, setting the character size to 16pt for a 300×300dpi device:
 
     error = FT_Set_Char_Size( face,    /* handle to face object           */
@@ -236,7 +236,7 @@ Some notes.
 This function computes the character pixel size that corresponds to the
 character width and height and device resolutions.  However, if you want to
 specify the pixel sizes yourself, you can call
-[`FT_Set_Pixel_Sizes`](../reference/ft2-base_interface.html#FT_Set_Pixel_Sizes).
+[`FT_Set_Pixel_Sizes`](../reference/ft2-base_interface#FT_Set_Pixel_Sizes).
 
     error = FT_Set_Pixel_Sizes( face,   /* handle to face object */
                                 0,      /* pixel_width           */
@@ -276,7 +276,7 @@ Later on we will describe how to look for specific charmaps in a face.  For
 now, we assume that the face contains at least a Unicode charmap that was
 selected during a call to `FT_New_Face`.  To convert a Unicode character code
 to a font glyph index, we use
-[`FT_Get_Char_Index`](../reference/ft2-base_interface.html#FT_Get_Char_Index).
+[`FT_Get_Char_Index`](../reference/ft2-base_interface#FT_Get_Char_Index).
 
     glyph_index = FT_Get_Char_Index( face, charcode );
 
@@ -308,11 +308,11 @@ its name suggests, a glyph slot is a container that is able to hold one glyph
 image at a time, be it a bitmap, an outline, or something else.  Each face
 object has a single glyph slot object that can be accessed as `face->glyph`.
 Its fields are explained by the
-[`FT_GlyphSlotRec`](../reference/ft2-base_interface.html#FT_GlyphSlotRec)
+[`FT_GlyphSlotRec`](../reference/ft2-base_interface#FT_GlyphSlotRec)
 structure documentation.
 
 Loading a glyph image into the slot is performed by calling
-[`FT_Load_Glyph`](../reference/ft2-base_interface.html#FT_Load_Glyph).
+[`FT_Load_Glyph`](../reference/ft2-base_interface#FT_Load_Glyph).
 
     error = FT_Load_Glyph( face,          /* handle to face object */
                            glyph_index,   /* glyph index           */
@@ -334,7 +334,7 @@ This function tries to load the corresponding glyph image from the face.
 The field `face−>glyph−>format` describes the format used for storing the glyph
 image in the slot.  If it is not `FT_GLYPH_FORMAT_BITMAP`, one can immediately
 convert it to a bitmap through
-[`FT_Render_Glyph`](../reference/ft2-base_interface.html#FT_Render_Glyph).
+[`FT_Render_Glyph`](../reference/ft2-base_interface#FT_Render_Glyph).
 
     error = FT_Render_Glyph( face->glyph,   /* glyph slot  */
                              render_mode ); /* render mode */
@@ -344,7 +344,7 @@ glyph image.  `FT_RENDER_MODE_NORMAL`, the default, renders an anti-aliased
 coverage bitmap with 256 gray levels (also called a _pixmap_), as this is the
 default.  You can alternatively use `FT_RENDER_MODE_MONO` if you want to
 generate a 1-bit monochrome bitmap.  More values are available for the
-[`FT_Render_Mode`](../reference/ft2-base_interface.html#FT_Render_Mode)
+[`FT_Render_Mode`](../reference/ft2-base_interface#FT_Render_Mode)
 enumeration value.
 
 Once you have a bitmapped glyph image, you can access it directly through
@@ -369,7 +369,7 @@ contain a Unicode charmap (which is rather infrequent today).
 There are two ways to select a different charmap with FreeType.  It's easiest
 if the encoding you need already has a corresponding enumeration defined in
   `FT_FREETYPE_H`, for example `FT_ENCODING_BIG5`.  In this case, you can call
-  [`FT_Select_Charmap`](../reference/ft2-base_interface.html#FT_Select_Charmap).
+  [`FT_Select_Charmap`](../reference/ft2-base_interface#FT_Select_Charmap).
 
     error = FT_Select_Charmap( face,               /* target face object */
                                FT_ENCODING_BIG5 ); /* encoding           */
@@ -415,13 +415,13 @@ reasons.
     if ( error ) { ... }
 
 Once a charmap has been selected, either through `FT_Select_Charmap` or
-[`FT_Set_Charmap`](../reference/ft2-base_interface.html#FT_Set_Charmap), it is
+[`FT_Set_Charmap`](../reference/ft2-base_interface#FT_Set_Charmap), it is
 used by all subsequent calls to `FT_Get_Char_Index`.
 
 #### d. Glyph Transformations
 
 It is possible to specify an affine transformation with
-[`FT_Set_Transform`](../reference/ft2-base_interface.html#FT_Set_Transform), to
+[`FT_Set_Transform`](../reference/ft2-base_interface#FT_Set_Transform), to
 be applied to glyph images when they are loaded.  Of course, this only works
 for scalable (vectorial) font formats.
 
@@ -431,9 +431,9 @@ for scalable (vectorial) font formats.
 
 This function sets the current transformation for a given face object.  Its
 second parameter is a pointer to an
-[`FT_Matrix`](../reference/ft2-basic_types.html#FT_Matrix) structure that
+[`FT_Matrix`](../reference/ft2-basic_types#FT_Matrix) structure that
 describes a 2×2 affine matrix.  The third parameter is a pointer to an
-[`FT_Vector`](../reference/ft2-basic_types.html#FT_Vector) structure,
+[`FT_Vector`](../reference/ft2-basic_types#FT_Vector) structure,
 describing a two-dimensional vector that translates the glyph image _after_ the
 2×2 transformation.
 
@@ -517,7 +517,7 @@ previously described.
 This code needs a few explanations.
 
 * We define a handle named `slot` that points to the face object's glyph slot.
-  (The type [`FT_GlyphSlot`](../reference/ft2-base_interface.html#FT_GlyphSlot)
+  (The type [`FT_GlyphSlot`](../reference/ft2-base_interface#FT_GlyphSlot)
   is a pointer).  That is a convenience to avoid using `face->glyph->XXX` every
   time.
 * We increment the pen position with the vector `slot->advance`, which
@@ -527,7 +527,7 @@ This code needs a few explanations.
 * The function `my_draw_bitmap` is not part of FreeType but must be provided by
   the application to draw the bitmap to the target surface.  In this example,
   it takes a pointer to an
-  [`FT_Bitmap`](../reference/ft2-basic_types.html#FT_Bitmap) descriptor and the
+  [`FT_Bitmap`](../reference/ft2-basic_types#FT_Bitmap) descriptor and the
   position of its top-left corner as arguments.  For ideal rendering on a
   screen this function should perform linear blending with gamma correction,
   using the bitmap as an alpha channel.
@@ -572,7 +572,7 @@ explained below.
 We have reduced the size of our code, but it does exactly the same thing.
 
 * We use the function
-  [`FT_Load_Char`](../reference/ft2-base_interface.html#FT_Load_Char) instead
+  [`FT_Load_Char`](../reference/ft2-base_interface#FT_Load_Char) instead
   of `FT_Load_Glyph`.  As you probably imagine, it is equivalent to calling
   `FT_Get_Char_Index`, then `FT_Load_Glyph`.
 * We do not use `FT_LOAD_DEFAULT` for the loading mode, but the bit flag
@@ -676,18 +676,18 @@ Japanese, Korean, Mongolian, etc.).
 
 Note that only a few font formats provide vertical metrics.  You can test
 whether a given face object contains them by using the macro
-[`FT_HAS_VERTICAL`](../reference/ft2-base_interface.html#FT_HAS_VERTICAL),
+[`FT_HAS_VERTICAL`](../reference/ft2-base_interface#FT_HAS_VERTICAL),
 which returns true if appropriate.
 
 Individual glyph metrics can be accessed by first loading the glyph in a face's
 glyph slot, then accessing them through the `face->glyph->metrics` structure,
 whose type is
-[`FT_Glyph_Metrics`](../reference/ft2-base_interface.html#FT_Glyph_Metrics).
+[`FT_Glyph_Metrics`](../reference/ft2-base_interface#FT_Glyph_Metrics).
 We will discuss this in more detail below; for now, we only note that it
 contains the following fields.
 
 `width`| This is the width of the glyph image's bounding box. It is independent of the layout direction.
-`height`| This is the height of the glyph image's bounding box. It is independent of the layout direction. Be careful not to confuse it with the 'height' field in the [`FT_Size_Metrics`](../reference/ft2-base_interface.html#FT_Size_Metrics) structure.
+`height`| This is the height of the glyph image's bounding box. It is independent of the layout direction. Be careful not to confuse it with the 'height' field in the [`FT_Size_Metrics`](../reference/ft2-base_interface#FT_Size_Metrics) structure.
 `horiBearingX`| For _horizontal text layouts_, this is the horizontal distance from the current cursor position to the leftmost border of the glyph image's bounding box.
 `horiBearingY`| For _horizontal text layouts_, this is the vertical distance from the current cursor position (on the baseline) to the topmost border of the glyph image's bounding box.
 `horiAdvance`| For _horizontal text layouts_, this is the horizontal distance to increment the pen position when the glyph is drawn as part of a string of text.
@@ -729,7 +729,7 @@ is one of the following fields.
 
 The glyph image that is loaded in a glyph slot can be converted into a bitmap,
 either by using `FT_LOAD_RENDER` when loading it, or by calling
-[`FT_Render_Glyph`](../reference/ft2-base_interface.html#FT_Render_Glyph).
+[`FT_Render_Glyph`](../reference/ft2-base_interface#FT_Render_Glyph).
 Each time you load a new glyph image, the previous one is erased from the glyph
 slot.
 
@@ -739,7 +739,7 @@ additional transformations and measures on it before converting it to a bitmap.
 
 The FreeType 2 API has a specific extension that is capable of dealing with
 glyph images in a flexible and generic way.  To use it, you first need to
-include the [`FT_GLYPH_H`](../reference/ft2-header_file_macros.html#FT_GLYPH_H)
+include the [`FT_GLYPH_H`](../reference/ft2-header_file_macros#FT_GLYPH_H)
 header file.
 
     #include FT_GLYPH_H
@@ -761,13 +761,13 @@ how to do it.
 The following steps are performed.
 
 * Create a variable named `glyph`, of type
-  [`FT_Glyph`](../reference/ft2-glyph_management.html#FT_Glyph).  This is a
+  [`FT_Glyph`](../reference/ft2-glyph_management#FT_Glyph).  This is a
   handle (pointer) to an individual glyph image.
 * Load the glyph image in the normal way into the face's glyph slot.  We don't
   use `FT_LOAD_RENDER` because we want to grab a scalable glyph image that we
   can transform later on.
 * Copy the glyph image from the slot into a new `FT_Glyph` object by calling
-  [`FT_Get_Glyph`](../reference/ft2-glyph_management.html#FT_Get_Glyph).  This
+  [`FT_Get_Glyph`](../reference/ft2-glyph_management#FT_Get_Glyph).  This
   function returns an error code and sets `glyph`.
 
 It is important to note that the extracted glyph is in the same format as the
@@ -777,7 +777,7 @@ You can access the field `glyph->format` if you want to know exactly how the
 glyph is modeled and stored.
 
 A new glyph object can be destroyed with a call to
-[`FT_Done_Glyph`](../reference/ft2-glyph_management.html#FT_Done_Glyph).
+[`FT_Done_Glyph`](../reference/ft2-glyph_management#FT_Done_Glyph).
 
 The glyph object contains exactly one glyph image and a 2D vector representing
 the glyph's advance in 16.16 fixed-point coordinates.  The latter can be
@@ -792,10 +792,10 @@ of relying on `FT_Done_FreeType` doing all the clean-up.
 If the glyph image is scalable (i.e., if `glyph->format` is not equal to
 `FT_GLYPH_FORMAT_BITMAP`), it is possible to transform the image anytime by a
 call to
-[`FT_Glyph_Transform`](../reference/ft2-glyph_management.html#FT_Glyph_Transform).
+[`FT_Glyph_Transform`](../reference/ft2-glyph_management#FT_Glyph_Transform).
 
 You can also copy a single glyph image with
-[`FT_Glyph_Copy`](../reference/ft2-glyph_management.html#FT_Glyph_Copy).
+[`FT_Glyph_Copy`](../reference/ft2-glyph_management#FT_Glyph_Copy).
 
     FT_Glyph   glyph, glyph2;
     FT_Matrix  matrix;
@@ -831,7 +831,7 @@ vector in the glyph; you thus don't need to recompute it.
 
 You can also retrieve the control (bounding) box of any glyph image (scalable
 or not) through the
-[`FT_Glyph_Get_CBox`](../reference/ft2-glyph_management.html#FT_Glyph_Get_CBox)
+[`FT_Glyph_Get_CBox`](../reference/ft2-glyph_management#FT_Glyph_Get_CBox)
 function.
 
     FT_BBox  bbox;
@@ -870,7 +870,7 @@ Finally, to get the bounding box in grid-fitted pixel coordinates, set
 `bbox_mode` to `FT_GLYPH_BBOX_PIXELS`.
 
 [Computing _exact_ bounding boxes can be done with function
-[`FT_Outline_Get_BBox`](../reference/ft2-outline_processing.html#FT_Outline_Get_BBox),
+[`FT_Outline_Get_BBox`](../reference/ft2-outline_processing#FT_Outline_Get_BBox),
 at the cost of slower execution.  You probably don't need with the possible
 exception of rotated glyphs.]
 
@@ -878,7 +878,7 @@ exception of rotated glyphs.]
 
 You may need to convert the glyph object to a bitmap once you have conveniently
 cached or transformed it.  This can be done easily with the
-[`FT_Glyph_To_Bitmap`](../reference/ft2-glyph_management.html) function, which
+[`FT_Glyph_To_Bitmap`](../reference/ft2-glyph_management) function, which
 handles any glyph object.
 
     FT_Vector  origin;
@@ -914,7 +914,7 @@ The new glyph object always contains a bitmap (if no error is returned), and
 you must _typecast_ its handle to the `FT_BitmapGlyph` type in order to access
 its content.  This type is a sort of 'subclass' of `FT_Glyph` that contains
 additional fields (see
-[`FT_BitmapGlyphRec`](../reference/ft2-glyph_management.html#FT_BitmapGlyphRec)).
+[`FT_BitmapGlyphRec`](../reference/ft2-glyph_management#FT_BitmapGlyphRec)).
 
 `left`| Just like the `bitmap_left` field of a glyph slot, this is the horizontal distance from the glyph origin (0,0) to the leftmost pixel of the glyph bitmap.  It is expressed in integer pixels.
 `top`| Just like the `bitmap_top` field of a glyph slot, this is the vertical distance from the glyph origin (0,0) to the topmost pixel of the glyph bitmap (more precise, to the pixel just above the bitmap).  This distance is expressed in integer pixels, and is positive for upwards y.
@@ -957,7 +957,7 @@ to various discrepancies in font formats), unfortunately.
 Each size object also contains a scaled version of some of the global metrics
 described above, to be directly accessed through the `face->size->metrics`
 structure (of type
-[`FT_Size_Metrics`](../reference/ft2-base_interface.html#FT_Size_Metrics)).
+[`FT_Size_Metrics`](../reference/ft2-base_interface#FT_Size_Metrics)).
 _No rounding or grid-fitting is performed for those values_.  They are also
 completely independent of any hinting process.  In other words, don't rely on
 them to get exact metrics at the pixel level.  They are expressed in 26.6 pixel
@@ -965,7 +965,7 @@ format.
 
 `ascender` | The scaled version of the original design ascender.
 `descender`| The scaled version of the original design descender.
-`height`   |   The scaled version of the original design text height (the vertical distance from one baseline to the next).  This is probably the only field you should really use in this structure.  Be careful not to confuse it with the 'height' field in the [`FT_Glyph_Metrics`](../reference/ft2-base_interface.html#FT_Glyph_Metrics) structure.
+`height`   |   The scaled version of the original design text height (the vertical distance from one baseline to the next).  This is probably the only field you should really use in this structure.  Be careful not to confuse it with the 'height' field in the [`FT_Glyph_Metrics`](../reference/ft2-base_interface#FT_Glyph_Metrics) structure.
 `max_advance`| The scaled version of the original design maximum advance.
 
 Note that the `face->size->metrics` structure contains other fields that are
@@ -999,8 +999,8 @@ is the Type 1 format where glyph images are stored in files with extension
 `.afm` or `.pfm`.
 
 FreeType 2 allows you to deal with this, by providing the
-[`FT_Attach_File`](../reference/ft2-base_interface.html#FT_Attach_File) and
-[`FT_Attach_Stream`](../reference/ft2-base_interface.html#FT_Attach_Stream)
+[`FT_Attach_File`](../reference/ft2-base_interface#FT_Attach_File) and
+[`FT_Attach_Stream`](../reference/ft2-base_interface#FT_Attach_Stream)
 APIs.  Both functions are used to load additional metrics into a face object by
 reading them from an additional format-specific file.  Here an example, opening
 a Type 1 font.
@@ -1015,7 +1015,7 @@ a Type 1 font.
 
 Note that `FT_Attach_Stream` is similar to `FT_Attach_File` except that it
 doesn't take a C string to name the extra file but an
-[`FT_Stream`](../reference/ft2-system_interface.html#FT_StreamRec) handle.
+[`FT_Stream`](../reference/ft2-system_interface#FT_StreamRec) handle.
 Also, _reading a metrics file is in no way mandatory_.
 
 Finally, the file attachment APIs are very generic and can be used to load any
@@ -1024,7 +1024,7 @@ content is entirely font format specific.
 
 FreeType 2 allows you to retrieve the kerning information between two glyphs
 through the
-[`FT_Get_Kerning`](../reference/ft2-base_interface.html#FT_Get_Kerning)
+[`FT_Get_Kerning`](../reference/ft2-base_interface#FT_Get_Kerning)
 function.
 
     FT_Vector  kerning;
@@ -1612,7 +1612,7 @@ _outline_, for each glyph in a face.  Each outline is defined in an abstract
 grid called the _design space_, with coordinates expressed in _font units_.
 When a glyph image is loaded, the font driver usually scales the outline to
 device space according to the current character pixel size found in an
-[`FT_Size`](../reference/ft2-base_interface.html#FT_Size) object.  The driver
+[`FT_Size`](../reference/ft2-base_interface#FT_Size) object.  The driver
 may also modify the scaled outline in order to significantly improve its
 appearance on a pixel-based surface (a process known as _hinting_ or
 _grid-fitting_).
@@ -1644,13 +1644,13 @@ You should check that a font face contains scalable glyph images by using the
 `FT_IS_SCALABLE` macro, which returns true if appropriate.
 
 When you call the function
-[`FT_Set_Pixel_Sizes`](../reference/ft2-base_interface.html#FT_Set_Pixel_Sizes),
+[`FT_Set_Pixel_Sizes`](../reference/ft2-base_interface#FT_Set_Pixel_Sizes),
 you are specifying the value of `pixel_size_x` and `pixel_size_y` FreeType
 shall use.  The library will immediately compute the values of `x_scale` and
 `y_scale`.
 
 When you call the function
-[`FT_Set_Char_Size`](../reference/ft2-base_interface.html#FT_Set_Char_Size),
+[`FT_Set_Char_Size`](../reference/ft2-base_interface#FT_Set_Char_Size),
 you are specifying the character size in physical _points_, which is used,
 along with the device's resolutions, to compute the character pixel size and
 the corresponding scaling factors.
@@ -1666,7 +1666,7 @@ of the character pixel size and scaling factors as fields of the
 
 You can scale a distance expressed in font units to 26.6 pixel format directly
 with the help of the
-[`FT_MulFix`](../reference/ft2-computations.html#FT_MulFix) function.
+[`FT_MulFix`](../reference/ft2-computations#FT_MulFix) function.
 
     /* convert design distances to 1/64th of pixels */
     pixels_x = FT_MulFix( design_x, face->size->metrics.x_scale );
