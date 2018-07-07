@@ -16,7 +16,7 @@
   <li>
   {% endif %}
       {% if folder.url %}
-      <a href="{{folder.url}}">{{ folder.title }}</a>
+      <a href="{{site.baseurl}}{{infolder}}/{{folder.url}}">{{ folder.title }}</a>
       {% else %}
       <a href="#">{{ folder.title }}</a>
       <ul>
