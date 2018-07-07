@@ -1416,11 +1416,11 @@
 <p>A pointer to an array of <code>n_points</code> <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a> elements, giving the outline's point coordinates.</p>
 </td></tr>
 <tr><td class="val" id="tags">tags</td><td class="desc">
-<p>A pointer to an array of <code>n_points</code> chars, giving each outline point's type.
-If bit&nbsp;0 is unset, the point is &lsquo;off&rsquo; the curve, i.e., a Bezier control point, while it is &lsquo;on&rsquo; if set.
-Bit&nbsp;1 is meaningful for &lsquo;off&rsquo; points only. If set, it indicates a third-order Bezier arc control point; and a second-order control point if unset.
-If bit&nbsp;2 is set, bits 5-7 contain the drop-out mode (as defined in the OpenType specification; the value is the same as the argument to the SCANMODE instruction).
-Bits 3 and&nbsp;4 are reserved for internal purposes.</p>
+<p>A pointer to an array of <code>n_points</code> chars, giving each outline point's type.</p>
+<p>If bit&nbsp;0 is unset, the point is &lsquo;off&rsquo; the curve, i.e., a Bezier control point, while it is &lsquo;on&rsquo; if set.</p>
+<p>Bit&nbsp;1 is meaningful for &lsquo;off&rsquo; points only. If set, it indicates a third-order Bezier arc control point; and a second-order control point if unset.</p>
+<p>If bit&nbsp;2 is set, bits 5-7 contain the drop-out mode (as defined in the OpenType specification; the value is the same as the argument to the SCANMODE instruction).</p>
+<p>Bits 3 and&nbsp;4 are reserved for internal purposes.</p>
 </td></tr>
 <tr><td class="val" id="contours">contours</td><td class="desc">
 <p>An array of <code>n_contours</code> shorts, giving the end point of each contour within the outline. For example, the first contour is defined by the points &lsquo;0&rsquo; to &lsquo;contours[0]&rsquo;, the second one is defined by the points &lsquo;contours[0]+1&rsquo; to &lsquo;contours[1]&rsquo;, etc.</p>

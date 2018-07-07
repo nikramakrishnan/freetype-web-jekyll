@@ -2173,10 +2173,10 @@
 <p>The number of pixels in bitmap row.</p>
 </td></tr>
 <tr><td class="val" id="pitch">pitch</td><td class="desc">
-<p>The pitch's absolute value is the number of bytes taken by one bitmap row, including padding. However, the pitch is positive when the bitmap has a &lsquo;down&rsquo; flow, and negative when it has an &lsquo;up&rsquo; flow. In all cases, the pitch is an offset to add to a bitmap pointer in order to go down one row.
-Note that &lsquo;padding&rsquo; means the alignment of a bitmap to a byte border, and FreeType functions normally align to the smallest possible integer value.
-For the B/W rasterizer, &lsquo;pitch&rsquo; is always an even number.
-To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/index.html#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file <code>example2.cpp</code> in the tutorial for a demonstration.</p>
+<p>The pitch's absolute value is the number of bytes taken by one bitmap row, including padding. However, the pitch is positive when the bitmap has a &lsquo;down&rsquo; flow, and negative when it has an &lsquo;up&rsquo; flow. In all cases, the pitch is an offset to add to a bitmap pointer in order to go down one row.</p>
+<p>Note that &lsquo;padding&rsquo; means the alignment of a bitmap to a byte border, and FreeType functions normally align to the smallest possible integer value.</p>
+<p>For the B/W rasterizer, &lsquo;pitch&rsquo; is always an even number.</p>
+<p>To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/index.html#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file <code>example2.cpp</code> in the tutorial for a demonstration.</p>
 </td></tr>
 <tr><td class="val" id="buffer">buffer</td><td class="desc">
 <p>A typeless pointer to the bitmap buffer. This value should be aligned on 32-bit boundaries in most cases.</p>

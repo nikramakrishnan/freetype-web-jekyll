@@ -1415,12 +1415,12 @@
 <p>This flag is set to indicate that an anti-aliased glyph image should be generated. Otherwise, it will be monochrome (1-bit).</p>
 </td></tr>
 <tr><td class="val" id="ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</td><td class="desc">
-<p>This flag is set to indicate direct rendering. In this mode, client applications must provide their own span callback. This lets them directly draw or compose over an existing bitmap. If this bit is not set, the target pixmap's buffer <em>must</em> be zeroed before rendering.
-Direct rendering is only possible with anti-aliased glyphs.</p>
+<p>This flag is set to indicate direct rendering. In this mode, client applications must provide their own span callback. This lets them directly draw or compose over an existing bitmap. If this bit is not set, the target pixmap's buffer <em>must</em> be zeroed before rendering.</p>
+<p>Direct rendering is only possible with anti-aliased glyphs.</p>
 </td></tr>
 <tr><td class="val" id="ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</td><td class="desc">
-<p>This flag is only used in direct rendering mode. If set, the output will be clipped to a box specified in the <code>clip_box</code> field of the <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a> structure.
-Note that by default, the glyph bitmap is clipped to the target pixmap, except in direct rendering mode where all spans are generated if no clipping box is set.</p>
+<p>This flag is only used in direct rendering mode. If set, the output will be clipped to a box specified in the <code>clip_box</code> field of the <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a> structure.</p>
+<p>Note that by default, the glyph bitmap is clipped to the target pixmap, except in direct rendering mode where all spans are generated if no clipping box is set.</p>
 </td></tr>
 </table>
 
