@@ -390,7 +390,6 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .nav > li > a {
-    font-size: large;
     line-height: 140%;
     padding: 4px 10px;
 }
@@ -882,7 +881,7 @@ span.soft {
 @media (min-width: 1000px) {
 
     ul#ft_sidebar {
-        width: 225px;
+        width: 250px;
     }
 }
 

@@ -16,23 +16,49 @@ $( document ).ready(function() {
     });
 
     /**
-     * AnchorJS
-     */
+    * AnchorJS
+    */
     anchors.add('h2,h3,h4,h5');
 
 });
 
 function checkOffset() {
     if($('.fixed').offset().top + $('.fixed').height() 
-                                           >= $('.bottom-bar').offset().top - 10)
-        $('.fixed').css('max-height', '60%');
+    >= $('.bottom-bar').offset().top - 10)
+    $('.fixed').css('max-height', '60%');
     if($(document).scrollTop() + window.innerHeight < $('.bottom-bar').offset().top)
     $('.fixed').css('max-height', '80%'); // restore when you scroll up
 }
+
+// Add a bottom bar if the document length exceeds the window height.
+// Additionally ensure that the TOC background reaches the bottom of the
+// window.
+
+function addBottomBar() {
+    var columnHeight = $('#tg-sb-content').height();
+    var topBarHeight = $('.navbar-static-top').height();
+    var winHeight = $(window).height();
+
+    if (columnHeight + topBarHeight > winHeight) {
+        $('#TOC-bottom').css('height', columnHeight);
+        /* add bottom bar if it doesn't exist already */
+        if ($('.bottom-bar').length == 0) {
+            $('body').append('<div class="bottom-bar"></div>');
+        }
+    }
+    else {
+        $('.bottom-bar').remove();
+    }
+}
+
+
 $(document).scroll(function() {
     checkOffset();
 });
 
+$(window).load(function() {
+    addBottomBar();
+});
 
 // needed for nav tabs on pages. See Formatting > Nav tabs for more details.
 // script from http://stackoverflow.com/questions/10523433/how-do-i-keep-the-current-tab-active-with-twitter-bootstrap-after-a-page-reload
