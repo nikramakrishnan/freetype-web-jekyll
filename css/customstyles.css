@@ -383,13 +383,14 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .nav li a {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     padding: 2px 10px;
     background-color: #f1f1f1;
 }
 
 .nav > li > a {
+    font-size: 16px;
     line-height: 140%;
     padding: 4px 10px;
 }
