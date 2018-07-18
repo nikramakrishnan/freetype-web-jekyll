@@ -194,4 +194,4 @@ for `make` that is both a lot easier to use and more powerful.
 -   Jam only does project builds, it is not a configuration tool and is
     trivially compatible with Autoconf on Unix.
 
-Find more information on [the FT Jam page](jam/index.html).
+Find more information on [the FT Jam page](jam.html).
