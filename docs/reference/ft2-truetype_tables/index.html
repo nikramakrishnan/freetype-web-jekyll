@@ -1141,8 +1141,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1177,8 +1177,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -2181,7 +2181,7 @@
 <p>A list of valid values for the <code>encoding_id</code> for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.</p>
 <h4>values</h4>
 
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="tt_apple_id_default">TT_APPLE_ID_DEFAULT</td><td class="desc">
 <p>Unicode version 1.0.</p>
 </td></tr>
@@ -2708,7 +2708,7 @@
 
 <p>Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a>. These values are also used as return values for function <a href="../ft2-truetype_tables/index.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.</p>
 <p>The canonical source for Microsoft's IDs is</p>
-<p><a href="https://www.microsoft.com/globaldev/reference/lcid-all.mspx">https://www.microsoft.com/globaldev/reference/lcid-all.mspx</a> ,</p>
+<p><a href="https://docs.microsoft.com/en-us/windows/desktop/Intl/language-identifier-constants-and-strings">https://docs.microsoft.com/en-us/windows/desktop/Intl/language-identifier-constants-and-strings</a> ,</p>
 <p>however, we only provide macros for language identifiers present in the OpenType specification: Microsoft has abandoned the concept of LCIDs (language code identifiers), and format&nbsp;1 of the &lsquo;name&rsquo; table provides a better mechanism for languages not covered here.</p>
 <p>More legacy values not listed in the reference can be found in the <a href="../ft2-header_file_macros/index.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a> header file.</p>
 <hr>
@@ -3200,7 +3200,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The FreeType Project</a>.
+            Copyright 2018 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by

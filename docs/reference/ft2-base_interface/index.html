@@ -1526,8 +1526,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1562,8 +1562,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -2329,7 +2329,7 @@
 <p>Other encodings might be defined in the future.</p>
 <h4>values</h4>
 
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="ft_encoding_none">FT_ENCODING_NONE</td><td class="desc">
 <p>The encoding value&nbsp;0 is reserved for all formats except BDF, PCF, and Windows FNT; see below for more information.</p>
 </td></tr>
@@ -3913,7 +3913,7 @@
 <p>An enumeration type that lists the supported size request types, i.e., what input size (in font units) maps to the requested output size (in pixels, as computed from the arguments of <a href="../ft2-base_interface/index.html#ft_size_request">FT_Size_Request</a>).</p>
 <h4>values</h4>
 
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="ft_size_request_type_nominal">FT_SIZE_REQUEST_TYPE_NOMINAL</td><td class="desc">
 <p>The nominal size. The <code>units_per_EM</code> field of <a href="../ft2-base_interface/index.html#ft_facerec">FT_FaceRec</a> is used to determine both scaling values.</p>
 <p>This is the standard scaling found in most applications. In particular, use this size request type for TrueType fonts if they provide optical scaling or something similar. Note, however, that <code>units_per_EM</code> is a rather abstract value which bears no relation to the actual size of the glyphs in a font.</p>
@@ -4862,7 +4862,7 @@
 <p>A list of bit flags used in the <code>face_flags</code> field of the <a href="../ft2-base_interface/index.html#ft_facerec">FT_FaceRec</a> structure. They inform client applications of properties of the corresponding face.</p>
 <h4>values</h4>
 
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="ft_face_flag_scalable">FT_FACE_FLAG_SCALABLE</td><td class="desc">
 <p>The face contains outline glyphs. Note that a face can contain bitmap strikes also, i.e., a face can have both this flag and <a href="../ft2-base_interface/index.html#ft_face_flag_xxx">FT_FACE_FLAG_FIXED_SIZES</a> set.</p>
 </td></tr>
@@ -5311,7 +5311,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The FreeType Project</a>.
+            Copyright 2018 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by

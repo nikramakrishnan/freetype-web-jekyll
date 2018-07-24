@@ -1043,8 +1043,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1079,8 +1079,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-ot_validation/index.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="../ft2-gx_validation/index.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1484,7 +1484,7 @@
 <p>The memory manager to use to preload frames. This is set internally by FreeType and shouldn't be touched by stream implementations.</p>
 </td></tr>
 <tr><td class="val" id="cursor">cursor</td><td class="desc">
-<p>This field is set and used internally by FreeType when parsing frames.</p>
+<p>This field is set and used internally by FreeType when parsing frames. In particular, the <code>FT_GET_XXX</code> macros use this instead of the &lsquo;pos&rsquo; field.</p>
 </td></tr>
 <tr><td class="val" id="limit">limit</td><td class="desc">
 <p>This field is set and used internally by FreeType when parsing frames.</p>
@@ -1549,7 +1549,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The FreeType Project</a>.
+            Copyright 2018 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
