@@ -55,17 +55,9 @@ entries:
       url: overview.html#patents
       output: web, pdf
 
-  - title: Contact
+  - title: Documentation
     output: web, pdf
-    url: contact.html
-
-  - title: Licenses
-    output: web, pdf
-    url: license.html
-
-  - title: History
-    output: web, pdf
-    url: history.html
+    url: /docs
 
   - title: Download
     output: web, pdf
@@ -74,3 +66,15 @@ entries:
   - title: Development
     output: web, pdf
     url: development.html
+
+  - title: Licenses
+    output: web, pdf
+    url: license.html
+
+  - title: Contact
+    output: web, pdf
+    url: contact.html
+
+  - title: History
+    output: web, pdf
+    url: history.html
