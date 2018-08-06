@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>The Type 1 and CID drivers - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#the-type-1-and-cid-drivers" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                The Type 1 and CID drivers
               </span>
             
           
@@ -536,10 +540,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Controlling FreeType Modules
@@ -579,11 +585,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-t1_cid_driver.html" title="The Type 1 and CID drivers" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        The Type 1 and CID drivers
+      </label>
+    
+    <a href="ft2-t1_cid_driver.html" title="The Type 1 and CID drivers" class="md-nav__link md-nav__link--active">
       The Type 1 and CID drivers
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1027,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#controlling-freetype-modules">Controlling FreeType Modules</a> &raquo; The Type 1 and CID drivers</p>
+<hr />
+<h1 id="the-type-1-and-cid-drivers">The Type 1 and CID drivers<a class="headerlink" href="#the-type-1-and-cid-drivers" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>It is possible to control the behaviour of FreeType's Type&nbsp;1 and Type&nbsp;1 CID drivers with <a href="ft2-module_management.html#ft_property_set">FT_Property_Set</a> and <a href="ft2-module_management.html#ft_property_get">FT_Property_Get</a>.</p>
+<p>Behind the scenes, both drivers use the Adobe CFF engine for hinting; however, the used properties must be specified separately.</p>
+<p>The Type&nbsp;1 driver's module name is &lsquo;type1&rsquo;; the CID driver's module name is &lsquo;t1cid&rsquo;.</p>
+<p>Available properties are <a href="ft2-properties.html#hinting-engine">hinting-engine</a>, <a href="ft2-properties.html#no-stem-darkening">no-stem-darkening</a>, <a href="ft2-properties.html#darkening-parameters">darkening-parameters</a>, and <a href="ft2-properties.html#random-seed">random-seed</a>, as documented in the &lsquo;<a href="ft2-properties.html#properties">Driver properties</a>&rsquo; section.</p>
+<p>Please see the &lsquo;<a href="ft2-cff_driver.html#cff_driver">The CFF driver</a>&rsquo; section for more details on the new hinting engine.</p>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1089,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-cff_driver.html" title="The CFF driver" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                The CFF driver
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-tt_driver.html" title="The TrueType driver" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                The TrueType driver
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1150,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

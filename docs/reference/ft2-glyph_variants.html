@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>Unicode Variation Sequences - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#unicode-variation-sequences" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                Unicode Variation Sequences
               </span>
             
           
@@ -248,10 +252,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Core API
@@ -303,11 +309,84 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-glyph_variants.html" title="Unicode Variation Sequences" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Unicode Variation Sequences
+      </label>
+    
+    <a href="ft2-glyph_variants.html" title="Unicode Variation Sequences" class="md-nav__link md-nav__link--active">
       Unicode Variation Sequences
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharvariantindex" title="FT_Face_GetCharVariantIndex" class="md-nav__link">
+    FT_Face_GetCharVariantIndex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharvariantisdefault" title="FT_Face_GetCharVariantIsDefault" class="md-nav__link">
+    FT_Face_GetCharVariantIsDefault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getvariantselectors" title="FT_Face_GetVariantSelectors" class="md-nav__link">
+    FT_Face_GetVariantSelectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getvariantsofchar" title="FT_Face_GetVariantsOfChar" class="md-nav__link">
+    FT_Face_GetVariantsOfChar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharsofvariant" title="FT_Face_GetCharsOfVariant" class="md-nav__link">
+    FT_Face_GetCharsOfVariant
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1062,263 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharvariantindex" title="FT_Face_GetCharVariantIndex" class="md-nav__link">
+    FT_Face_GetCharVariantIndex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharvariantisdefault" title="FT_Face_GetCharVariantIsDefault" class="md-nav__link">
+    FT_Face_GetCharVariantIsDefault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getvariantselectors" title="FT_Face_GetVariantSelectors" class="md-nav__link">
+    FT_Face_GetVariantSelectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getvariantsofchar" title="FT_Face_GetVariantsOfChar" class="md-nav__link">
+    FT_Face_GetVariantsOfChar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_face_getcharsofvariant" title="FT_Face_GetCharsOfVariant" class="md-nav__link">
+    FT_Face_GetCharsOfVariant
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#core-api">Core API</a> &raquo; Unicode Variation Sequences</p>
+<hr />
+<h1 id="unicode-variation-sequences">Unicode Variation Sequences<a class="headerlink" href="#unicode-variation-sequences" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>Many characters, especially for CJK scripts, have variant forms. They are a sort of grey area somewhere between being totally irrelevant and semantically distinct; for this reason, the Unicode consortium decided to introduce Variation Sequences (VS), consisting of a Unicode base character and a variation selector instead of further extending the already huge number of characters.</p>
+<p>Unicode maintains two different sets, namely &lsquo;Standardized Variation Sequences&rsquo; and registered &lsquo;Ideographic Variation Sequences&rsquo; (IVS), collected in the &lsquo;Ideographic Variation Database&rsquo; (IVD).</p>
+<p><a href="https://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.txt">https://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.txt</a> <a href="https://unicode.org/reports/tr37/">https://unicode.org/reports/tr37/</a> <a href="https://unicode.org/ivd/">https://unicode.org/ivd/</a></p>
+<p>To date (January 2017), the character with the most ideographic variations is U+9089, having 32 such IVS.</p>
+<p>Three Mongolian Variation Selectors have the values U+180B-U+180D; 256 generic Variation Selectors are encoded in the ranges U+FE00-U+FE0F and U+E0100-U+E01EF. IVS currently use Variation Selectors from the range U+E0100-U+E01EF only.</p>
+<p>A VS consists of the base character value followed by a single Variation Selector. For example, to get the first variation of U+9089, you have to write the character sequence <code>U+9089 U+E0100</code>.</p>
+<p>Adobe and MS decided to support both standardized and ideographic VS with a new cmap subtable (format&nbsp;14). It is an odd subtable because it is not a mapping of input code points to glyphs, but contains lists of all variations supported by the font.</p>
+<p>A variation may be either &lsquo;default&rsquo; or &lsquo;non-default&rsquo; for a given font. A default variation is the one you will get for that code point if you look it up in the standard Unicode cmap. A non-default variation is a different glyph.</p>
+<h2 id="ft_face_getcharvariantindex">FT_Face_GetCharVariantIndex<a class="headerlink" href="#ft_face_getcharvariantindex" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_uint">FT_UInt</a> )
+  <b>FT_Face_GetCharVariantIndex</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>   face,
+                               <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  charcode,
+                               <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  variantSelector );
+</pre>
+</div>
 
+<p>Return the glyph index of a given character code as modified by the variation selector.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the source face object.</p>
+</td></tr>
+<tr><td class="val" id="charcode">charcode</td><td class="desc">
+<p>The character code point in Unicode.</p>
+</td></tr>
+<tr><td class="val" id="variantselector">variantSelector</td><td class="desc">
+<p>The Unicode code point of the variation selector.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>The glyph index. 0&nbsp;means either &lsquo;undefined character code&rsquo;, or &lsquo;undefined selector code&rsquo;, or &lsquo;no variation selector cmap subtable&rsquo;, or &lsquo;current CharMap is not Unicode&rsquo;.</p>
+<h4>note</h4>
+
+<p>If you use FreeType to manipulate the contents of font files directly, be aware that the glyph index returned by this function doesn't always correspond to the internal indices used within the file. This is done to ensure that value&nbsp;0 always corresponds to the &lsquo;missing glyph&rsquo;.</p>
+<p>This function is only meaningful if a) the font has a variation selector cmap sub table, and b) the current charmap has a Unicode encoding.</p>
+<h4>since</h4>
+
+<p>2.3.6</p>
+<hr>
+
+<h2 id="ft_face_getcharvariantisdefault">FT_Face_GetCharVariantIsDefault<a class="headerlink" href="#ft_face_getcharvariantisdefault" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_int">FT_Int</a> )
+  <b>FT_Face_GetCharVariantIsDefault</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>   face,
+                                   <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  charcode,
+                                   <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  variantSelector );
+</pre>
+</div>
+
+<p>Check whether this variation of this Unicode character is the one to be found in the &lsquo;cmap&rsquo;.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the source face object.</p>
+</td></tr>
+<tr><td class="val" id="charcode">charcode</td><td class="desc">
+<p>The character codepoint in Unicode.</p>
+</td></tr>
+<tr><td class="val" id="variantselector">variantSelector</td><td class="desc">
+<p>The Unicode codepoint of the variation selector.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>1&nbsp;if found in the standard (Unicode) cmap, 0&nbsp;if found in the variation selector cmap, or -1 if it is not a variation.</p>
+<h4>note</h4>
+
+<p>This function is only meaningful if the font has a variation selector cmap subtable.</p>
+<h4>since</h4>
+
+<p>2.3.6</p>
+<hr>
+
+<h2 id="ft_face_getvariantselectors">FT_Face_GetVariantSelectors<a class="headerlink" href="#ft_face_getvariantselectors" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantSelectors</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>  face );
+</pre>
+</div>
+
+<p>Return a zero-terminated list of Unicode variation selectors found in the font.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the source face object.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>A pointer to an array of selector code points, or NULL if there is no valid variation selector cmap subtable.</p>
+<h4>note</h4>
+
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="ft2-base_interface.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<h4>since</h4>
+
+<p>2.3.6</p>
+<hr>
+
+<h2 id="ft_face_getvariantsofchar">FT_Face_GetVariantsOfChar<a class="headerlink" href="#ft_face_getvariantsofchar" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantsOfChar</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>   face,
+                             <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  charcode );
+</pre>
+</div>
+
+<p>Return a zero-terminated list of Unicode variation selectors found for the specified character code.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the source face object.</p>
+</td></tr>
+<tr><td class="val" id="charcode">charcode</td><td class="desc">
+<p>The character codepoint in Unicode.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>A pointer to an array of variation selector code points that are active for the given character, or NULL if the corresponding list is empty.</p>
+<h4>note</h4>
+
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="ft2-base_interface.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<h4>since</h4>
+
+<p>2.3.6</p>
+<hr>
+
+<h2 id="ft_face_getcharsofvariant">FT_Face_GetCharsOfVariant<a class="headerlink" href="#ft_face_getcharsofvariant" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetCharsOfVariant</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>   face,
+                             <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>  variantSelector );
+</pre>
+</div>
+
+<p>Return a zero-terminated list of Unicode character codes found for the specified variation selector.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the source face object.</p>
+</td></tr>
+<tr><td class="val" id="variantselector">variantSelector</td><td class="desc">
+<p>The variation selector code point in Unicode.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>A list of all the code points that are specified by this selector (both default and non-default codes are returned) or NULL if there is no valid cmap or the variation selector is invalid.</p>
+<h4>note</h4>
+
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="ft2-base_interface.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<h4>since</h4>
+
+<p>2.3.6</p>
+<hr>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1331,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-base_interface.html" title="Base Interface" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Base Interface
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-color_management.html" title="Glyph Color Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glyph Color Management
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1392,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

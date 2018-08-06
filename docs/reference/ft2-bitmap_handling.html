@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>Bitmap Handling - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#bitmap-handling" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                Bitmap Handling
               </span>
             
           
@@ -692,10 +696,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
     <label class="md-nav__link" for="nav-8">
       Support API
@@ -759,11 +765,98 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-bitmap_handling.html" title="Bitmap Handling" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Bitmap Handling
+      </label>
+    
+    <a href="ft2-bitmap_handling.html" title="Bitmap Handling" class="md-nav__link md-nav__link--active">
       Bitmap Handling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_init" title="FT_Bitmap_Init" class="md-nav__link">
+    FT_Bitmap_Init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_copy" title="FT_Bitmap_Copy" class="md-nav__link">
+    FT_Bitmap_Copy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_embolden" title="FT_Bitmap_Embolden" class="md-nav__link">
+    FT_Bitmap_Embolden
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_convert" title="FT_Bitmap_Convert" class="md-nav__link">
+    FT_Bitmap_Convert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_blend" title="FT_Bitmap_Blend" class="md-nav__link">
+    FT_Bitmap_Blend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_glyphslot_own_bitmap" title="FT_GlyphSlot_Own_Bitmap" class="md-nav__link">
+    FT_GlyphSlot_Own_Bitmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_done" title="FT_Bitmap_Done" class="md-nav__link">
+    FT_Bitmap_Done
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1076,365 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_init" title="FT_Bitmap_Init" class="md-nav__link">
+    FT_Bitmap_Init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_copy" title="FT_Bitmap_Copy" class="md-nav__link">
+    FT_Bitmap_Copy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_embolden" title="FT_Bitmap_Embolden" class="md-nav__link">
+    FT_Bitmap_Embolden
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_convert" title="FT_Bitmap_Convert" class="md-nav__link">
+    FT_Bitmap_Convert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_blend" title="FT_Bitmap_Blend" class="md-nav__link">
+    FT_Bitmap_Blend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_glyphslot_own_bitmap" title="FT_GlyphSlot_Own_Bitmap" class="md-nav__link">
+    FT_GlyphSlot_Own_Bitmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_bitmap_done" title="FT_Bitmap_Done" class="md-nav__link">
+    FT_Bitmap_Done
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#support-api">Support API</a> &raquo; Bitmap Handling</p>
+<hr />
+<h1 id="bitmap-handling">Bitmap Handling<a class="headerlink" href="#bitmap-handling" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>This section contains functions for handling <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a> objects. Note that none of the functions changes the bitmap's &lsquo;flow&rsquo; (as indicated by the sign of the &lsquo;pitch&rsquo; field in <code>FT_Bitmap</code>).</p>
+<h2 id="ft_bitmap_init">FT_Bitmap_Init<a class="headerlink" href="#ft_bitmap_init" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <span class="keyword">void</span> )
+  <b>FT_Bitmap_Init</b>( <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *abitmap );
 
+  /* deprecated */
+  FT_EXPORT( <span class="keyword">void</span> )
+  FT_Bitmap_New( <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *abitmap );
+</pre>
+</div>
+
+<p>Initialize a pointer to an <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a> structure.</p>
+<h4>inout</h4>
+
+<table class="fields">
+<tr><td class="val" id="abitmap">abitmap</td><td class="desc">
+<p>A pointer to the bitmap structure.</p>
+</td></tr>
+</table>
+
+<h4>note</h4>
+
+<p>A deprecated name for the same function is <code>FT_Bitmap_New</code>.</p>
+<hr>
+
+<h2 id="ft_bitmap_copy">FT_Bitmap_Copy<a class="headerlink" href="#ft_bitmap_copy" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Bitmap_Copy</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>        library,
+                  <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *source,
+                  <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>        *target );
+</pre>
+</div>
+
+<p>Copy a bitmap into another one.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to a library object.</p>
+</td></tr>
+<tr><td class="val" id="source">source</td><td class="desc">
+<p>A handle to the source bitmap.</p>
+</td></tr>
+</table>
+
+<h4>output</h4>
+
+<table class="fields">
+<tr><td class="val" id="target">target</td><td class="desc">
+<p>A handle to the target bitmap.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<hr>
+
+<h2 id="ft_bitmap_embolden">FT_Bitmap_Embolden<a class="headerlink" href="#ft_bitmap_embolden" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Bitmap_Embolden</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>  library,
+                      <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>*  bitmap,
+                      <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>      xStrength,
+                      <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>      yStrength );
+</pre>
+</div>
+
+<p>Embolden a bitmap. The new bitmap will be about <code>xStrength</code> pixels wider and <code>yStrength</code> pixels higher. The left and bottom borders are kept unchanged.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to a library object.</p>
+</td></tr>
+<tr><td class="val" id="xstrength">xStrength</td><td class="desc">
+<p>How strong the glyph is emboldened horizontally. Expressed in 26.6 pixel format.</p>
+</td></tr>
+<tr><td class="val" id="ystrength">yStrength</td><td class="desc">
+<p>How strong the glyph is emboldened vertically. Expressed in 26.6 pixel format.</p>
+</td></tr>
+</table>
+
+<h4>inout</h4>
+
+<table class="fields">
+<tr><td class="val" id="bitmap">bitmap</td><td class="desc">
+<p>A handle to the target bitmap.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>The current implementation restricts <code>xStrength</code> to be less than or equal to&nbsp;8 if bitmap is of pixel_mode <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_MONO</a>.</p>
+<p>If you want to embolden the bitmap owned by a <a href="ft2-base_interface.html#ft_glyphslotrec">FT_GlyphSlotRec</a>, you should call <a href="ft2-bitmap_handling.html#ft_glyphslot_own_bitmap">FT_GlyphSlot_Own_Bitmap</a> on the slot first.</p>
+<p>Bitmaps in <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY2</a> and <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a>@ format are converted to <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a> format (i.e., 8bpp).</p>
+<hr>
+
+<h2 id="ft_bitmap_convert">FT_Bitmap_Convert<a class="headerlink" href="#ft_bitmap_convert" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Bitmap_Convert</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>        library,
+                     <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *source,
+                     <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>        *target,
+                     <a href="ft2-basic_types.html#ft_int">FT_Int</a>            alignment );
+</pre>
+</div>
+
+<p>Convert a bitmap object with depth 1bpp, 2bpp, 4bpp, 8bpp or 32bpp to a bitmap object with depth 8bpp, making the number of used bytes per line (a.k.a. the &lsquo;pitch&rsquo;) a multiple of &lsquo;alignment&rsquo;.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to a library object.</p>
+</td></tr>
+<tr><td class="val" id="source">source</td><td class="desc">
+<p>The source bitmap.</p>
+</td></tr>
+<tr><td class="val" id="alignment">alignment</td><td class="desc">
+<p>The pitch of the bitmap is a multiple of this argument. Common values are 1, 2, or 4.</p>
+</td></tr>
+</table>
+
+<h4>output</h4>
+
+<table class="fields">
+<tr><td class="val" id="target">target</td><td class="desc">
+<p>The target bitmap.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>It is possible to call <a href="ft2-bitmap_handling.html#ft_bitmap_convert">FT_Bitmap_Convert</a> multiple times without calling <a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a> (the memory is simply reallocated).</p>
+<p>Use <a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a> to finally remove the bitmap object.</p>
+<p>The &lsquo;library&rsquo; argument is taken to have access to FreeType's memory handling functions.</p>
+<hr>
+
+<h2 id="ft_bitmap_blend">FT_Bitmap_Blend<a class="headerlink" href="#ft_bitmap_blend" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Bitmap_Blend</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>         library,
+                   <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>*   source,
+                   <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>    source_offset,
+                   <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>*         target,
+                   <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>         *atarget_offset,
+                   <a href="ft2-color_management.html#ft_color">FT_Color</a>           color );
+</pre>
+</div>
+
+<p>Blend a bitmap onto another bitmap, using a given color.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to a library object.</p>
+</td></tr>
+<tr><td class="val" id="source">source</td><td class="desc">
+<p>The source bitmap, which can have any <a href="ft2-basic_types.html#ft_pixel_mode">FT_Pixel_Mode</a> format.</p>
+</td></tr>
+<tr><td class="val" id="source_offset">source_offset</td><td class="desc">
+<p>The offset vector to the upper left corner of the source bitmap in 26.6 pixel format. This can be a fractional pixel value.</p>
+</td></tr>
+<tr><td class="val" id="color">color</td><td class="desc">
+<p>The color used to draw &lsquo;source&rsquo; onto &lsquo;target&rsquo;.</p>
+</td></tr>
+</table>
+
+<h4>inout</h4>
+
+<table class="fields">
+<tr><td class="val" id="target">target</td><td class="desc">
+<p>A handle to an <code>FT_Bitmap</code> object. It should be either initialized as empty with a call to <a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a>, or it should be of type <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_BGRA</a>.</p>
+</td></tr>
+<tr><td class="val" id="atarget_offset">atarget_offset</td><td class="desc">
+<p>The offset vector to the upper left corner of the target bitmap in 26.6 pixel format. It should represent an integer offset; the function will set the lowest six bits to zero to enforce that.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>This function doesn't perform clipping.</p>
+<p>The bitmap in &lsquo;target&rsquo; gets allocated or reallocated as needed; the vector <code>atarget_offset</code> is updated accordingly.</p>
+<p>In case of allocation or reallocation, the bitmap's pitch is set to &lsquo;4&nbsp;*&nbsp;width&rsquo;. Both &lsquo;source&rsquo; and &lsquo;target&rsquo; must have the same bitmap flow (as indicated by the sign of the &lsquo;pitch&rsquo; field).</p>
+<h4>since</h4>
+
+<p>2.10</p>
+<hr>
+
+<h2 id="ft_glyphslot_own_bitmap">FT_GlyphSlot_Own_Bitmap<a class="headerlink" href="#ft_glyphslot_own_bitmap" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_GlyphSlot_Own_Bitmap</b>( <a href="ft2-base_interface.html#ft_glyphslot">FT_GlyphSlot</a>  slot );
+</pre>
+</div>
+
+<p>Make sure that a glyph slot owns <code>slot-&gt;bitmap</code>.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="slot">slot</td><td class="desc">
+<p>The glyph slot.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>This function is to be used in combination with <a href="ft2-bitmap_handling.html#ft_bitmap_embolden">FT_Bitmap_Embolden</a>.</p>
+<hr>
+
+<h2 id="ft_bitmap_done">FT_Bitmap_Done<a class="headerlink" href="#ft_bitmap_done" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Bitmap_Done</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>  library,
+                  <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *bitmap );
+</pre>
+</div>
+
+<p>Destroy a bitmap object initialized with <a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a>.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to a library object.</p>
+</td></tr>
+<tr><td class="val" id="bitmap">bitmap</td><td class="desc">
+<p>The bitmap object to be freed.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>The &lsquo;library&rsquo; argument is taken to have access to FreeType's memory handling functions.</p>
+<hr>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1447,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-quick_advance.html" title="Quick retrieval of advance values" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Quick retrieval of advance values
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-raster.html" title="Scanline Converter" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Scanline Converter
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1508,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>GZIP Streams - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#gzip-streams" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                GZIP Streams
               </span>
             
           
@@ -692,10 +696,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
     <label class="md-nav__link" for="nav-8">
       Support API
@@ -819,11 +825,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-gzip.html" title="GZIP Streams" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GZIP Streams
+      </label>
+    
+    <a href="ft2-gzip.html" title="GZIP Streams" class="md-nav__link md-nav__link--active">
       GZIP Streams
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_stream_opengzip" title="FT_Stream_OpenGzip" class="md-nav__link">
+    FT_Stream_OpenGzip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_gzip_uncompress" title="FT_Gzip_Uncompress" class="md-nav__link">
+    FT_Gzip_Uncompress
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1041,154 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_stream_opengzip" title="FT_Stream_OpenGzip" class="md-nav__link">
+    FT_Stream_OpenGzip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_gzip_uncompress" title="FT_Gzip_Uncompress" class="md-nav__link">
+    FT_Gzip_Uncompress
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#support-api">Support API</a> &raquo; GZIP Streams</p>
+<hr />
+<h1 id="gzip-streams">GZIP Streams<a class="headerlink" href="#gzip-streams" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>This section contains the declaration of Gzip-specific functions.</p>
+<h2 id="ft_stream_opengzip">FT_Stream_OpenGzip<a class="headerlink" href="#ft_stream_opengzip" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_GZIP_H (freetype/ftgzip.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Stream_OpenGzip</b>( <a href="ft2-system_interface.html#ft_stream">FT_Stream</a>  stream,
+                      <a href="ft2-system_interface.html#ft_stream">FT_Stream</a>  source );
+</pre>
+</div>
 
+<p>Open a new stream to parse gzip-compressed font files. This is mainly used to support the compressed <code>*.pcf.gz</code> fonts that come with XFree86.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="stream">stream</td><td class="desc">
+<p>The target embedding stream.</p>
+</td></tr>
+<tr><td class="val" id="source">source</td><td class="desc">
+<p>The source stream.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>The source stream must be opened <em>before</em> calling this function.</p>
+<p>Calling the internal function <code>FT_Stream_Close</code> on the new stream will <strong>not</strong> call <code>FT_Stream_Close</code> on the source stream. None of the stream objects will be released to the heap.</p>
+<p>The stream implementation is very basic and resets the decompression process each time seeking backwards is needed within the stream.</p>
+<p>In certain builds of the library, gzip compression recognition is automatically handled when calling <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a> or <a href="ft2-base_interface.html#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a gzipped stream from it and re-open the face with it.</p>
+<p>This function may return <code>FT_Err_Unimplemented_Feature</code> if your build of FreeType was not compiled with zlib support.</p>
+<hr>
+
+<h2 id="ft_gzip_uncompress">FT_Gzip_Uncompress<a class="headerlink" href="#ft_gzip_uncompress" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_GZIP_H (freetype/ftgzip.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Gzip_Uncompress</b>( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>       memory,
+                      <a href="ft2-basic_types.html#ft_byte">FT_Byte</a>*        output,
+                      <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>*       output_len,
+                      <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_byte">FT_Byte</a>*  input,
+                      <a href="ft2-basic_types.html#ft_ulong">FT_ULong</a>        input_len );
+</pre>
+</div>
+
+<p>Decompress a zipped input buffer into an output buffer. This function is modeled after zlib's &lsquo;uncompress&rsquo; function.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="memory">memory</td><td class="desc">
+<p>A FreeType memory handle.</p>
+</td></tr>
+<tr><td class="val" id="input">input</td><td class="desc">
+<p>The input buffer.</p>
+</td></tr>
+<tr><td class="val" id="input_len">input_len</td><td class="desc">
+<p>The length of the input buffer.</p>
+</td></tr>
+</table>
+
+<h4>output</h4>
+
+<table class="fields">
+<tr><td class="val" id="output">output</td><td class="desc">
+<p>The output buffer.</p>
+</td></tr>
+</table>
+
+<h4>inout</h4>
+
+<table class="fields">
+<tr><td class="val" id="output_len">output_len</td><td class="desc">
+<p>Before calling the function, this is the total size of the output buffer, which must be large enough to hold the entire uncompressed data (so the size of the uncompressed data must be known in advance). After calling the function, <code>output_len</code> is the size of the used data in &lsquo;output&rsquo;.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>This function may return <code>FT_Err_Unimplemented_Feature</code> if your build of FreeType was not compiled with zlib support.</p>
+<h4>since</h4>
+
+<p>2.5.1</p>
+<hr>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1201,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-module_management.html" title="Module Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Module Management
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-lzw.html" title="LZW Streams" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                LZW Streams
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1262,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

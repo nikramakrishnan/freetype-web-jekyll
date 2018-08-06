@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>Subpixel Rendering - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#subpixel-rendering" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                Subpixel Rendering
               </span>
             
           
@@ -536,10 +540,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Controlling FreeType Modules
@@ -639,11 +645,84 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-lcd_rendering.html" title="Subpixel Rendering" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Subpixel Rendering
+      </label>
+    
+    <a href="ft2-lcd_rendering.html" title="Subpixel Rendering" class="md-nav__link md-nav__link--active">
       Subpixel Rendering
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_lcdfilter" title="FT_LcdFilter" class="md-nav__link">
+    FT_LcdFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdfilter" title="FT_Library_SetLcdFilter" class="md-nav__link">
+    FT_Library_SetLcdFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdfilterweights" title="FT_Library_SetLcdFilterWeights" class="md-nav__link">
+    FT_Library_SetLcdFilterWeights
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_lcdfivetapfilter" title="FT_LcdFiveTapFilter" class="md-nav__link">
+    FT_LcdFiveTapFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdgeometry" title="FT_Library_SetLcdGeometry" class="md-nav__link">
+    FT_Library_SetLcdGeometry
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1062,276 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_lcdfilter" title="FT_LcdFilter" class="md-nav__link">
+    FT_LcdFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdfilter" title="FT_Library_SetLcdFilter" class="md-nav__link">
+    FT_Library_SetLcdFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdfilterweights" title="FT_Library_SetLcdFilterWeights" class="md-nav__link">
+    FT_Library_SetLcdFilterWeights
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_lcdfivetapfilter" title="FT_LcdFiveTapFilter" class="md-nav__link">
+    FT_LcdFiveTapFilter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_library_setlcdgeometry" title="FT_Library_SetLcdGeometry" class="md-nav__link">
+    FT_Library_SetLcdGeometry
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#controlling-freetype-modules">Controlling FreeType Modules</a> &raquo; Subpixel Rendering</p>
+<hr />
+<h1 id="subpixel-rendering">Subpixel Rendering<a class="headerlink" href="#subpixel-rendering" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>FreeType provides two alternative subpixel rendering technologies. Should you #define FT_CONFIG_OPTION_SUBPIXEL_RENDERING in your <code>ftoption.h</code>, this enables patented ClearType-style rendering. Otherwise, Harmony LCD rendering is enabled. These technologies are controlled differently and API described below, although always available, performs its function when appropriate method is enabled and does nothing otherwise.</p>
+<p>ClearType-style LCD rendering exploits the color-striped structure of LCD pixels, increasing the available resolution in the direction of the stripe (usually horizontal RGB) by a factor of&nbsp;3. Using the subpixels coverages unfiltered can create severe color fringes especially when rendering thin features. Indeed, to produce black-on-white text, the nearby color subpixels must be dimmed equally.</p>
+<p>A good 5-tap FIR filter should be applied to subpixel coverages regardless of pixel boundaries and should have these properties:</p>
+<p>1) It should be symmetrical, like {&nbsp;a, b, c, b, a&nbsp;}, to avoid any shifts in appearance.</p>
+<p>2) It should be color-balanced, meaning a&nbsp;+ b&nbsp;=&nbsp;c, to reduce color fringes by distributing the computed coverage for one subpixel to all subpixels equally.</p>
+<p>3) It should be normalized, meaning 2a&nbsp;+ 2b&nbsp;+ c&nbsp;=&nbsp;1.0 to maintain overall brightness.</p>
+<p>Boxy 3-tap filter {0, &#8531;, &#8531;, &#8531;, 0} is sharper but is less forgiving of non-ideal gamma curves of a screen (and viewing angles), beveled filters are fuzzier but more tolerant.</p>
+<p>Use the <a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a> or <a href="ft2-lcd_rendering.html#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a> API to specify a low-pass filter, which is then applied to subpixel-rendered bitmaps generated through <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a>.</p>
+<p>Harmony LCD rendering is suitable to panels with any regular subpixel structure, not just monitors with 3 color striped subpixels, as long as the color subpixels have fixed positions relative to the pixel center. In this case, each color channel is then rendered separately after shifting the outline opposite to the subpixel shift so that the coverage maps are aligned. This method is immune to color fringes because the shifts do not change integral coverage.</p>
+<p>The subpixel geometry must be specified by xy-coordinates for each subpixel. By convention they may come in the RGB order: {{-&#8531;, 0}, {0, 0}, {&#8531;, 0}} for standard RGB striped panel or {{-&#8537;, &frac14;}, {-&#8537;, -&frac14;}, {&#8531;, 0}} for a certain PenTile panel.</p>
+<p>Use the <a href="ft2-lcd_rendering.html#ft_library_setlcdgeometry">FT_Library_SetLcdGeometry</a> API to specify subpixel positions. If one follows the RGB order convention, the same order applies to the resulting <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD</a> and <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD_V</a> bitmaps. Note, however, that the coordinate frame for the latter must be rotated clockwise. Harmony with default LCD geometry is equivalent to ClearType with light filter.</p>
+<p>As a result of ClearType filtering or Harmony rendering, the dimensions of LCD bitmaps can be either wider or taller than the dimensions of the corresponding outline with regard to the pixel grid. For example, for <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a>, the filter adds 2&nbsp;subpixels to the left, and 2&nbsp;subpixels to the right. The bitmap offset values are adjusted accordingly, so clients shouldn't need to modify their layout and glyph positioning code when enabling the filter.</p>
+<p>The ClearType and Harmony rendering is applicable to glyph bitmaps rendered through <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a>, <a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a>, <a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a>, and <a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a>, when <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a> or <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a> is specified. This API does not control <a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a> and <a href="ft2-outline_processing.html#ft_outline_get_bitmap">FT_Outline_Get_Bitmap</a>.</p>
+<p>The described algorithms can completely remove color artefacts when combined with gamma-corrected alpha blending in linear space. Each of the 3&nbsp;alpha values (subpixels) must by independently used to blend one color channel. That is, red alpha blends the red channel of the text color with the red channel of the background pixel.</p>
+<h2 id="ft_lcdfilter">FT_LcdFilter<a class="headerlink" href="#ft_lcdfilter" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
+<div class = "codehilite">
+<pre>
+  <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_LcdFilter_
+  {
+    <a href="ft2-lcd_rendering.html#ft_lcd_filter_none">FT_LCD_FILTER_NONE</a>    = 0,
+    <a href="ft2-lcd_rendering.html#ft_lcd_filter_default">FT_LCD_FILTER_DEFAULT</a> = 1,
+    <a href="ft2-lcd_rendering.html#ft_lcd_filter_light">FT_LCD_FILTER_LIGHT</a>   = 2,
+    <a href="ft2-lcd_rendering.html#ft_lcd_filter_legacy1">FT_LCD_FILTER_LEGACY1</a> = 3,
+    <a href="ft2-lcd_rendering.html#ft_lcd_filter_legacy">FT_LCD_FILTER_LEGACY</a>  = 16,
 
+    FT_LCD_FILTER_MAX   /* do not remove */
+
+  } <b>FT_LcdFilter</b>;
+</pre>
+</div>
+
+<p>A list of values to identify various types of LCD filters.</p>
+<h4>values</h4>
+
+<table class="fields">
+<tr><td class="val" id="ft_lcd_filter_none">FT_LCD_FILTER_NONE</td><td class="desc">
+<p>Do not perform filtering. When used with subpixel rendering, this results in sometimes severe color fringes.</p>
+</td></tr>
+<tr><td class="val" id="ft_lcd_filter_default">FT_LCD_FILTER_DEFAULT</td><td class="desc">
+<p>This is a beveled, normalized, and color-balanced five-tap filter with weights of [0x08 0x4D 0x56 0x4D 0x08] in 1/256th units.</p>
+</td></tr>
+<tr><td class="val" id="ft_lcd_filter_light">FT_LCD_FILTER_LIGHT</td><td class="desc">
+<p>this is a boxy, normalized, and color-balanced three-tap filter with weights of [0x00 0x55 0x56 0x55 0x00] in 1/256th units.</p>
+</td></tr>
+<tr><td class="val" id="ft_lcd_filter_legacy">FT_LCD_FILTER_LEGACY</td><td class="desc">
+
+</td></tr>
+<tr><td class="val" id="ft_lcd_filter_legacy1">FT_LCD_FILTER_LEGACY1</td><td class="desc">
+<p>This filter corresponds to the original libXft color filter. It provides high contrast output but can exhibit really bad color fringes if glyphs are not extremely well hinted to the pixel grid. This filter is only provided for comparison purposes, and might be disabled or stay unsupported in the future. The second value is provided for compatibility with FontConfig, which historically used different enumeration, sometimes incorrectly forwarded to FreeType.</p>
+</td></tr>
+</table>
+
+<h4>since</h4>
+
+<p>2.3.0 (<code>FT_LCD_FILTER_LEGACY1</code> since 2.6.2)</p>
+<hr>
+
+<h2 id="ft_library_setlcdfilter">FT_Library_SetLcdFilter<a class="headerlink" href="#ft_library_setlcdfilter" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Library_SetLcdFilter</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>    library,
+                           <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LcdFilter</a>  filter );
+</pre>
+</div>
+
+<p>This function is used to apply color filtering to LCD decimated bitmaps, like the ones used when calling <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a> with <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a> or <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a>.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to the target library instance.</p>
+</td></tr>
+<tr><td class="val" id="filter">filter</td><td class="desc">
+<p>The filter type.</p>
+<p>You can use <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a> here to disable this feature, or <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_DEFAULT</a> to use a default filter that should work well on most LCD screens.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>This feature is always disabled by default. Clients must make an explicit call to this function with a &lsquo;filter&rsquo; value other than <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a> in order to enable it.</p>
+<p>Due to <strong>PATENTS</strong> covering subpixel rendering, this function doesn't do anything except returning <code>FT_Err_Unimplemented_Feature</code> if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.</p>
+<h4>since</h4>
+
+<p>2.3.0</p>
+<hr>
+
+<h2 id="ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights<a class="headerlink" href="#ft_library_setlcdfilterweights" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Library_SetLcdFilterWeights</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>      library,
+                                  <span class="keyword">unsigned</span> <span class="keyword">char</span>  *weights );
+</pre>
+</div>
+
+<p>This function can be used to enable LCD filter with custom weights, instead of using presets in <a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a>.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to the target library instance.</p>
+</td></tr>
+<tr><td class="val" id="weights">weights</td><td class="desc">
+<p>A pointer to an array; the function copies the first five bytes and uses them to specify the filter weights in 1/256th units.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>Due to <strong>PATENTS</strong> covering subpixel rendering, this function doesn't do anything except returning <code>FT_Err_Unimplemented_Feature</code> if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.</p>
+<p>LCD filter weights can also be set per face using <a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a> with <a href="ft2-parameter_tags.html#ft_param_tag_lcd_filter_weights">FT_PARAM_TAG_LCD_FILTER_WEIGHTS</a>.</p>
+<h4>since</h4>
+
+<p>2.4.0</p>
+<hr>
+
+<h2 id="ft_lcdfivetapfilter">FT_LcdFiveTapFilter<a class="headerlink" href="#ft_lcdfivetapfilter" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
+<div class = "codehilite">
+<pre>
+#<span class="keyword">define</span> FT_LCD_FILTER_FIVE_TAPS  5
+
+  <span class="keyword">typedef</span> <a href="ft2-basic_types.html#ft_byte">FT_Byte</a>  <b>FT_LcdFiveTapFilter</b>[FT_LCD_FILTER_FIVE_TAPS];
+</pre>
+</div>
+
+<p>A typedef for passing the five LCD filter weights to <a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a> within an <a href="ft2-base_interface.html#ft_parameter">FT_Parameter</a> structure.</p>
+<h4>since</h4>
+
+<p>2.8</p>
+<hr>
+
+<h2 id="ft_library_setlcdgeometry">FT_Library_SetLcdGeometry<a class="headerlink" href="#ft_library_setlcdgeometry" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+  <b>FT_Library_SetLcdGeometry</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>  library,
+                             <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>   sub[3] );
+</pre>
+</div>
+
+<p>This function can be used to modify default positions of color subpixels, which controls Harmony LCD rendering.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="library">library</td><td class="desc">
+<p>A handle to the target library instance.</p>
+</td></tr>
+<tr><td class="val" id="sub">sub</td><td class="desc">
+<p>A pointer to an array of 3 vectors in 26.6 fractional pixel format; the function modifies the default values, see the note below.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p>Subpixel geometry examples:</p>
+<ul>
+<li>
+<p>{{-21, 0}, {0, 0}, {21, 0}} is the default, corresponding to 3 color stripes shifted by a third of a pixel. This could be an RGB panel.</p>
+</li>
+<li>
+<p>{{21, 0}, {0, 0}, {-21, 0}} looks the same as the default but can specify a BGR panel instead, while keeping the bitmap in the same RGB888 format.</p>
+</li>
+<li>
+<p>{{0, 21}, {0, 0}, {0, -21}} is the vertical RGB, but the bitmap stays RGB888 as a result.</p>
+</li>
+<li>
+<p>{{-11, 16}, {-11, -16}, {22, 0}} is a certain PenTile arrangement.</p>
+</li>
+</ul>
+<p>This function does nothing and returns <code>FT_Err_Unimplemented_Feature</code> in the context of ClearType-style subpixel rendering when FT_CONFIG_OPTION_SUBPIXEL_RENDERING is defined in your build of the library.</p>
+<h4>since</h4>
+
+<p>2.10.0</p>
+<hr>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1344,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-parameter_tags.html" title="Parameter Tags" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Parameter Tags
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-cache_subsystem.html" title="Cache Sub-System" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Cache Sub-System
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1405,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

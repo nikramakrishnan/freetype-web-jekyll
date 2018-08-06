@@ -40,7 +40,7 @@
     
     
       
-        <title>FreeType-2.9.1 API Reference</title>
+        <title>The CFF driver - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#the-cff-driver" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                
+                The CFF driver
               </span>
             
           
@@ -536,10 +540,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Controlling FreeType Modules
@@ -567,11 +573,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="ft2-cff_driver.html" title="The CFF driver" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        The CFF driver
+      </label>
+    
+    <a href="ft2-cff_driver.html" title="The CFF driver" class="md-nav__link md-nav__link--active">
       The CFF driver
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -983,12 +1027,62 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#controlling-freetype-modules">Controlling FreeType Modules</a> &raquo; The CFF driver</p>
+<hr />
+<h1 id="the-cff-driver">The CFF driver<a class="headerlink" href="#the-cff-driver" title="Permanent link">&para;</a></h1>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>While FreeType's CFF driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="ft2-module_management.html#ft_property_set">FT_Property_Set</a> and <a href="ft2-module_management.html#ft_property_get">FT_Property_Get</a>.</p>
+<p>The CFF driver's module name is &lsquo;cff&rsquo;.</p>
+<p>Available properties are <a href="ft2-properties.html#hinting-engine">hinting-engine</a>, <a href="ft2-properties.html#no-stem-darkening">no-stem-darkening</a>, <a href="ft2-properties.html#darkening-parameters">darkening-parameters</a>, and <a href="ft2-properties.html#random-seed">random-seed</a>, as documented in the &lsquo;<a href="ft2-properties.html#properties">Driver properties</a>&rsquo; section.</p>
+<p><strong>Hinting and antialiasing principles of the new engine</strong></p>
+<p>The rasterizer is positioning horizontal features (e.g., ascender height &amp; x-height, or crossbars) on the pixel grid and minimizing the amount of antialiasing applied to them, while placing vertical features (vertical stems) on the pixel grid without hinting, thus representing the stem position and weight accurately. Sometimes the vertical stems may be only partially black. In this context, &lsquo;antialiasing&rsquo; means that stems are not positioned exactly on pixel borders, causing a fuzzy appearance.</p>
+<p>There are two principles behind this approach.</p>
+<p>1) No hinting in the horizontal direction: Unlike &lsquo;superhinted&rsquo; TrueType, which changes glyph widths to accommodate regular inter-glyph spacing, Adobe's approach is &lsquo;faithful to the design&rsquo; in representing both the glyph width and the inter-glyph spacing designed for the font. This makes the screen display as close as it can be to the result one would get with infinite resolution, while preserving what is considered the key characteristics of each glyph. Note that the distances between unhinted and grid-fitted positions at small sizes are comparable to kerning values and thus would be noticeable (and distracting) while reading if hinting were applied.</p>
+<p>One of the reasons to not hint horizontally is antialiasing for LCD screens: The pixel geometry of modern displays supplies three vertical subpixels as the eye moves horizontally across each visible pixel. On devices where we can be certain this characteristic is present a rasterizer can take advantage of the subpixels to add increments of weight. In Western writing systems this turns out to be the more critical direction anyway; the weights and spacing of vertical stems (see above) are central to Armenian, Cyrillic, Greek, and Latin type designs. Even when the rasterizer uses greyscale antialiasing instead of color (a necessary compromise when one doesn't know the screen characteristics), the unhinted vertical features preserve the design's weight and spacing much better than aliased type would.</p>
+<p>2) Alignment in the vertical direction: Weights and spacing along the y&nbsp;axis are less critical; what is much more important is the visual alignment of related features (like cap-height and x-height). The sense of alignment for these is enhanced by the sharpness of grid-fit edges, while the cruder vertical resolution (full pixels instead of &#8531; pixels) is less of a problem.</p>
+<p>On the technical side, horizontal alignment zones for ascender, x-height, and other important height values (traditionally called &lsquo;blue zones&rsquo;) as defined in the font are positioned independently, each being rounded to the nearest pixel edge, taking care of overshoot suppression at small sizes, stem darkening, and scaling.</p>
+<p>Hstems (this is, hint values defined in the font to help align horizontal features) that fall within a blue zone are said to be &lsquo;captured&rsquo; and are aligned to that zone. Uncaptured stems are moved in one of four ways, top edge up or down, bottom edge up or down. Unless there are conflicting hstems, the smallest movement is taken to minimize distortion.</p>
+                
+                  
+                
+              
               
                 
 
@@ -1001,6 +1095,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ft2-auto_hinter.html" title="The auto-hinter" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                The auto-hinter
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ft2-t1_cid_driver.html" title="The Type 1 and CID drivers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                The Type 1 and CID drivers
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1027,7 +1156,7 @@
     
       <script src="assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:""}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

@@ -18,8 +18,8 @@ This document is a *must-read* for any user of the library.
 
 ### The FreeType API Reference
 
--   [Table Of Contents](reference/ft2-toc)
--   [Index](reference/ft2-index)
+-   [Table Of Contents](reference/index.html)
+-   [Index](reference/ft2-index.html)
 
 ### [The Design of FreeType](design)
 
