@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.1">
+      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
     
     
       
@@ -1358,7 +1358,7 @@
               
                 
                 
-                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#support-api">Support API</a> &raquo; Module Management</p>
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../">Docs</a> &raquo; <a href="index.html#support-api">Support API</a> &raquo; Module Management</p>
 <hr />
 <h1 id="module-management">Module Management<a class="headerlink" href="#module-management" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
@@ -1481,7 +1481,7 @@
 </pre>
 </div>
 
-<p>The module class descriptor.</p>
+<p>The module class descriptor. While being a public structure necessary for FreeType's module bookkeeping, most of the fields are essentially internal, not to be used directly by an application.</p>
 <h4>fields</h4>
 
 <table class="fields">
@@ -1499,6 +1499,9 @@
 </td></tr>
 <tr><td class="val" id="module_requires">module_requires</td><td class="desc">
 <p>The version of FreeType this module requires, as a 16.16 fixed number (major.minor). Starts at version 2.0, i.e., 0x20000.</p>
+</td></tr>
+<tr><td class="val" id="module_interface">module_interface</td><td class="desc">
+<p>A typeless pointer to a structure (which varies between different modules) that holds the module's interface functions. This is essentially what <code>get_interface</code> returns.</p>
 </td></tr>
 <tr><td class="val" id="module_init">module_init</td><td class="desc">
 <p>The initializing function.</p>
@@ -1758,10 +1761,10 @@
 <p><code>FREETYPE_PROPERTIES</code> has the following syntax form (broken here into multiple lines for better readability).
 <div class="codehilite"><pre><span></span>  &lt;optional whitespace&gt;
   &lt;module-name1&gt; &#39;:&#39;
-  &lt;property-name1&gt; &#39;=&#39; &lt;property-value1&gt;
-  &lt;whitespace&gt;
+  @property-name1: &#39;=&#39; &lt;property-value1&gt;
+  @whitespace:
   &lt;module-name2&gt; &#39;:&#39;
-  &lt;property-name2&gt; &#39;=&#39; &lt;property-value2&gt;
+  @property-name2: &#39;=&#39; &lt;property-value2&gt;
   ...
 </pre></div></p>
 <p>Example:

@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.1">
+      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
     
     
       
@@ -1260,7 +1260,7 @@
               
                 
                 
-                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../../">Docs</a> &raquo; <a href="index.html#core-api">Core API</a> &raquo; Glyph Management</p>
+                <p><a href="https://www.freetype.org">FreeType</a> &raquo; <a href="../">Docs</a> &raquo; <a href="index.html#core-api">Core API</a> &raquo; Glyph Management</p>
 <hr />
 <h1 id="glyph-management">Glyph Management<a class="headerlink" href="#glyph-management" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
@@ -1693,7 +1693,7 @@
 
 <p>This function does nothing if the glyph format isn't scalable.</p>
 <p>The glyph image is translated with the &lsquo;origin&rsquo; vector before rendering.</p>
-<p>The first parameter is a pointer to an <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> handle, that will be <em>replaced</em> by this function (with newly allocated data). Typically, you would use (omitting error handling):</p>
+<p>The first parameter is a pointer to an <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> handle, that will be <em>replaced</em> by this function (with newly allocated data). Typically, you would use (omitting error handling):
 <div class="codehilite"><pre><span></span>  FT_Glyph        glyph;
   FT_BitmapGlyph  glyph_bitmap;
 
@@ -1708,7 +1708,7 @@
   if ( glyph-&gt;format != FT_GLYPH_FORMAT_BITMAP )
   {
     error = FT_Glyph_To_Bitmap( &amp;glyph, FT_RENDER_MODE_NORMAL,
-                                0, 1 );
+                                  0, 1 );
     if ( error ) // `glyph&#39; unchanged
       ...
   }
@@ -1721,9 +1721,8 @@
 
   // discard glyph image (bitmap or not)
   FT_Done_Glyph( glyph );
-</pre></div>
-
-<p>Here another example, again without error handling:</p>
+</pre></div></p>
+<p>Here another example, again without error handling:
 <div class="codehilite"><pre><span></span>  FT_Glyph  glyphs[MAX_GLYPHS]
 
 
@@ -1755,8 +1754,7 @@
 
   for ( idx = 0; i &lt; MAX_GLYPHS; i++ )
     FT_Done_Glyph( glyphs[idx] );
-</pre></div>
-
+</pre></div></p>
 <hr>
 
 <h2 id="ft_done_glyph">FT_Done_Glyph<a class="headerlink" href="#ft_done_glyph" title="Permanent link">&para;</a></h2>
