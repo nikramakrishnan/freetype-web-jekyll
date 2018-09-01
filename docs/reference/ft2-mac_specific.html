@@ -1199,7 +1199,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>example</h4>
 
-<p>This function can be used to create <a href="ft2-base_interface.html#ft_face">FT_Face</a> objects from fonts that are installed in the system as follows.
+<p>This function can be used to create <code><a href="ft2-base_interface.html#ft_face">FT_Face</a></code> objects from fonts that are installed in the system as follows.
 <div class="codehilite"><pre><span></span>  fond  = GetResource( &#39;FOND&#39;, fontName );
   error = FT_New_Face_From_FOND( library, fond, 0, &amp;face );
 </pre></div></p>
@@ -1230,10 +1230,10 @@
 
 <table class="fields">
 <tr><td class="val" id="pathspec">pathSpec</td><td class="desc">
-<p>FSSpec to the file. For passing to <a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>FSSpec to the file. For passing to <code><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>Index of the face. For passing to <code><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1267,10 +1267,10 @@
 
 <table class="fields">
 <tr><td class="val" id="pathspec">pathSpec</td><td class="desc">
-<p>FSSpec to the file. For passing to <a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>FSSpec to the file. For passing to <code><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>Index of the face. For passing to <code><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1305,13 +1305,13 @@
 
 <table class="fields">
 <tr><td class="val" id="path">path</td><td class="desc">
-<p>Buffer to store pathname of the file. For passing to <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a>. The client must allocate this buffer before calling this function.</p>
+<p>Buffer to store pathname of the file. For passing to <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code>. The client must allocate this buffer before calling this function.</p>
 </td></tr>
 <tr><td class="val" id="maxpathsize">maxPathSize</td><td class="desc">
 <p>Lengths of the buffer &lsquo;path&rsquo; that client allocated.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a>.</p>
+<p>Index of the face. For passing to <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1366,7 +1366,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a> is identical to <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a> except it accepts an FSSpec instead of a path.</p>
+<p><code><a href="ft2-mac_specific.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a></code> is identical to <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code> except it accepts an FSSpec instead of a path.</p>
 <hr>
 
 <h2 id="ft_new_face_from_fsref">FT_New_Face_From_FSRef<a class="headerlink" href="#ft_new_face_from_fsref" title="Permanent link">&para;</a></h2>
@@ -1415,7 +1415,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p><a href="ft2-mac_specific.html#ft_new_face_from_fsref">FT_New_Face_From_FSRef</a> is identical to <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a> except it accepts an FSRef instead of a path.</p>
+<p><code><a href="ft2-mac_specific.html#ft_new_face_from_fsref">FT_New_Face_From_FSRef</a></code> is identical to <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code> except it accepts an FSRef instead of a path.</p>
 <hr>
                 
                   

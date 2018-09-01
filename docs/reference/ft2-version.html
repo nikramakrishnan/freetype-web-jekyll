@@ -1137,7 +1137,7 @@
 </pre>
 </div>
 
-<p>Return the version of the FreeType library being used. This is useful when dynamically linking to the library, since one cannot use the macros <a href="ft2-version.html#freetype_xxx">FREETYPE_MAJOR</a>, <a href="ft2-version.html#freetype_xxx">FREETYPE_MINOR</a>, and <a href="ft2-version.html#freetype_xxx">FREETYPE_PATCH</a>.</p>
+<p>Return the version of the FreeType library being used. This is useful when dynamically linking to the library, since one cannot use the macros <code><a href="ft2-version.html#freetype_xxx">FREETYPE_MAJOR</a></code>, <code><a href="ft2-version.html#freetype_xxx">FREETYPE_MINOR</a></code>, and <code><a href="ft2-version.html#freetype_xxx">FREETYPE_PATCH</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1162,7 +1162,7 @@
 
 <h4>note</h4>
 
-<p>The reason why this function takes a &lsquo;library&rsquo; argument is because certain programs implement library initialization in a custom way that doesn't use <a href="ft2-base_interface.html#ft_init_freetype">FT_Init_FreeType</a>.</p>
+<p>The reason why this function takes a &lsquo;library&rsquo; argument is because certain programs implement library initialization in a custom way that doesn't use <code><a href="ft2-base_interface.html#ft_init_freetype">FT_Init_FreeType</a></code>.</p>
 <p>In such cases, the library version might not be available before the library object has been created.</p>
 <hr>
 
@@ -1238,7 +1238,7 @@
 </pre>
 </div>
 
-<p>These three macros identify the FreeType source code version. Use <a href="ft2-version.html#ft_library_version">FT_Library_Version</a> to access them at runtime.</p>
+<p>These three macros identify the FreeType source code version. Use <code><a href="ft2-version.html#ft_library_version">FT_Library_Version</a></code> to access them at runtime.</p>
 <h4>values</h4>
 
 <table class="fields">

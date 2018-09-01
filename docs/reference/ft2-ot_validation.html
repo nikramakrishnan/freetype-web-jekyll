@@ -1134,7 +1134,7 @@
 <p>A handle to the input face.</p>
 </td></tr>
 <tr><td class="val" id="validation_flags">validation_flags</td><td class="desc">
-<p>A bit field that specifies the tables to be validated. See <a href="ft2-ot_validation.html#ft_validate_otxxx">FT_VALIDATE_OTXXX</a> for possible values.</p>
+<p>A bit field that specifies the tables to be validated. See <code><a href="ft2-ot_validation.html#ft_validate_otxxx">FT_VALIDATE_OTXXX</a></code> for possible values.</p>
 </td></tr>
 </table>
 
@@ -1164,7 +1164,7 @@
 <h4>note</h4>
 
 <p>This function only works with OpenType fonts, returning an error otherwise.</p>
-<p>After use, the application should deallocate the five tables with <a href="ft2-ot_validation.html#ft_opentype_free">FT_OpenType_Free</a>. A NULL value indicates that the table either doesn't exist in the font, or the application hasn't asked for validation.</p>
+<p>After use, the application should deallocate the five tables with <code><a href="ft2-ot_validation.html#ft_opentype_free">FT_OpenType_Free</a></code>. A NULL value indicates that the table either doesn't exist in the font, or the application hasn't asked for validation.</p>
 <hr>
 
 <h2 id="ft_opentype_free">FT_OpenType_Free<a class="headerlink" href="#ft_opentype_free" title="Permanent link">&para;</a></h2>
@@ -1185,13 +1185,13 @@
 <p>A handle to the input face.</p>
 </td></tr>
 <tr><td class="val" id="table">table</td><td class="desc">
-<p>The pointer to the buffer that is allocated by <a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a>.</p>
+<p>The pointer to the buffer that is allocated by <code><a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a></code>.</p>
 </td></tr>
 </table>
 
 <h4>note</h4>
 
-<p>This function must be used to free the buffer allocated by <a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a> only.</p>
+<p>This function must be used to free the buffer allocated by <code><a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a></code> only.</p>
 <hr>
 
 <h2 id="ft_validate_otxxx">FT_VALIDATE_OTXXX<a class="headerlink" href="#ft_validate_otxxx" title="Permanent link">&para;</a></h2>
@@ -1214,7 +1214,7 @@
 </pre>
 </div>
 
-<p>A list of bit-field constants used with <a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a> to indicate which OpenType tables should be validated.</p>
+<p>A list of bit-field constants used with <code><a href="ft2-ot_validation.html#ft_opentype_validate">FT_OpenType_Validate</a></code> to indicate which OpenType tables should be validated.</p>
 <h4>values</h4>
 
 <table class="fields">

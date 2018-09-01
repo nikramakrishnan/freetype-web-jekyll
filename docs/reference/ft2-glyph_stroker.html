@@ -1472,7 +1472,7 @@
 </pre>
 </div>
 
-<p>These values are used to select a given stroke border in <a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> and <a href="ft2-glyph_stroker.html#ft_stroker_exportborder">FT_Stroker_ExportBorder</a>.</p>
+<p>These values are used to select a given stroke border in <code><a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a></code> and <code><a href="ft2-glyph_stroker.html#ft_stroker_exportborder">FT_Stroker_ExportBorder</a></code>.</p>
 <h4>values</h4>
 
 <table class="fields">
@@ -1487,7 +1487,7 @@
 <h4>note</h4>
 
 <p>Applications are generally interested in the &lsquo;inside&rsquo; and &lsquo;outside&rsquo; borders. However, there is no direct mapping between these and the &lsquo;left&rsquo; and &lsquo;right&rsquo; ones, since this really depends on the glyph's drawing orientation, which varies between font formats.</p>
-<p>You can however use <a href="ft2-glyph_stroker.html#ft_outline_getinsideborder">FT_Outline_GetInsideBorder</a> and <a href="ft2-glyph_stroker.html#ft_outline_getoutsideborder">FT_Outline_GetOutsideBorder</a> to get these.</p>
+<p>You can however use <code><a href="ft2-glyph_stroker.html#ft_outline_getinsideborder">FT_Outline_GetInsideBorder</a></code> and <code><a href="ft2-glyph_stroker.html#ft_outline_getoutsideborder">FT_Outline_GetOutsideBorder</a></code> to get these.</p>
 <hr>
 
 <h2 id="ft_outline_getinsideborder">FT_Outline_GetInsideBorder<a class="headerlink" href="#ft_outline_getinsideborder" title="Permanent link">&para;</a></h2>
@@ -1499,7 +1499,7 @@
 </pre>
 </div>
 
-<p>Retrieve the <a href="ft2-glyph_stroker.html#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;inside&rsquo; borders of a given outline.</p>
+<p>Retrieve the <code><a href="ft2-glyph_stroker.html#ft_strokerborder">FT_StrokerBorder</a></code> value corresponding to the &lsquo;inside&rsquo; borders of a given outline.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1510,7 +1510,7 @@
 
 <h4>return</h4>
 
-<p>The border index. <a href="ft2-glyph_stroker.html#ft_strokerborder">FT_STROKER_BORDER_RIGHT</a> for empty or invalid outlines.</p>
+<p>The border index. <code><a href="ft2-glyph_stroker.html#ft_strokerborder">FT_STROKER_BORDER_RIGHT</a></code> for empty or invalid outlines.</p>
 <hr>
 
 <h2 id="ft_outline_getoutsideborder">FT_Outline_GetOutsideBorder<a class="headerlink" href="#ft_outline_getoutsideborder" title="Permanent link">&para;</a></h2>
@@ -1522,7 +1522,7 @@
 </pre>
 </div>
 
-<p>Retrieve the <a href="ft2-glyph_stroker.html#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;outside&rsquo; borders of a given outline.</p>
+<p>Retrieve the <code><a href="ft2-glyph_stroker.html#ft_strokerborder">FT_StrokerBorder</a></code> value corresponding to the &lsquo;outside&rsquo; borders of a given outline.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1533,7 +1533,7 @@
 
 <h4>return</h4>
 
-<p>The border index. <a href="ft2-glyph_stroker.html#ft_strokerborder">FT_STROKER_BORDER_LEFT</a> for empty or invalid outlines.</p>
+<p>The border index. <code><a href="ft2-glyph_stroker.html#ft_strokerborder">FT_STROKER_BORDER_LEFT</a></code> for empty or invalid outlines.</p>
 <hr>
 
 <h2 id="ft_glyph_stroke">FT_Glyph_Stroke<a class="headerlink" href="#ft_glyph_stroke" title="Permanent link">&para;</a></h2>
@@ -1689,7 +1689,7 @@
 <h4>note</h4>
 
 <p>The radius is expressed in the same units as the outline coordinates.</p>
-<p>This function calls <a href="ft2-glyph_stroker.html#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.</p>
+<p>This function calls <code><a href="ft2-glyph_stroker.html#ft_stroker_rewind">FT_Stroker_Rewind</a></code> automatically.</p>
 <hr>
 
 <h2 id="ft_stroker_rewind">FT_Stroker_Rewind<a class="headerlink" href="#ft_stroker_rewind" title="Permanent link">&para;</a></h2>
@@ -1701,7 +1701,7 @@
 </pre>
 </div>
 
-<p>Reset a stroker object without changing its attributes. You should call this function before beginning a new series of calls to <a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> or <a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.</p>
+<p>Reset a stroker object without changing its attributes. You should call this function before beginning a new series of calls to <code><a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a></code> or <code><a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1723,7 +1723,7 @@
 </pre>
 </div>
 
-<p>A convenience function used to parse a whole outline with the stroker. The resulting outline(s) can be retrieved later by functions like <a href="ft2-glyph_stroker.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a> and <a href="ft2-glyph_stroker.html#ft_stroker_export">FT_Stroker_Export</a>.</p>
+<p>A convenience function used to parse a whole outline with the stroker. The resulting outline(s) can be retrieved later by functions like <code><a href="ft2-glyph_stroker.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a></code> and <code><a href="ft2-glyph_stroker.html#ft_stroker_export">FT_Stroker_Export</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1745,7 +1745,7 @@
 
 <p>If &lsquo;opened&rsquo; is&nbsp;0 (the default), the outline is treated as a closed path, and the stroker generates two distinct &lsquo;border&rsquo; outlines.</p>
 <p>If &lsquo;opened&rsquo; is&nbsp;1, the outline is processed as an open path, and the stroker generates a single &lsquo;stroke&rsquo; outline.</p>
-<p>This function calls <a href="ft2-glyph_stroker.html#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.</p>
+<p>This function calls <code><a href="ft2-glyph_stroker.html#ft_stroker_rewind">FT_Stroker_Rewind</a></code> automatically.</p>
 <hr>
 
 <h2 id="ft_stroker_done">FT_Stroker_Done<a class="headerlink" href="#ft_stroker_done" title="Permanent link">&para;</a></h2>
@@ -1799,7 +1799,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>This function is useful when you need to stroke a path that is not stored as an <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a> object.</p>
+<p>This function is useful when you need to stroke a path that is not stored as an <code><a href="ft2-outline_processing.html#ft_outline">FT_Outline</a></code> object.</p>
 <hr>
 
 <h2 id="ft_stroker_endsubpath">FT_Stroker_EndSubPath<a class="headerlink" href="#ft_stroker_endsubpath" title="Permanent link">&para;</a></h2>
@@ -1825,7 +1825,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You should call this function after <a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a>. If the subpath was not &lsquo;opened&rsquo;, this function &lsquo;draws&rsquo; a single line segment to the start position when needed.</p>
+<p>You should call this function after <code><a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a></code>. If the subpath was not &lsquo;opened&rsquo;, this function &lsquo;draws&rsquo; a single line segment to the start position when needed.</p>
 <hr>
 
 <h2 id="ft_stroker_lineto">FT_Stroker_LineTo<a class="headerlink" href="#ft_stroker_lineto" title="Permanent link">&para;</a></h2>
@@ -1855,7 +1855,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You should call this function between <a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.</p>
+<p>You should call this function between <code><a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a></code> and <code><a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a></code>.</p>
 <hr>
 
 <h2 id="ft_stroker_conicto">FT_Stroker_ConicTo<a class="headerlink" href="#ft_stroker_conicto" title="Permanent link">&para;</a></h2>
@@ -1889,7 +1889,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You should call this function between <a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.</p>
+<p>You should call this function between <code><a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a></code> and <code><a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a></code>.</p>
 <hr>
 
 <h2 id="ft_stroker_cubicto">FT_Stroker_CubicTo<a class="headerlink" href="#ft_stroker_cubicto" title="Permanent link">&para;</a></h2>
@@ -1927,7 +1927,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You should call this function between <a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.</p>
+<p>You should call this function between <code><a href="ft2-glyph_stroker.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a></code> and <code><a href="ft2-glyph_stroker.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a></code>.</p>
 <hr>
 
 <h2 id="ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts<a class="headerlink" href="#ft_stroker_getbordercounts" title="Permanent link">&para;</a></h2>
@@ -1972,7 +1972,7 @@
 
 <p>When an outline, or a sub-path, is &lsquo;closed&rsquo;, the stroker generates two independent &lsquo;border&rsquo; outlines, named &lsquo;left&rsquo; and &lsquo;right&rsquo;.</p>
 <p>When the outline, or a sub-path, is &lsquo;opened&rsquo;, the stroker merges the &lsquo;border&rsquo; outlines with caps. The &lsquo;left&rsquo; border receives all points, while the &lsquo;right&rsquo; border becomes empty.</p>
-<p>Use the function <a href="ft2-glyph_stroker.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a> instead if you want to retrieve the counts associated to both borders.</p>
+<p>Use the function <code><a href="ft2-glyph_stroker.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a></code> instead if you want to retrieve the counts associated to both borders.</p>
 <hr>
 
 <h2 id="ft_stroker_exportborder">FT_Stroker_ExportBorder<a class="headerlink" href="#ft_stroker_exportborder" title="Permanent link">&para;</a></h2>
@@ -1986,7 +1986,7 @@
 </pre>
 </div>
 
-<p>Call this function after <a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export the corresponding border to your own <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a> structure.</p>
+<p>Call this function after <code><a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a></code> to export the corresponding border to your own <code><a href="ft2-outline_processing.html#ft_outline">FT_Outline</a></code> structure.</p>
 <p>Note that this function appends the border points and contours to your outline, but does not try to resize its arrays.</p>
 <h4>input</h4>
 
@@ -2004,10 +2004,10 @@
 
 <h4>note</h4>
 
-<p>Always call this function after <a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to get sure that there is enough room in your <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a> object to receive all new data.</p>
+<p>Always call this function after <code><a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a></code> to get sure that there is enough room in your <code><a href="ft2-outline_processing.html#ft_outline">FT_Outline</a></code> object to receive all new data.</p>
 <p>When an outline, or a sub-path, is &lsquo;closed&rsquo;, the stroker generates two independent &lsquo;border&rsquo; outlines, named &lsquo;left&rsquo; and &lsquo;right&rsquo;.</p>
 <p>When the outline, or a sub-path, is &lsquo;opened&rsquo;, the stroker merges the &lsquo;border&rsquo; outlines with caps. The &lsquo;left&rsquo; border receives all points, while the &lsquo;right&rsquo; border becomes empty.</p>
-<p>Use the function <a href="ft2-glyph_stroker.html#ft_stroker_export">FT_Stroker_Export</a> instead if you want to retrieve all borders at once.</p>
+<p>Use the function <code><a href="ft2-glyph_stroker.html#ft_stroker_export">FT_Stroker_Export</a></code> instead if you want to retrieve all borders at once.</p>
 <hr>
 
 <h2 id="ft_stroker_getcounts">FT_Stroker_GetCounts<a class="headerlink" href="#ft_stroker_getcounts" title="Permanent link">&para;</a></h2>
@@ -2056,7 +2056,7 @@
 </pre>
 </div>
 
-<p>Call this function after <a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export all borders to your own <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a> structure.</p>
+<p>Call this function after <code><a href="ft2-glyph_stroker.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a></code> to export all borders to your own <code><a href="ft2-outline_processing.html#ft_outline">FT_Outline</a></code> structure.</p>
 <p>Note that this function appends the border points and contours to your outline, but does not try to resize its arrays.</p>
 <h4>input</h4>
 

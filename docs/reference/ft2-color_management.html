@@ -1201,7 +1201,7 @@
 </pre>
 </div>
 
-<p>A list of bit field constants used in the <code>palette_flags</code> array of the <a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a> structure to indicate for which background a palette with a given index is usable.</p>
+<p>A list of bit field constants used in the <code>palette_flags</code> array of the <code><a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a></code> structure to indicate for which background a palette with a given index is usable.</p>
 <h4>values</h4>
 
 <table class="fields long">
@@ -1247,7 +1247,7 @@
 <p>NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="palette_flags">palette_flags</td><td class="desc">
-<p>A read-only array of palette flags with <code>num_palettes</code> elements. Possible values are an ORed combination of <a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_LIGHT_BACKGROUND</a> and <a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_DARK_BACKGROUND</a>.</p>
+<p>A read-only array of palette flags with <code>num_palettes</code> elements. Possible values are an ORed combination of <code><a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_LIGHT_BACKGROUND</a></code> and <code><a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_DARK_BACKGROUND</a></code>.</p>
 <p>NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="num_palette_entries">num_palette_entries</td><td class="desc">
@@ -1262,7 +1262,7 @@
 
 <h4>note</h4>
 
-<p>Use function <a href="ft2-sfnt_names.html#ft_get_sfnt_name">FT_Get_Sfnt_Name</a> to map name IDs and entry name IDs to name strings.</p>
+<p>Use function <code><a href="ft2-sfnt_names.html#ft_get_sfnt_name">FT_Get_Sfnt_Name</a></code> to map name IDs and entry name IDs to name strings.</p>
 <h4>since</h4>
 
 <p>2.10</p>
@@ -1291,7 +1291,7 @@
 
 <table class="fields">
 <tr><td class="val" id="apalette">apalette</td><td class="desc">
-<p>A pointer to an <a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a> structure.</p>
+<p>A pointer to an <code><a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a></code> structure.</p>
 </td></tr>
 </table>
 
@@ -1300,7 +1300,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>All arrays in the returned <a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a> structure are read-only.</p>
+<p>All arrays in the returned <code><a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a></code> structure are read-only.</p>
 <p>This function always returns an error if the config macro <code>TT_CONFIG_OPTION_COLOR_LAYERS</code> is not defined in <code>ftoption.h</code>.</p>
 <h4>since</h4>
 
@@ -1347,7 +1347,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>The number of color entries is given by the <code>num_palette_entries</code> field in the <a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a> structure.</p>
+<p>The number of color entries is given by the <code>num_palette_entries</code> field in the <code><a href="ft2-color_management.html#ft_palette_data">FT_Palette_Data</a></code> structure.</p>
 <p>The array pointed to by <code>apalette_entries</code> is owned and managed by FreeType.</p>
 <p>This function always returns an error if the config macro <code>TT_CONFIG_OPTION_COLOR_LAYERS</code> is not defined in <code>ftoption.h</code>.</p>
 <h4>since</h4>
@@ -1382,7 +1382,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>If this function isn't called, the text foreground color is set to white opaque (BGRA value 0xFFFFFFFF) if <a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_DARK_BACKGROUND</a> is present for the current palette, and black opaque (BGRA value 0x000000FF) otherwise, including the case that no palette types are available in the &lsquo;CPAL&rsquo; table.</p>
+<p>If this function isn't called, the text foreground color is set to white opaque (BGRA value 0xFFFFFFFF) if <code><a href="ft2-color_management.html#ft_palette_xxx">FT_PALETTE_FOR_DARK_BACKGROUND</a></code> is present for the current palette, and black opaque (BGRA value 0x000000FF) otherwise, including the case that no palette types are available in the &lsquo;CPAL&rsquo; table.</p>
 <p>This function always returns an error if the config macro <code>TT_CONFIG_OPTION_COLOR_LAYERS</code> is not defined in <code>ftoption.h</code>.</p>
 <h4>since</h4>
 

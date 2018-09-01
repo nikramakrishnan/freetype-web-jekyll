@@ -1421,7 +1421,7 @@
 <p>The number of points in the outline.</p>
 </td></tr>
 <tr><td class="val" id="points">points</td><td class="desc">
-<p>A pointer to an array of <code>n_points</code> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a> elements, giving the outline's point coordinates.</p>
+<p>A pointer to an array of <code>n_points</code> <code><a href="ft2-basic_types.html#ft_vector">FT_Vector</a></code> elements, giving the outline's point coordinates.</p>
 </td></tr>
 <tr><td class="val" id="tags">tags</td><td class="desc">
 <p>A pointer to an array of <code>n_points</code> chars, giving each outline point's type.</p>
@@ -1434,13 +1434,13 @@
 <p>An array of <code>n_contours</code> shorts, giving the end point of each contour within the outline. For example, the first contour is defined by the points &lsquo;0&rsquo; to &lsquo;contours[0]&rsquo;, the second one is defined by the points &lsquo;contours[0]+1&rsquo; to &lsquo;contours[1]&rsquo;, etc.</p>
 </td></tr>
 <tr><td class="val" id="flags">flags</td><td class="desc">
-<p>A set of bit flags used to characterize the outline and give hints to the scan-converter and hinter on how to convert/grid-fit it. See <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_XXX</a>.</p>
+<p>A set of bit flags used to characterize the outline and give hints to the scan-converter and hinter on how to convert/grid-fit it. See <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_XXX</a></code>.</p>
 </td></tr>
 </table>
 
 <h4>note</h4>
 
-<p>The B/W rasterizer only checks bit&nbsp;2 in the &lsquo;tags&rsquo; array for the first point of each contour. The drop-out mode as given with <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a>, <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_SMART_DROPOUTS</a>, and <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_INCLUDE_STUBS</a> in &lsquo;flags&rsquo; is then overridden.</p>
+<p>The B/W rasterizer only checks bit&nbsp;2 in the &lsquo;tags&rsquo; array for the first point of each contour. The drop-out mode as given with <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a></code>, <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_SMART_DROPOUTS</a></code>, and <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_INCLUDE_STUBS</a></code> in &lsquo;flags&rsquo; is then overridden.</p>
 <hr>
 
 <h2 id="ft_outline_new">FT_Outline_New<a class="headerlink" href="#ft_outline_new" title="Permanent link">&para;</a></h2>
@@ -1452,12 +1452,6 @@
                   <a href="ft2-basic_types.html#ft_uint">FT_UInt</a>      numPoints,
                   <a href="ft2-basic_types.html#ft_int">FT_Int</a>       numContours,
                   <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>  *anoutline );
-
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
-  FT_Outline_New_Internal( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>    memory,
-                           <a href="ft2-basic_types.html#ft_uint">FT_UInt</a>      numPoints,
-                           <a href="ft2-basic_types.html#ft_int">FT_Int</a>       numContours,
-                           <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>  *anoutline );
 </pre>
 </div>
 
@@ -1466,7 +1460,7 @@
 
 <table class="fields">
 <tr><td class="val" id="library">library</td><td class="desc">
-<p>A handle to the library object from where the outline is allocated. Note however that the new outline will <strong>not</strong> necessarily be <strong>freed</strong>, when destroying the library, by <a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a>.</p>
+<p>A handle to the library object from where the outline is allocated. Note however that the new outline will <strong>not</strong> necessarily be <strong>freed</strong>, when destroying the library, by <code><a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="numpoints">numPoints</td><td class="desc">
 <p>The maximum number of points within the outline. Must be smaller than or equal to 0xFFFF (65535).</p>
@@ -1499,14 +1493,10 @@
   FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Done</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>   library,
                    <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
-
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
-  FT_Outline_Done_Internal( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>    memory,
-                            <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
-<p>Destroy an outline created with <a href="ft2-outline_processing.html#ft_outline_new">FT_Outline_New</a>.</p>
+<p>Destroy an outline created with <code><a href="ft2-outline_processing.html#ft_outline_new">FT_Outline_New</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1620,7 +1610,7 @@
 
 <h4>note</h4>
 
-<p>You can use <a href="ft2-outline_processing.html#ft_outline_translate">FT_Outline_Translate</a> if you need to translate the outline's points.</p>
+<p>You can use <code><a href="ft2-outline_processing.html#ft_outline_translate">FT_Outline_Translate</a></code> if you need to translate the outline's points.</p>
 <hr>
 
 <h2 id="ft_outline_embolden">FT_Outline_Embolden<a class="headerlink" href="#ft_outline_embolden" title="Permanent link">&para;</a></h2>
@@ -1657,8 +1647,8 @@
 <h4>note</h4>
 
 <p>The used algorithm to increase or decrease the thickness of the glyph doesn't change the number of points; this means that certain situations like acute angles or intersections are sometimes handled incorrectly.</p>
-<p>If you need &lsquo;better&rsquo; metrics values you should call <a href="ft2-outline_processing.html#ft_outline_get_cbox">FT_Outline_Get_CBox</a> or <a href="ft2-outline_processing.html#ft_outline_get_bbox">FT_Outline_Get_BBox</a>.</p>
-<p>To get meaningful results, font scaling values must be set with functions like <a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a> before calling FT_Render_Glyph.</p>
+<p>If you need &lsquo;better&rsquo; metrics values you should call <code><a href="ft2-outline_processing.html#ft_outline_get_cbox">FT_Outline_Get_CBox</a></code> or <code><a href="ft2-outline_processing.html#ft_outline_get_bbox">FT_Outline_Get_BBox</a></code>.</p>
+<p>To get meaningful results, font scaling values must be set with functions like <code><a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a></code> before calling FT_Render_Glyph.</p>
 <h4>example</h4>
 
 <div class="codehilite"><pre><span></span>  FT_Load_Glyph( face, index, FT_LOAD_DEFAULT );
@@ -1680,7 +1670,7 @@
 </pre>
 </div>
 
-<p>Embolden an outline. The new outline will be &lsquo;xstrength&rsquo; pixels wider and &lsquo;ystrength&rsquo; pixels higher. Otherwise, it is similar to <a href="ft2-outline_processing.html#ft_outline_embolden">FT_Outline_Embolden</a>, which uses the same strength in both directions.</p>
+<p>Embolden an outline. The new outline will be &lsquo;xstrength&rsquo; pixels wider and &lsquo;ystrength&rsquo; pixels higher. Otherwise, it is similar to <code><a href="ft2-outline_processing.html#ft_outline_embolden">FT_Outline_Embolden</a></code>, which uses the same strength in both directions.</p>
 <h4>since</h4>
 
 <p>2.4.10</p>
@@ -1706,7 +1696,7 @@
 
 <h4>note</h4>
 
-<p>This function toggles the bit flag <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_REVERSE_FILL</a> in the outline's &lsquo;flags&rsquo; field.</p>
+<p>This function toggles the bit flag <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_REVERSE_FILL</a></code> in the outline's &lsquo;flags&rsquo; field.</p>
 <p>It shouldn't be used by a normal client application, unless it knows what it is doing.</p>
 <hr>
 
@@ -1766,7 +1756,7 @@
 
 <h4>note</h4>
 
-<p>See <a href="ft2-glyph_management.html#ft_glyph_get_cbox">FT_Glyph_Get_CBox</a> for a discussion of tricky fonts.</p>
+<p>See <code><a href="ft2-glyph_management.html#ft_glyph_get_cbox">FT_Glyph_Get_CBox</a></code> for a discussion of tricky fonts.</p>
 <hr>
 
 <h2 id="ft_outline_get_bbox">FT_Outline_Get_BBox<a class="headerlink" href="#ft_outline_get_bbox" title="Permanent link">&para;</a></h2>
@@ -1801,7 +1791,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>If the font is tricky and the glyph has been loaded with <a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a>, the resulting BBox is meaningless. To get reasonable values for the BBox it is necessary to load the glyph at a large ppem value (so that the hinting instructions can properly shift and scale the subglyphs), then extracting the BBox, which can be eventually converted back to font units.</p>
+<p>If the font is tricky and the glyph has been loaded with <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code>, the resulting BBox is meaningless. To get reasonable values for the BBox it is necessary to load the glyph at a large ppem value (so that the hinting instructions can properly shift and scale the subglyphs), then extracting the BBox, which can be eventually converted back to font units.</p>
 <hr>
 
 <h2 id="ft_outline_get_bitmap">FT_Outline_Get_Bitmap<a class="headerlink" href="#ft_outline_get_bitmap" title="Permanent link">&para;</a></h2>
@@ -1842,7 +1832,7 @@
 
 <p>This function does NOT CREATE the bitmap, it only renders an outline image within the one you pass to it! Consequently, the various fields in &lsquo;abitmap&rsquo; should be set accordingly.</p>
 <p>It will use the raster corresponding to the default glyph format.</p>
-<p>The value of the <code>num_grays</code> field in &lsquo;abitmap&rsquo; is ignored. If you select the gray-level rasterizer, and you want less than 256 gray levels, you have to use <a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a> directly.</p>
+<p>The value of the <code>num_grays</code> field in &lsquo;abitmap&rsquo; is ignored. If you select the gray-level rasterizer, and you want less than 256 gray levels, you have to use <code><a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a></code> directly.</p>
 <hr>
 
 <h2 id="ft_outline_render">FT_Outline_Render<a class="headerlink" href="#ft_outline_render" title="Permanent link">&para;</a></h2>
@@ -1856,7 +1846,7 @@
 </pre>
 </div>
 
-<p>Render an outline within a bitmap using the current scan-convert. This function uses an <a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a> structure as an argument, allowing advanced features like direct composition, translucency, etc.</p>
+<p>Render an outline within a bitmap using the current scan-convert. This function uses an <code><a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a></code> structure as an argument, allowing advanced features like direct composition, translucency, etc.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1872,7 +1862,7 @@
 
 <table class="fields">
 <tr><td class="val" id="params">params</td><td class="desc">
-<p>A pointer to an <a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a> structure used to describe the rendering operation.</p>
+<p>A pointer to an <code><a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a></code> structure used to describe the rendering operation.</p>
 </td></tr>
 </table>
 
@@ -1881,9 +1871,9 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You should know what you are doing and how <a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a> works to use this function.</p>
+<p>You should know what you are doing and how <code><a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a></code> works to use this function.</p>
 <p>The field <code>params.source</code> will be set to &lsquo;outline&rsquo; before the scan converter is called, which means that the value you give to it is actually ignored.</p>
-<p>The gray-level rasterizer always uses 256 gray levels. If you want less gray levels, you have to provide your own span callback. See the <a href="ft2-raster.html#ft_raster_flag_xxx">FT_RASTER_FLAG_DIRECT</a> value of the &lsquo;flags&rsquo; field in the <a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a> structure for more details.</p>
+<p>The gray-level rasterizer always uses 256 gray levels. If you want less gray levels, you have to provide your own span callback. See the <code><a href="ft2-raster.html#ft_raster_flag_xxx">FT_RASTER_FLAG_DIRECT</a></code> value of the &lsquo;flags&rsquo; field in the <code><a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a></code> structure for more details.</p>
 <hr>
 
 <h2 id="ft_outline_decompose">FT_Outline_Decompose<a class="headerlink" href="#ft_outline_decompose" title="Permanent link">&para;</a></h2>
@@ -2137,10 +2127,10 @@
 <p>According to the PostScript specification, counter-clockwise contours must be filled, and clockwise ones must be unfilled.</p>
 </td></tr>
 <tr><td class="val" id="ft_orientation_fill_right">FT_ORIENTATION_FILL_RIGHT</td><td class="desc">
-<p>This is identical to <a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a>, but is used to remember that in TrueType, everything that is to the right of the drawing direction of a contour must be filled.</p>
+<p>This is identical to <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a></code>, but is used to remember that in TrueType, everything that is to the right of the drawing direction of a contour must be filled.</p>
 </td></tr>
 <tr><td class="val" id="ft_orientation_fill_left">FT_ORIENTATION_FILL_LEFT</td><td class="desc">
-<p>This is identical to <a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_POSTSCRIPT</a>, but is used to remember that in PostScript, everything that is to the left of the drawing direction of a contour must be filled.</p>
+<p>This is identical to <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_POSTSCRIPT</a></code>, but is used to remember that in PostScript, everything that is to the left of the drawing direction of a contour must be filled.</p>
 </td></tr>
 <tr><td class="val" id="ft_orientation_none">FT_ORIENTATION_NONE</td><td class="desc">
 <p>The orientation cannot be determined. That is, different parts of the glyph have different orientation.</p>
@@ -2158,8 +2148,8 @@
 </pre>
 </div>
 
-<p>This function analyzes a glyph outline and tries to compute its fill orientation (see <a href="ft2-outline_processing.html#ft_orientation">FT_Orientation</a>). This is done by integrating the total area covered by the outline. The positive integral corresponds to the clockwise orientation and <a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_POSTSCRIPT</a> is returned. The negative integral corresponds to the counter-clockwise orientation and <a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a> is returned.</p>
-<p>Note that this will return <a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a> for empty outlines.</p>
+<p>This function analyzes a glyph outline and tries to compute its fill orientation (see <code><a href="ft2-outline_processing.html#ft_orientation">FT_Orientation</a></code>). This is done by integrating the total area covered by the outline. The positive integral corresponds to the clockwise orientation and <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_POSTSCRIPT</a></code> is returned. The negative integral corresponds to the counter-clockwise orientation and <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a></code> is returned.</p>
+<p>Note that this will return <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a></code> for empty outlines.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -2201,7 +2191,7 @@
 </pre>
 </div>
 
-<p>A list of bit-field constants use for the flags in an outline's &lsquo;flags&rsquo; field.</p>
+<p>A list of bit-field constants used for the flags in an outline's &lsquo;flags&rsquo; field.</p>
 <h4>values</h4>
 
 <table class="fields long">
@@ -2221,10 +2211,10 @@
 <p>By default, the scan converter will try to detect drop-outs in an outline and correct the glyph bitmap to ensure consistent shape continuity. If set, this flag hints the scan-line converter to ignore such cases. See below for more information.</p>
 </td></tr>
 <tr><td class="val" id="ft_outline_smart_dropouts">FT_OUTLINE_SMART_DROPOUTS</td><td class="desc">
-<p>Select smart dropout control. If unset, use simple dropout control. Ignored if <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a> is set. See below for more information.</p>
+<p>Select smart dropout control. If unset, use simple dropout control. Ignored if <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a></code> is set. See below for more information.</p>
 </td></tr>
 <tr><td class="val" id="ft_outline_include_stubs">FT_OUTLINE_INCLUDE_STUBS</td><td class="desc">
-<p>If set, turn pixels on for &lsquo;stubs&rsquo;, otherwise exclude them. Ignored if <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a> is set. See below for more information.</p>
+<p>If set, turn pixels on for &lsquo;stubs&rsquo;, otherwise exclude them. Ignored if <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a></code> is set. See below for more information.</p>
 </td></tr>
 <tr><td class="val" id="ft_outline_high_precision">FT_OUTLINE_HIGH_PRECISION</td><td class="desc">
 <p>This flag indicates that the scan-line converter should try to convert this outline to bitmaps with the highest possible quality. It is typically set for small character sizes. Note that this is only a hint that might be completely ignored by a given scan-converter.</p>
@@ -2236,8 +2226,8 @@
 
 <h4>note</h4>
 
-<p>The flags <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a>, <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_SMART_DROPOUTS</a>, and <a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_INCLUDE_STUBS</a> are ignored by the smooth rasterizer.</p>
-<p>There exists a second mechanism to pass the drop-out mode to the B/W rasterizer; see the &lsquo;tags&rsquo; field in <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>.</p>
+<p>The flags <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_IGNORE_DROPOUTS</a></code>, <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_SMART_DROPOUTS</a></code>, and <code><a href="ft2-outline_processing.html#ft_outline_xxx">FT_OUTLINE_INCLUDE_STUBS</a></code> are ignored by the smooth rasterizer.</p>
+<p>There exists a second mechanism to pass the drop-out mode to the B/W rasterizer; see the &lsquo;tags&rsquo; field in <code><a href="ft2-outline_processing.html#ft_outline">FT_Outline</a></code>.</p>
 <p>Please refer to the description of the &lsquo;SCANTYPE&rsquo; instruction in the OpenType specification (in file <code>ttinst1.doc</code>) how simple drop-outs, smart drop-outs, and stubs are defined.</p>
 <hr>
                 

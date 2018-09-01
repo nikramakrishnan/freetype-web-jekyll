@@ -1273,10 +1273,10 @@
 </pre>
 </div>
 
-<p>Handle to an object used to model generic glyph images. It is a pointer to the <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a> structure and can contain a glyph bitmap or pointer.</p>
+<p>Handle to an object used to model generic glyph images. It is a pointer to the <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code> structure and can contain a glyph bitmap or pointer.</p>
 <h4>note</h4>
 
-<p>Glyph objects are not owned by the library. You must thus release them manually (through <a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a>) <em>before</em> calling <a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a>.</p>
+<p>Glyph objects are not owned by the library. You must thus release them manually (through <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>) <em>before</em> calling <code><a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a></code>.</p>
 <hr>
 
 <h2 id="ft_glyphrec">FT_GlyphRec<a class="headerlink" href="#ft_glyphrec" title="Permanent link">&para;</a></h2>
@@ -1322,7 +1322,7 @@
 </pre>
 </div>
 
-<p>A handle to an object used to model a bitmap glyph image. This is a sub-class of <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>, and a pointer to <a href="ft2-glyph_management.html#ft_bitmapglyphrec">FT_BitmapGlyphRec</a>.</p>
+<p>A handle to an object used to model a bitmap glyph image. This is a sub-class of <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code>, and a pointer to <code><a href="ft2-glyph_management.html#ft_bitmapglyphrec">FT_BitmapGlyphRec</a></code>.</p>
 <hr>
 
 <h2 id="ft_bitmapglyphrec">FT_BitmapGlyphRec<a class="headerlink" href="#ft_bitmapglyphrec" title="Permanent link">&para;</a></h2>
@@ -1340,12 +1340,12 @@
 </pre>
 </div>
 
-<p>A structure used for bitmap glyph images. This really is a &lsquo;sub-class&rsquo; of <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a>.</p>
+<p>A structure used for bitmap glyph images. This really is a &lsquo;sub-class&rsquo; of <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code>.</p>
 <h4>fields</h4>
 
 <table class="fields">
 <tr><td class="val" id="root">root</td><td class="desc">
-<p>The root <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> fields.</p>
+<p>The root <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> fields.</p>
 </td></tr>
 <tr><td class="val" id="left">left</td><td class="desc">
 <p>The left-side bearing, i.e., the horizontal distance from the current pen position to the left border of the glyph bitmap.</p>
@@ -1360,8 +1360,8 @@
 
 <h4>note</h4>
 
-<p>You can typecast an <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> to <a href="ft2-glyph_management.html#ft_bitmapglyph">FT_BitmapGlyph</a> if you have <code>glyph-&gt;format == FT_GLYPH_FORMAT_BITMAP</code>. This lets you access the bitmap's contents easily.</p>
-<p>The corresponding pixel buffer is always owned by <a href="ft2-glyph_management.html#ft_bitmapglyph">FT_BitmapGlyph</a> and is thus created and destroyed with it.</p>
+<p>You can typecast an <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> to <code><a href="ft2-glyph_management.html#ft_bitmapglyph">FT_BitmapGlyph</a></code> if you have <code>glyph-&gt;format == FT_GLYPH_FORMAT_BITMAP</code>. This lets you access the bitmap's contents easily.</p>
+<p>The corresponding pixel buffer is always owned by <code><a href="ft2-glyph_management.html#ft_bitmapglyph">FT_BitmapGlyph</a></code> and is thus created and destroyed with it.</p>
 <hr>
 
 <h2 id="ft_outlineglyph">FT_OutlineGlyph<a class="headerlink" href="#ft_outlineglyph" title="Permanent link">&para;</a></h2>
@@ -1372,7 +1372,7 @@
 </pre>
 </div>
 
-<p>A handle to an object used to model an outline glyph image. This is a sub-class of <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>, and a pointer to <a href="ft2-glyph_management.html#ft_outlineglyphrec">FT_OutlineGlyphRec</a>.</p>
+<p>A handle to an object used to model an outline glyph image. This is a sub-class of <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code>, and a pointer to <code><a href="ft2-glyph_management.html#ft_outlineglyphrec">FT_OutlineGlyphRec</a></code>.</p>
 <hr>
 
 <h2 id="ft_outlineglyphrec">FT_OutlineGlyphRec<a class="headerlink" href="#ft_outlineglyphrec" title="Permanent link">&para;</a></h2>
@@ -1388,12 +1388,12 @@
 </pre>
 </div>
 
-<p>A structure used for outline (vectorial) glyph images. This really is a &lsquo;sub-class&rsquo; of <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a>.</p>
+<p>A structure used for outline (vectorial) glyph images. This really is a &lsquo;sub-class&rsquo; of <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code>.</p>
 <h4>fields</h4>
 
 <table class="fields">
 <tr><td class="val" id="root">root</td><td class="desc">
-<p>The root <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> fields.</p>
+<p>The root <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> fields.</p>
 </td></tr>
 <tr><td class="val" id="outline">outline</td><td class="desc">
 <p>A descriptor for the outline.</p>
@@ -1402,8 +1402,8 @@
 
 <h4>note</h4>
 
-<p>You can typecast an <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> to <a href="ft2-glyph_management.html#ft_outlineglyph">FT_OutlineGlyph</a> if you have <code>glyph-&gt;format == FT_GLYPH_FORMAT_OUTLINE</code>. This lets you access the outline's content easily.</p>
-<p>As the outline is extracted from a glyph slot, its coordinates are expressed normally in 26.6 pixels, unless the flag <a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a> was used in <a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a>() or <a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a>().</p>
+<p>You can typecast an <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> to <code><a href="ft2-glyph_management.html#ft_outlineglyph">FT_OutlineGlyph</a></code> if you have <code>glyph-&gt;format == FT_GLYPH_FORMAT_OUTLINE</code>. This lets you access the outline's content easily.</p>
+<p>As the outline is extracted from a glyph slot, its coordinates are expressed normally in 26.6 pixels, unless the flag <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code> was used in <code><a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a></code>() or <code><a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a></code>().</p>
 <p>The outline's tables are always owned by the object and are destroyed with it.</p>
 <hr>
 
@@ -1418,7 +1418,7 @@
 </pre>
 </div>
 
-<p>A function used to create a new empty glyph image. Note that the created <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> object must be released with <a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a>.</p>
+<p>A function used to create a new empty glyph image. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1456,7 +1456,7 @@
 </pre>
 </div>
 
-<p>A function used to extract a glyph image from a slot. Note that the created <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> object must be released with <a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a>.</p>
+<p>A function used to extract a glyph image from a slot. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1491,7 +1491,7 @@
 </pre>
 </div>
 
-<p>A function used to copy a glyph image. Note that the created <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> object must be released with <a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a>.</p>
+<p>A function used to copy a glyph image. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1577,7 +1577,7 @@
 </pre>
 </div>
 
-<p>The mode how the values of <a href="ft2-glyph_management.html#ft_glyph_get_cbox">FT_Glyph_Get_CBox</a> are returned.</p>
+<p>The mode how the values of <code><a href="ft2-glyph_management.html#ft_glyph_get_cbox">FT_Glyph_Get_CBox</a></code> are returned.</p>
 <h4>values</h4>
 
 <table class="fields">
@@ -1635,20 +1635,20 @@
 <h4>note</h4>
 
 <p>Coordinates are relative to the glyph origin, using the y&nbsp;upwards convention.</p>
-<p>If the glyph has been loaded with <a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a>, <code>bbox_mode</code> must be set to <a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_UNSCALED</a> to get unscaled font units in 26.6 pixel format. The value <a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_SUBPIXELS</a> is another name for this constant.</p>
-<p>If the font is tricky and the glyph has been loaded with <a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a>, the resulting CBox is meaningless. To get reasonable values for the CBox it is necessary to load the glyph at a large ppem value (so that the hinting instructions can properly shift and scale the subglyphs), then extracting the CBox, which can be eventually converted back to font units.</p>
+<p>If the glyph has been loaded with <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code>, <code>bbox_mode</code> must be set to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_UNSCALED</a></code> to get unscaled font units in 26.6 pixel format. The value <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_SUBPIXELS</a></code> is another name for this constant.</p>
+<p>If the font is tricky and the glyph has been loaded with <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code>, the resulting CBox is meaningless. To get reasonable values for the CBox it is necessary to load the glyph at a large ppem value (so that the hinting instructions can properly shift and scale the subglyphs), then extracting the CBox, which can be eventually converted back to font units.</p>
 <p>Note that the maximum coordinates are exclusive, which means that one can compute the width and height of the glyph image (be it in integer or 26.6 pixels) as:
 <div class="codehilite"><pre><span></span>  width  = bbox.xMax - bbox.xMin;
   height = bbox.yMax - bbox.yMin;
 </pre></div></p>
-<p>Note also that for 26.6 coordinates, if <code>bbox_mode</code> is set to <a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_GRIDFIT</a>, the coordinates will also be grid-fitted, which corresponds to:
+<p>Note also that for 26.6 coordinates, if <code>bbox_mode</code> is set to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_GRIDFIT</a></code>, the coordinates will also be grid-fitted, which corresponds to:
 <div class="codehilite"><pre><span></span>  bbox.xMin = FLOOR(bbox.xMin);
   bbox.yMin = FLOOR(bbox.yMin);
   bbox.xMax = CEILING(bbox.xMax);
   bbox.yMax = CEILING(bbox.yMax);
 </pre></div></p>
-<p>To get the bbox in pixel coordinates, set <code>bbox_mode</code> to <a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_TRUNCATE</a>.</p>
-<p>To get the bbox in grid-fitted pixel coordinates, set <code>bbox_mode</code> to <a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_PIXELS</a>.</p>
+<p>To get the bbox in pixel coordinates, set <code>bbox_mode</code> to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_TRUNCATE</a></code>.</p>
+<p>To get the bbox in grid-fitted pixel coordinates, set <code>bbox_mode</code> to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_PIXELS</a></code>.</p>
 <hr>
 
 <h2 id="ft_glyph_to_bitmap">FT_Glyph_To_Bitmap<a class="headerlink" href="#ft_glyph_to_bitmap" title="Permanent link">&para;</a></h2>
@@ -1693,7 +1693,7 @@
 
 <p>This function does nothing if the glyph format isn't scalable.</p>
 <p>The glyph image is translated with the &lsquo;origin&rsquo; vector before rendering.</p>
-<p>The first parameter is a pointer to an <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a> handle, that will be <em>replaced</em> by this function (with newly allocated data). Typically, you would use (omitting error handling):
+<p>The first parameter is a pointer to an <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> handle, that will be <em>replaced</em> by this function (with newly allocated data). Typically, you would use (omitting error handling):
 <div class="codehilite"><pre><span></span>  FT_Glyph        glyph;
   FT_BitmapGlyph  glyph_bitmap;
 

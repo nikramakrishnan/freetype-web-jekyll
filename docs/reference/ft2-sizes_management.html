@@ -1110,9 +1110,9 @@
 <hr />
 <h1 id="size-management">Size Management<a class="headerlink" href="#size-management" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>When creating a new face object (e.g., with <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a>), an <a href="ft2-base_interface.html#ft_size">FT_Size</a> object is automatically created and used to store all pixel-size dependent information, available in the <code>face-&gt;size</code> field.</p>
-<p>It is however possible to create more sizes for a given face, mostly in order to manage several character pixel sizes of the same font family and style. See <a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a> and <a href="ft2-sizes_management.html#ft_done_size">FT_Done_Size</a>.</p>
-<p>Note that <a href="ft2-base_interface.html#ft_set_pixel_sizes">FT_Set_Pixel_Sizes</a> and <a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a> only modify the contents of the current &lsquo;active&rsquo; size; you thus need to use <a href="ft2-sizes_management.html#ft_activate_size">FT_Activate_Size</a> to change it.</p>
+<p>When creating a new face object (e.g., with <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code>), an <code><a href="ft2-base_interface.html#ft_size">FT_Size</a></code> object is automatically created and used to store all pixel-size dependent information, available in the <code>face-&gt;size</code> field.</p>
+<p>It is however possible to create more sizes for a given face, mostly in order to manage several character pixel sizes of the same font family and style. See <code><a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a></code> and <code><a href="ft2-sizes_management.html#ft_done_size">FT_Done_Size</a></code>.</p>
+<p>Note that <code><a href="ft2-base_interface.html#ft_set_pixel_sizes">FT_Set_Pixel_Sizes</a></code> and <code><a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a></code> only modify the contents of the current &lsquo;active&rsquo; size; you thus need to use <code><a href="ft2-sizes_management.html#ft_activate_size">FT_Activate_Size</a></code> to change it.</p>
 <p>99% of applications won't need the functions provided here, especially if they use the caching sub-system, so be cautious when using these.</p>
 <h2 id="ft_new_size">FT_New_Size<a class="headerlink" href="#ft_new_size" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SIZES_H (freetype/ftsizes.h).</p>
@@ -1146,7 +1146,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You need to call <a href="ft2-sizes_management.html#ft_activate_size">FT_Activate_Size</a> in order to select the new size for upcoming calls to <a href="ft2-base_interface.html#ft_set_pixel_sizes">FT_Set_Pixel_Sizes</a>, <a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a>, <a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a>, <a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a>, etc.</p>
+<p>You need to call <code><a href="ft2-sizes_management.html#ft_activate_size">FT_Activate_Size</a></code> in order to select the new size for upcoming calls to <code><a href="ft2-base_interface.html#ft_set_pixel_sizes">FT_Set_Pixel_Sizes</a></code>, <code><a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a></code>, <code><a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a></code>, <code><a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a></code>, etc.</p>
 <hr>
 
 <h2 id="ft_done_size">FT_Done_Size<a class="headerlink" href="#ft_done_size" title="Permanent link">&para;</a></h2>
@@ -1158,7 +1158,7 @@
 </pre>
 </div>
 
-<p>Discard a given size object. Note that <a href="ft2-base_interface.html#ft_done_face">FT_Done_Face</a> automatically discards all size objects allocated with <a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a>.</p>
+<p>Discard a given size object. Note that <code><a href="ft2-base_interface.html#ft_done_face">FT_Done_Face</a></code> automatically discards all size objects allocated with <code><a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1181,7 +1181,7 @@
 </pre>
 </div>
 
-<p>Even though it is possible to create several size objects for a given face (see <a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a> for details), functions like <a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a> or <a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a> only use the one that has been activated last to determine the &lsquo;current character pixel size&rsquo;.</p>
+<p>Even though it is possible to create several size objects for a given face (see <code><a href="ft2-sizes_management.html#ft_new_size">FT_New_Size</a></code> for details), functions like <code><a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a></code> or <code><a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a></code> only use the one that has been activated last to determine the &lsquo;current character pixel size&rsquo;.</p>
 <p>This function can be used to &lsquo;activate&rsquo; a previously created size object.</p>
 <h4>input</h4>
 

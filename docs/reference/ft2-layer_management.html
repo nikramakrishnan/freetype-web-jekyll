@@ -1111,18 +1111,18 @@
 </pre>
 </div>
 
-<p>This iterator object is needed for <a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+<p>This iterator object is needed for <code><a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a></code>.</p>
 <h4>fields</h4>
 
 <table class="fields">
 <tr><td class="val" id="num_layers">num_layers</td><td class="desc">
-<p>The number of glyph layers for the requested glyph index. Will be set by <a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+<p>The number of glyph layers for the requested glyph index. Will be set by <code><a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="layer">layer</td><td class="desc">
-<p>The current layer. Will be set by <a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+<p>The current layer. Will be set by <code><a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="p">p</td><td class="desc">
-<p>An opaque pointer into &lsquo;COLR&rsquo; table data. The caller must set this to NULL before the first call of <a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+<p>An opaque pointer into &lsquo;COLR&rsquo; table data. The caller must set this to NULL before the first call of <code><a href="ft2-layer_management.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1160,7 +1160,7 @@
 
 <table class="fields">
 <tr><td class="val" id="iterator">iterator</td><td class="desc">
-<p>An <a href="ft2-layer_management.html#ft_layeriterator">FT_LayerIterator</a> object. For the first call you should set <code>iterator-&gt;p</code> to NULL. For all following calls, simply use the same object again.</p>
+<p>An <code><a href="ft2-layer_management.html#ft_layeriterator">FT_LayerIterator</a></code> object. For the first call you should set <code>iterator-&gt;p</code> to NULL. For all following calls, simply use the same object again.</p>
 </td></tr>
 </table>
 
@@ -1172,7 +1172,7 @@
 </td></tr>
 <tr><td class="val" id="acolor_index">acolor_index</td><td class="desc">
 <p>The color index into the font face's color palette of the current layer. The value 0xFFFF is special; it doesn't reference a palette entry but indicates that the text foreground color should be used instead (to be set up by the application outside of FreeType).</p>
-<p>The color palette can be retrieved with <a href="ft2-color_management.html#ft_palette_select">FT_Palette_Select</a>.</p>
+<p>The color palette can be retrieved with <code><a href="ft2-color_management.html#ft_palette_select">FT_Palette_Select</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1181,8 +1181,8 @@
 <p>Value&nbsp;1 if everything is OK. If there are no more layers (or if there are no layers at all), value&nbsp;0 gets returned. In case of an error, value&nbsp;0 is returned also.</p>
 <h4>note</h4>
 
-<p>This function is necessary if you want to handle glyph layers by yourself. In particular, functions that operate with <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a> objects (like <a href="ft2-glyph_management.html#ft_get_glyph">FT_Get_Glyph</a> or <a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a>) don't have access to this information.</p>
-<p><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a>, however, handles colored glyph layers automatically if the <a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_COLOR</a> flag is passed to it.</p>
+<p>This function is necessary if you want to handle glyph layers by yourself. In particular, functions that operate with <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code> objects (like <code><a href="ft2-glyph_management.html#ft_get_glyph">FT_Get_Glyph</a></code> or <code><a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a></code>) don't have access to this information.</p>
+<p><code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code>, however, handles colored glyph layers automatically if the <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_COLOR</a></code> flag is passed to it.</p>
 <h4>example</h4>
 
 <div class="codehilite"><pre><span></span>  FT_Color*         palette;

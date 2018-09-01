@@ -1170,7 +1170,7 @@
 </pre>
 </div>
 
-<p>Return the kerning pair corresponding to two glyphs in a PFR face. The distance is expressed in metrics units, unlike the result of <a href="ft2-base_interface.html#ft_get_kerning">FT_Get_Kerning</a>.</p>
+<p>Return the kerning pair corresponding to two glyphs in a PFR face. The distance is expressed in metrics units, unlike the result of <code><a href="ft2-base_interface.html#ft_get_kerning">FT_Get_Kerning</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1198,8 +1198,8 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>This function always return distances in original PFR metrics units. This is unlike <a href="ft2-base_interface.html#ft_get_kerning">FT_Get_Kerning</a> with the <a href="ft2-base_interface.html#ft_kerning_mode">FT_KERNING_UNSCALED</a> mode, which always returns distances converted to outline units.</p>
-<p>You can use the value of the <code>x_scale</code> and <code>y_scale</code> parameters returned by <a href="ft2-pfr_fonts.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to scale these to device subpixels.</p>
+<p>This function always return distances in original PFR metrics units. This is unlike <code><a href="ft2-base_interface.html#ft_get_kerning">FT_Get_Kerning</a></code> with the <code><a href="ft2-base_interface.html#ft_kerning_mode">FT_KERNING_UNSCALED</a></code> mode, which always returns distances converted to outline units.</p>
+<p>You can use the value of the <code>x_scale</code> and <code>y_scale</code> parameters returned by <code><a href="ft2-pfr_fonts.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a></code> to scale these to device subpixels.</p>
 <hr>
 
 <h2 id="ft_get_pfr_advance">FT_Get_PFR_Advance<a class="headerlink" href="#ft_get_pfr_advance" title="Permanent link">&para;</a></h2>
@@ -1238,7 +1238,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>You can use the <code>x_scale</code> or <code>y_scale</code> results of <a href="ft2-pfr_fonts.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to convert the advance to device subpixels (i.e., 1/64<sup>th</sup> of pixels).</p>
+<p>You can use the <code>x_scale</code> or <code>y_scale</code> results of <code><a href="ft2-pfr_fonts.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a></code> to convert the advance to device subpixels (i.e., 1/64<sup>th</sup> of pixels).</p>
 <hr>
                 
                   

@@ -1145,12 +1145,12 @@
 <p>2) It should be color-balanced, meaning a&nbsp;+ b&nbsp;=&nbsp;c, to reduce color fringes by distributing the computed coverage for one subpixel to all subpixels equally.</p>
 <p>3) It should be normalized, meaning 2a&nbsp;+ 2b&nbsp;+ c&nbsp;=&nbsp;1.0 to maintain overall brightness.</p>
 <p>Boxy 3-tap filter {0, &#8531;, &#8531;, &#8531;, 0} is sharper but is less forgiving of non-ideal gamma curves of a screen (and viewing angles), beveled filters are fuzzier but more tolerant.</p>
-<p>Use the <a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a> or <a href="ft2-lcd_rendering.html#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a> API to specify a low-pass filter, which is then applied to subpixel-rendered bitmaps generated through <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a>.</p>
+<p>Use the <code><a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a></code> or <code><a href="ft2-lcd_rendering.html#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a></code> API to specify a low-pass filter, which is then applied to subpixel-rendered bitmaps generated through <code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code>.</p>
 <p>Harmony LCD rendering is suitable to panels with any regular subpixel structure, not just monitors with 3 color striped subpixels, as long as the color subpixels have fixed positions relative to the pixel center. In this case, each color channel is then rendered separately after shifting the outline opposite to the subpixel shift so that the coverage maps are aligned. This method is immune to color fringes because the shifts do not change integral coverage.</p>
 <p>The subpixel geometry must be specified by xy-coordinates for each subpixel. By convention they may come in the RGB order: {{-&#8531;, 0}, {0, 0}, {&#8531;, 0}} for standard RGB striped panel or {{-&#8537;, &frac14;}, {-&#8537;, -&frac14;}, {&#8531;, 0}} for a certain PenTile panel.</p>
-<p>Use the <a href="ft2-lcd_rendering.html#ft_library_setlcdgeometry">FT_Library_SetLcdGeometry</a> API to specify subpixel positions. If one follows the RGB order convention, the same order applies to the resulting <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD</a> and <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD_V</a> bitmaps. Note, however, that the coordinate frame for the latter must be rotated clockwise. Harmony with default LCD geometry is equivalent to ClearType with light filter.</p>
-<p>As a result of ClearType filtering or Harmony rendering, the dimensions of LCD bitmaps can be either wider or taller than the dimensions of the corresponding outline with regard to the pixel grid. For example, for <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a>, the filter adds 2&nbsp;subpixels to the left, and 2&nbsp;subpixels to the right. The bitmap offset values are adjusted accordingly, so clients shouldn't need to modify their layout and glyph positioning code when enabling the filter.</p>
-<p>The ClearType and Harmony rendering is applicable to glyph bitmaps rendered through <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a>, <a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a>, <a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a>, and <a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a>, when <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a> or <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a> is specified. This API does not control <a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a> and <a href="ft2-outline_processing.html#ft_outline_get_bitmap">FT_Outline_Get_Bitmap</a>.</p>
+<p>Use the <code><a href="ft2-lcd_rendering.html#ft_library_setlcdgeometry">FT_Library_SetLcdGeometry</a></code> API to specify subpixel positions. If one follows the RGB order convention, the same order applies to the resulting <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD</a></code> and <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD_V</a></code> bitmaps. Note, however, that the coordinate frame for the latter must be rotated clockwise. Harmony with default LCD geometry is equivalent to ClearType with light filter.</p>
+<p>As a result of ClearType filtering or Harmony rendering, the dimensions of LCD bitmaps can be either wider or taller than the dimensions of the corresponding outline with regard to the pixel grid. For example, for <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a></code>, the filter adds 2&nbsp;subpixels to the left, and 2&nbsp;subpixels to the right. The bitmap offset values are adjusted accordingly, so clients shouldn't need to modify their layout and glyph positioning code when enabling the filter.</p>
+<p>The ClearType and Harmony rendering is applicable to glyph bitmaps rendered through <code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code>, <code><a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a></code>, <code><a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a></code>, and <code><a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a></code>, when <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a></code> or <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a></code> is specified. This API does not control <code><a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a></code> and <code><a href="ft2-outline_processing.html#ft_outline_get_bitmap">FT_Outline_Get_Bitmap</a></code>.</p>
 <p>The described algorithms can completely remove color artefacts when combined with gamma-corrected alpha blending in linear space. Each of the 3&nbsp;alpha values (subpixels) must by independently used to blend one color channel. That is, red alpha blends the red channel of the text color with the red channel of the background pixel.</p>
 <h2 id="ft_lcdfilter">FT_LcdFilter<a class="headerlink" href="#ft_lcdfilter" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).</p>
@@ -1206,7 +1206,7 @@
 </pre>
 </div>
 
-<p>This function is used to apply color filtering to LCD decimated bitmaps, like the ones used when calling <a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a> with <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a> or <a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a>.</p>
+<p>This function is used to apply color filtering to LCD decimated bitmaps, like the ones used when calling <code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code> with <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a></code> or <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1215,7 +1215,7 @@
 </td></tr>
 <tr><td class="val" id="filter">filter</td><td class="desc">
 <p>The filter type.</p>
-<p>You can use <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a> here to disable this feature, or <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_DEFAULT</a> to use a default filter that should work well on most LCD screens.</p>
+<p>You can use <code><a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a></code> here to disable this feature, or <code><a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_DEFAULT</a></code> to use a default filter that should work well on most LCD screens.</p>
 </td></tr>
 </table>
 
@@ -1224,7 +1224,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>This feature is always disabled by default. Clients must make an explicit call to this function with a &lsquo;filter&rsquo; value other than <a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a> in order to enable it.</p>
+<p>This feature is always disabled by default. Clients must make an explicit call to this function with a &lsquo;filter&rsquo; value other than <code><a href="ft2-lcd_rendering.html#ft_lcdfilter">FT_LCD_FILTER_NONE</a></code> in order to enable it.</p>
 <p>Due to <strong>PATENTS</strong> covering subpixel rendering, this function doesn't do anything except returning <code>FT_Err_Unimplemented_Feature</code> if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.</p>
 <h4>since</h4>
 
@@ -1241,7 +1241,7 @@
 </pre>
 </div>
 
-<p>This function can be used to enable LCD filter with custom weights, instead of using presets in <a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a>.</p>
+<p>This function can be used to enable LCD filter with custom weights, instead of using presets in <code><a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1259,7 +1259,7 @@
 <h4>note</h4>
 
 <p>Due to <strong>PATENTS</strong> covering subpixel rendering, this function doesn't do anything except returning <code>FT_Err_Unimplemented_Feature</code> if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.</p>
-<p>LCD filter weights can also be set per face using <a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a> with <a href="ft2-parameter_tags.html#ft_param_tag_lcd_filter_weights">FT_PARAM_TAG_LCD_FILTER_WEIGHTS</a>.</p>
+<p>LCD filter weights can also be set per face using <code><a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a></code> with <code><a href="ft2-parameter_tags.html#ft_param_tag_lcd_filter_weights">FT_PARAM_TAG_LCD_FILTER_WEIGHTS</a></code>.</p>
 <h4>since</h4>
 
 <p>2.4.0</p>
@@ -1275,7 +1275,7 @@
 </pre>
 </div>
 
-<p>A typedef for passing the five LCD filter weights to <a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a> within an <a href="ft2-base_interface.html#ft_parameter">FT_Parameter</a> structure.</p>
+<p>A typedef for passing the five LCD filter weights to <code><a href="ft2-base_interface.html#ft_face_properties">FT_Face_Properties</a></code> within an <code><a href="ft2-base_interface.html#ft_parameter">FT_Parameter</a></code> structure.</p>
 <h4>since</h4>
 
 <p>2.8</p>

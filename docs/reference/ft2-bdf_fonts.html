@@ -1182,7 +1182,7 @@
 </pre>
 </div>
 
-<p>A handle to a <a href="ft2-bdf_fonts.html#bdf_propertyrec">BDF_PropertyRec</a> structure to model a given BDF/PCF property.</p>
+<p>A handle to a <code><a href="ft2-bdf_fonts.html#bdf_propertyrec">BDF_PropertyRec</a></code> structure to model a given BDF/PCF property.</p>
 <hr>
 
 <h2 id="bdf_propertyrec">BDF_PropertyRec<a class="headerlink" href="#bdf_propertyrec" title="Permanent link">&para;</a></h2>
@@ -1211,13 +1211,13 @@
 <p>The property type.</p>
 </td></tr>
 <tr><td class="val" id="u.atom">u.atom</td><td class="desc">
-<p>The atom string, if type is <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_ATOM</a>. May be NULL, indicating an empty string.</p>
+<p>The atom string, if type is <code><a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_ATOM</a></code>. May be NULL, indicating an empty string.</p>
 </td></tr>
 <tr><td class="val" id="u.integer">u.integer</td><td class="desc">
-<p>A signed integer, if type is <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_INTEGER</a>.</p>
+<p>A signed integer, if type is <code><a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_INTEGER</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="u.cardinal">u.cardinal</td><td class="desc">
-<p>An unsigned integer, if type is <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_CARDINAL</a>.</p>
+<p>An unsigned integer, if type is <code><a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_CARDINAL</a></code>.</p>
 </td></tr>
 </table>
 
@@ -1300,8 +1300,8 @@
 
 <p>This function works with BDF <em>and</em> PCF fonts. It returns an error otherwise. It also returns an error if the property is not in the font.</p>
 <p>A &lsquo;property&rsquo; is a either key-value pair within the STARTPROPERTIES ... ENDPROPERTIES block of a BDF font or a key-value pair from the <code>info-&gt;props</code> array within a &lsquo;FontRec&rsquo; structure of a PCF font.</p>
-<p>Integer properties are always stored as &lsquo;signed&rsquo; within PCF fonts; consequently, <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_CARDINAL</a> is a possible return value for BDF fonts only.</p>
-<p>In case of error, <code>aproperty-&gt;type</code> is always set to <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_NONE</a>.</p>
+<p>Integer properties are always stored as &lsquo;signed&rsquo; within PCF fonts; consequently, <code><a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_CARDINAL</a></code> is a possible return value for BDF fonts only.</p>
+<p>In case of error, <code>aproperty-&gt;type</code> is always set to <code><a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PROPERTY_TYPE_NONE</a></code>.</p>
 <hr>
                 
                   

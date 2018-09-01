@@ -1538,7 +1538,7 @@
 
 <h4>note</h4>
 
-<p>For an OpenType variation font, the values of the following fields can change after a call to <a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>caret_Slope_Rise</code>, <code>caret_Slope_Run</code>, and <code>caret_Offset</code>.</p>
+<p>For an OpenType variation font, the values of the following fields can change after a call to <code><a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a></code> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>caret_Slope_Rise</code>, <code>caret_Slope_Run</code>, and <code>caret_Offset</code>.</p>
 <hr>
 
 <h2 id="tt_vertheader">TT_VertHeader<a class="headerlink" href="#tt_vertheader" title="Permanent link">&para;</a></h2>
@@ -1637,7 +1637,7 @@
 
 <h4>note</h4>
 
-<p>For an OpenType variation font, the values of the following fields can change after a call to <a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, <code>Line_Gap</code>, <code>caret_Slope_Rise</code>, <code>caret_Slope_Run</code>, and <code>caret_Offset</code>.</p>
+<p>For an OpenType variation font, the values of the following fields can change after a call to <code><a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a></code> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, <code>Line_Gap</code>, <code>caret_Slope_Rise</code>, <code>caret_Slope_Run</code>, and <code>caret_Offset</code>.</p>
 <hr>
 
 <h2 id="tt_os2">TT_OS2<a class="headerlink" href="#tt_os2" title="Permanent link">&para;</a></h2>
@@ -1707,8 +1707,8 @@
 <p>Note that we now support old Mac fonts that do not include an &lsquo;OS/2&rsquo; table. In this case, the &lsquo;version&rsquo; field is always set to 0xFFFF.</p>
 <h4>note</h4>
 
-<p>For an OpenType variation font, the values of the following fields can change after a call to <a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>sCapHeight</code>, <code>sTypoAscender</code>, <code>sTypoDescender</code>, <code>sTypoLineGap</code>, <code>sxHeight</code>, <code>usWinAscent</code>, <code>usWinDescent</code>, <code>yStrikeoutPosition</code>, <code>yStrikeoutSize</code>, <code>ySubscriptXOffset</code>, <code>ySubScriptXSize</code>, <code>ySubscriptYOffset</code>, <code>ySubscriptYSize</code>, <code>ySuperscriptXOffset</code>, <code>ySuperscriptXSize</code>, <code>ySuperscriptYOffset</code>, and <code>ySuperscriptYSize</code>.</p>
-<p>Possible values for bits in the <code>ulUnicodeRangeX</code> fields are given by the <a href="ft2-truetype_tables.html#tt_ucr_xxx">TT_UCR_XXX</a> macros.</p>
+<p>For an OpenType variation font, the values of the following fields can change after a call to <code><a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a></code> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>sCapHeight</code>, <code>sTypoAscender</code>, <code>sTypoDescender</code>, <code>sTypoLineGap</code>, <code>sxHeight</code>, <code>usWinAscent</code>, <code>usWinDescent</code>, <code>yStrikeoutPosition</code>, <code>yStrikeoutSize</code>, <code>ySubscriptXOffset</code>, <code>ySubScriptXSize</code>, <code>ySubscriptYOffset</code>, <code>ySubscriptYSize</code>, <code>ySuperscriptXOffset</code>, <code>ySuperscriptXSize</code>, <code>ySuperscriptYOffset</code>, and <code>ySuperscriptYSize</code>.</p>
+<p>Possible values for bits in the <code>ulUnicodeRangeX</code> fields are given by the <code><a href="ft2-truetype_tables.html#tt_ucr_xxx">TT_UCR_XXX</a></code> macros.</p>
 <hr>
 
 <h2 id="tt_postscript">TT_Postscript<a class="headerlink" href="#tt_postscript" title="Permanent link">&para;</a></h2>
@@ -1734,10 +1734,10 @@
 </pre>
 </div>
 
-<p>A structure to model a TrueType &lsquo;post&rsquo; table. All fields comply to the OpenType specification. This structure does not reference a font's PostScript glyph names; use <a href="ft2-base_interface.html#ft_get_glyph_name">FT_Get_Glyph_Name</a> to retrieve them.</p>
+<p>A structure to model a TrueType &lsquo;post&rsquo; table. All fields comply to the OpenType specification. This structure does not reference a font's PostScript glyph names; use <code><a href="ft2-base_interface.html#ft_get_glyph_name">FT_Get_Glyph_Name</a></code> to retrieve them.</p>
 <h4>note</h4>
 
-<p>For an OpenType variation font, the values of the following fields can change after a call to <a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>underlinePosition</code> and <code>underlineThickness</code>.</p>
+<p>For an OpenType variation font, the values of the following fields can change after a call to <code><a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a></code> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: <code>underlinePosition</code> and <code>underlineThickness</code>.</p>
 <hr>
 
 <h2 id="tt_pclt">TT_PCLT<a class="headerlink" href="#tt_pclt" title="Permanent link">&para;</a></h2>
@@ -1881,30 +1881,30 @@
 </pre>
 </div>
 
-<p>An enumeration to specify indices of SFNT tables loaded and parsed by FreeType during initialization of an SFNT font. Used in the <a href="ft2-truetype_tables.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a> API function.</p>
+<p>An enumeration to specify indices of SFNT tables loaded and parsed by FreeType during initialization of an SFNT font. Used in the <code><a href="ft2-truetype_tables.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a></code> API function.</p>
 <h4>values</h4>
 
 <table class="fields">
 <tr><td class="val" id="ft_sfnt_head">FT_SFNT_HEAD</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_header">TT_Header</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_header">TT_Header</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_maxp">FT_SFNT_MAXP</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_maxprofile">TT_MaxProfile</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_maxprofile">TT_MaxProfile</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_os2">FT_SFNT_OS2</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_os2">TT_OS2</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_os2">TT_OS2</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_hhea">FT_SFNT_HHEA</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_horiheader">TT_HoriHeader</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_horiheader">TT_HoriHeader</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_vhea">FT_SFNT_VHEA</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_vertheader">TT_VertHeader</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_vertheader">TT_VertHeader</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_post">FT_SFNT_POST</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_postscript">TT_Postscript</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_postscript">TT_Postscript</a></code> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_pclt">FT_SFNT_PCLT</td><td class="desc">
-<p>To access the font's <a href="ft2-truetype_tables.html#tt_pclt">TT_PCLT</a> structure.</p>
+<p>To access the font's <code><a href="ft2-truetype_tables.html#tt_pclt">TT_PCLT</a></code> structure.</p>
 </td></tr>
 </table>
 
@@ -1939,7 +1939,7 @@
 <h4>note</h4>
 
 <p>The table is owned by the face object and disappears with it.</p>
-<p>This function is only useful to access SFNT tables that are loaded by the sfnt, truetype, and opentype drivers. See <a href="ft2-truetype_tables.html#ft_sfnt_tag">FT_Sfnt_Tag</a> for a list.</p>
+<p>This function is only useful to access SFNT tables that are loaded by the sfnt, truetype, and opentype drivers. See <code><a href="ft2-truetype_tables.html#ft_sfnt_tag">FT_Sfnt_Tag</a></code> for a list.</p>
 <h4>example</h4>
 
 <p>Here an example how to access the &lsquo;vhea&rsquo; table.
@@ -1972,7 +1972,7 @@
 <p>A handle to the source face.</p>
 </td></tr>
 <tr><td class="val" id="tag">tag</td><td class="desc">
-<p>The four-byte tag of the table to load. Use value&nbsp;0 if you want to access the whole font file. Otherwise, you can use one of the definitions found in the <a href="ft2-header_file_macros.html#ft_truetype_tags_h">FT_TRUETYPE_TAGS_H</a> file, or forge a new one with <a href="ft2-basic_types.html#ft_make_tag">FT_MAKE_TAG</a>.</p>
+<p>The four-byte tag of the table to load. Use value&nbsp;0 if you want to access the whole font file. Otherwise, you can use one of the definitions found in the <code><a href="ft2-header_file_macros.html#ft_truetype_tags_h">FT_TRUETYPE_TAGS_H</a></code> file, or forge a new one with <code><a href="ft2-basic_types.html#ft_make_tag">FT_MAKE_TAG</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="offset">offset</td><td class="desc">
 <p>The starting offset in the table (or file if tag&nbsp;==&nbsp;0).</p>
@@ -2015,7 +2015,7 @@
   error = FT_Load_Sfnt_Table( face, tag, 0, buffer, &amp;length );
   if ( error ) { ... could not load table ... }
 </pre></div></p>
-<p>Note that structures like <a href="ft2-truetype_tables.html#tt_header">TT_Header</a> or <a href="ft2-truetype_tables.html#tt_os2">TT_OS2</a> can't be used with this function; they are limited to <a href="ft2-truetype_tables.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a>. Reason is that those structures depend on the processor architecture, with varying size (e.g. 32bit vs. 64bit) or order (big endian vs. little endian).</p>
+<p>Note that structures like <code><a href="ft2-truetype_tables.html#tt_header">TT_Header</a></code> or <code><a href="ft2-truetype_tables.html#tt_os2">TT_OS2</a></code> can't be used with this function; they are limited to <code><a href="ft2-truetype_tables.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a></code>. Reason is that those structures depend on the processor architecture, with varying size (e.g. 32bit vs. 64bit) or order (big endian vs. little endian).</p>
 <hr>
 
 <h2 id="ft_sfnt_table_info">FT_Sfnt_Table_Info<a class="headerlink" href="#ft_sfnt_table_info" title="Permanent link">&para;</a></h2>
@@ -2075,7 +2075,7 @@
 </pre>
 </div>
 
-<p>Return cmap language ID as specified in the OpenType standard. Definitions of language ID values are in file <a href="ft2-header_file_macros.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a>.</p>
+<p>Return cmap language ID as specified in the OpenType standard. Definitions of language ID values are in file <code><a href="ft2-header_file_macros.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -2122,7 +2122,7 @@
 </div>
 
 <p>Deprecated, no effect.</p>
-<p>Previously: A constant used as the tag of an <a href="ft2-base_interface.html#ft_parameter">FT_Parameter</a> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <a href="ft2-base_interface.html#ft_open_face">FT_Open_Face</a>.</p>
+<p>Previously: A constant used as the tag of an <code><a href="ft2-base_interface.html#ft_parameter">FT_Parameter</a></code> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <code><a href="ft2-base_interface.html#ft_open_face">FT_Open_Face</a></code>.</p>
 <hr>
 
 <h2 id="tt_platform_xxx">TT_PLATFORM_XXX<a class="headerlink" href="#tt_platform_xxx" title="Permanent link">&para;</a></h2>
@@ -2138,27 +2138,27 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>platform_id</code> identifier code in <a href="ft2-base_interface.html#ft_charmaprec">FT_CharMapRec</a> and <a href="ft2-sfnt_names.html#ft_sfntname">FT_SfntName</a> structures.</p>
+<p>A list of valid values for the <code>platform_id</code> identifier code in <code><a href="ft2-base_interface.html#ft_charmaprec">FT_CharMapRec</a></code> and <code><a href="ft2-sfnt_names.html#ft_sfntname">FT_SfntName</a></code> structures.</p>
 <h4>values</h4>
 
 <table class="fields">
 <tr><td class="val" id="tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</td><td class="desc">
-<p>Used by Apple to indicate a Unicode character map and/or name entry. See <a href="ft2-truetype_tables.html#tt_apple_id_xxx">TT_APPLE_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
+<p>Used by Apple to indicate a Unicode character map and/or name entry. See <code><a href="ft2-truetype_tables.html#tt_apple_id_xxx">TT_APPLE_ID_XXX</a></code> for corresponding <code>encoding_id</code> values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_macintosh">TT_PLATFORM_MACINTOSH</td><td class="desc">
-<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <a href="ft2-truetype_tables.html#tt_mac_id_xxx">TT_MAC_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
+<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <code><a href="ft2-truetype_tables.html#tt_mac_id_xxx">TT_MAC_ID_XXX</a></code> for corresponding <code>encoding_id</code> values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_iso">TT_PLATFORM_ISO</td><td class="desc">
-<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <a href="ft2-truetype_tables.html#tt_iso_id_xxx">TT_ISO_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values.</p>
+<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <code><a href="ft2-truetype_tables.html#tt_iso_id_xxx">TT_ISO_ID_XXX</a></code> for a list of corresponding <code>encoding_id</code> values.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_microsoft">TT_PLATFORM_MICROSOFT</td><td class="desc">
-<p>Used by Microsoft to indicate Windows-specific charmaps. See <a href="ft2-truetype_tables.html#tt_ms_id_xxx">TT_MS_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <a href="ft2-truetype_tables.html#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a>).</p>
+<p>Used by Microsoft to indicate Windows-specific charmaps. See <code><a href="ft2-truetype_tables.html#tt_ms_id_xxx">TT_MS_ID_XXX</a></code> for a list of corresponding <code>encoding_id</code> values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <code><a href="ft2-truetype_tables.html#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a></code>).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_custom">TT_PLATFORM_CUSTOM</td><td class="desc">
 <p>Used to indicate application-specific charmaps.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_adobe">TT_PLATFORM_ADOBE</td><td class="desc">
-<p>This value isn't part of any font format specification, but is used by FreeType to report Adobe-specific charmaps in an <a href="ft2-base_interface.html#ft_charmaprec">FT_CharMapRec</a> structure. See <a href="ft2-truetype_tables.html#tt_adobe_id_xxx">TT_ADOBE_ID_XXX</a>.</p>
+<p>This value isn't part of any font format specification, but is used by FreeType to report Adobe-specific charmaps in an <code><a href="ft2-base_interface.html#ft_charmaprec">FT_CharMapRec</a></code> structure. See <code><a href="ft2-truetype_tables.html#tt_adobe_id_xxx">TT_ADOBE_ID_XXX</a></code>.</p>
 </td></tr>
 </table>
 
@@ -2178,7 +2178,7 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>encoding_id</code> for <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.</p>
+<p>A list of valid values for the <code>encoding_id</code> for <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a></code> charmaps and name entries.</p>
 <h4>values</h4>
 
 <table class="fields long">
@@ -2248,7 +2248,7 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>encoding_id</code> for <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a> charmaps and name entries.</p>
+<p>A list of valid values for the <code>encoding_id</code> for <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a></code> charmaps and name entries.</p>
 <hr>
 
 <h2 id="tt_iso_id_xxx">TT_ISO_ID_XXX<a class="headerlink" href="#tt_iso_id_xxx" title="Permanent link">&para;</a></h2>
@@ -2261,7 +2261,7 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>encoding_id</code> for <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_ISO</a> charmaps and name entries.</p>
+<p>A list of valid values for the <code>encoding_id</code> for <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_ISO</a></code> charmaps and name entries.</p>
 <p>Their use is now deprecated.</p>
 <h4>values</h4>
 
@@ -2297,30 +2297,30 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>encoding_id</code> for <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a> charmaps and name entries.</p>
+<p>A list of valid values for the <code>encoding_id</code> for <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a></code> charmaps and name entries.</p>
 <h4>values</h4>
 
 <table class="fields">
 <tr><td class="val" id="tt_ms_id_symbol_cs">TT_MS_ID_SYMBOL_CS</td><td class="desc">
-<p>Microsoft symbol encoding. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_MS_SYMBOL</a>.</p>
+<p>Microsoft symbol encoding. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_MS_SYMBOL</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_unicode_cs">TT_MS_ID_UNICODE_CS</td><td class="desc">
-<p>Microsoft WGL4 charmap, matching Unicode. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_UNICODE</a>.</p>
+<p>Microsoft WGL4 charmap, matching Unicode. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_UNICODE</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_sjis">TT_MS_ID_SJIS</td><td class="desc">
-<p>Shift JIS Japanese encoding. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_SJIS</a>.</p>
+<p>Shift JIS Japanese encoding. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_SJIS</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_prc">TT_MS_ID_PRC</td><td class="desc">
-<p>Chinese encodings as used in the People's Republic of China (PRC). This means the encodings GB&nbsp;2312 and its supersets GBK and GB&nbsp;18030. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_PRC</a>.</p>
+<p>Chinese encodings as used in the People's Republic of China (PRC). This means the encodings GB&nbsp;2312 and its supersets GBK and GB&nbsp;18030. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_PRC</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_big_5">TT_MS_ID_BIG_5</td><td class="desc">
-<p>Traditional Chinese as used in Taiwan and Hong Kong. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_BIG5</a>.</p>
+<p>Traditional Chinese as used in Taiwan and Hong Kong. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_BIG5</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_wansung">TT_MS_ID_WANSUNG</td><td class="desc">
-<p>Korean Extended Wansung encoding. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_WANSUNG</a>.</p>
+<p>Korean Extended Wansung encoding. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_WANSUNG</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_johab">TT_MS_ID_JOHAB</td><td class="desc">
-<p>Korean Johab encoding. See <a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_JOHAB</a>.</p>
+<p>Korean Johab encoding. See <code><a href="ft2-base_interface.html#ft_encoding">FT_ENCODING_JOHAB</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_ucs_4">TT_MS_ID_UCS_4</td><td class="desc">
 <p>UCS-4 or UTF-32 charmaps. This has been added to the OpenType specification version 1.4 (mid-2001).</p>
@@ -2340,7 +2340,7 @@
 </pre>
 </div>
 
-<p>A list of valid values for the <code>encoding_id</code> for <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_ADOBE</a> charmaps. This is a FreeType-specific extension!</p>
+<p>A list of valid values for the <code>encoding_id</code> for <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_ADOBE</a></code> charmaps. This is a FreeType-specific extension!</p>
 <h4>values</h4>
 
 <table class="fields">
@@ -2489,7 +2489,7 @@
 </pre>
 </div>
 
-<p>Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a>. These values are also used as return values for function <a href="ft2-truetype_tables.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.</p>
+<p>Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a></code>. These values are also used as return values for function <code><a href="ft2-truetype_tables.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a></code>.</p>
 <p>The canonical source for Apple's IDs is</p>
 <p><a href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6name.html">https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6name.html</a></p>
 <hr>
@@ -2706,11 +2706,11 @@
 </pre>
 </div>
 
-<p>Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a>. These values are also used as return values for function <a href="ft2-truetype_tables.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.</p>
+<p>Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a></code>. These values are also used as return values for function <code><a href="ft2-truetype_tables.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a></code>.</p>
 <p>The canonical source for Microsoft's IDs is</p>
 <p><a href="https://docs.microsoft.com/en-us/windows/desktop/Intl/language-identifier-constants-and-strings">https://docs.microsoft.com/en-us/windows/desktop/Intl/language-identifier-constants-and-strings</a> ,</p>
 <p>however, we only provide macros for language identifiers present in the OpenType specification: Microsoft has abandoned the concept of LCIDs (language code identifiers), and format&nbsp;1 of the &lsquo;name&rsquo; table provides a better mechanism for languages not covered here.</p>
-<p>More legacy values not listed in the reference can be found in the <a href="ft2-header_file_macros.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a> header file.</p>
+<p>More legacy values not listed in the reference can be found in the <code><a href="ft2-header_file_macros.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a></code> header file.</p>
 <hr>
 
 <h2 id="tt_name_id_xxx">TT_NAME_ID_XXX<a class="headerlink" href="#tt_name_id_xxx" title="Permanent link">&para;</a></h2>

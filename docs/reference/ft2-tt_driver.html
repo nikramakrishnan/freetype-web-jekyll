@@ -1068,9 +1068,9 @@
 <hr />
 <h1 id="the-truetype-driver">The TrueType driver<a class="headerlink" href="#the-truetype-driver" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>While FreeType's TrueType driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="ft2-module_management.html#ft_property_set">FT_Property_Set</a> and <a href="ft2-module_management.html#ft_property_get">FT_Property_Get</a>. The following lists the available properties together with the necessary macros and structures.</p>
+<p>While FreeType's TrueType driver doesn't expose API functions by itself, it is possible to control its behaviour with <code><a href="ft2-module_management.html#ft_property_set">FT_Property_Set</a></code> and <code><a href="ft2-module_management.html#ft_property_get">FT_Property_Get</a></code>. The following lists the available properties together with the necessary macros and structures.</p>
 <p>The TrueType driver's module name is &lsquo;truetype&rsquo;.</p>
-<p>A single property <a href="ft2-properties.html#interpreter-version">interpreter-version</a> is available, as documented in the &lsquo;<a href="ft2-properties.html#properties">Driver properties</a>&rsquo; section.</p>
+<p>A single property <code><a href="ft2-properties.html#interpreter-version">interpreter-version</a></code> is available, as documented in the &lsquo;<a href="ft2-properties.html#properties">Driver properties</a>&rsquo; section.</p>
 <p>We start with a list of definitions, kindly provided by Greg Hitchcock.</p>
 <p><em>Bi-Level Rendering</em></p>
 <p>Monochromatic rendering, exclusively used in the early days of TrueType by both Apple and Microsoft. Microsoft's GDI interface supported hinting of the right-side bearing point, such that the advance width could be non-linear. Most often this was done to achieve some level of glyph symmetry. To enable reasonable performance (e.g., not having to run hinting on all glyphs just to get the widths) there was a bit in the head table indicating if the side bearing was hinted, and additional tables, &lsquo;hdmx&rsquo; and &lsquo;LTSH&rsquo;, to cache hinting widths across multiple sizes and device aspect ratios.</p>

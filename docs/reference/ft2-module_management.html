@@ -1363,7 +1363,7 @@
 <h1 id="module-management">Module Management<a class="headerlink" href="#module-management" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>The definitions below are used to manage modules within FreeType. Modules can be added, upgraded, and removed at runtime. Additionally, some module properties can be controlled also.</p>
-<p>Here is a list of possible values of the <code>module_name</code> field in the <a href="ft2-module_management.html#ft_module_class">FT_Module_Class</a> structure.
+<p>Here is a list of possible values of the <code>module_name</code> field in the <code><a href="ft2-module_management.html#ft_module_class">FT_Module_Class</a></code> structure.
 <div class="codehilite"><pre><span></span>  autofitter
   bdf
   cff
@@ -1625,7 +1625,7 @@
 </pre>
 </div>
 
-<p>Add the set of default drivers to a given library object. This is only useful when you create a library object with <a href="ft2-module_management.html#ft_new_library">FT_New_Library</a> (usually to plug a custom memory manager).</p>
+<p>Add the set of default drivers to a given library object. This is only useful when you create a library object with <code><a href="ft2-module_management.html#ft_new_library">FT_New_Library</a></code> (usually to plug a custom memory manager).</p>
 <h4>inout</h4>
 
 <table class="fields">
@@ -1680,7 +1680,7 @@
   bar = 1;
   FT_Property_Set( library, &quot;foo&quot;, &quot;bar&quot;, &amp;bar );
 </pre></div></p>
-<p>Note that the FreeType Cache sub-system doesn't recognize module property changes. To avoid glyph lookup confusion within the cache you should call <a href="ft2-cache_subsystem.html#ftc_manager_reset">FTC_Manager_Reset</a> to completely flush the cache if a module property gets changed after <a href="ft2-cache_subsystem.html#ftc_manager_new">FTC_Manager_New</a> has been called.</p>
+<p>Note that the FreeType Cache sub-system doesn't recognize module property changes. To avoid glyph lookup confusion within the cache you should call <code><a href="ft2-cache_subsystem.html#ftc_manager_reset">FTC_Manager_Reset</a></code> to completely flush the cache if a module property gets changed after <code><a href="ft2-cache_subsystem.html#ftc_manager_new">FTC_Manager_New</a></code> has been called.</p>
 <p>It is not possible to set properties of the FreeType Cache sub-system itself with FT_Property_Set; use ?FTC_Property_Set? instead.</p>
 <h4>since</h4>
 
@@ -1761,10 +1761,10 @@
 <p><code>FREETYPE_PROPERTIES</code> has the following syntax form (broken here into multiple lines for better readability).
 <div class="codehilite"><pre><span></span>  &lt;optional whitespace&gt;
   &lt;module-name1&gt; &#39;:&#39;
-  @property-name1: &#39;=&#39; &lt;property-value1&gt;
-  @whitespace:
+  &lt;property-name1&gt; &#39;=&#39; &lt;property-value1&gt;
+  &lt;whitespace&gt;
   &lt;module-name2&gt; &#39;:&#39;
-  @property-name2: &#39;=&#39; &lt;property-value2&gt;
+  &lt;property-name2&gt; &#39;=&#39; &lt;property-value2&gt;
   ...
 </pre></div></p>
 <p>Example:
@@ -1795,9 +1795,9 @@
 </pre>
 </div>
 
-<p>This function is used to create a new FreeType library instance from a given memory object. It is thus possible to use libraries with distinct memory allocators within the same program. Note, however, that the used <a href="ft2-system_interface.html#ft_memory">FT_Memory</a> structure is expected to remain valid for the life of the <a href="ft2-base_interface.html#ft_library">FT_Library</a> object.</p>
-<p>Normally, you would call this function (followed by a call to <a href="ft2-module_management.html#ft_add_default_modules">FT_Add_Default_Modules</a> or a series of calls to <a href="ft2-module_management.html#ft_add_module">FT_Add_Module</a>, and a call to <a href="ft2-module_management.html#ft_set_default_properties">FT_Set_Default_Properties</a>) instead of <a href="ft2-base_interface.html#ft_init_freetype">FT_Init_FreeType</a> to initialize the FreeType library.</p>
-<p>Don't use <a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a> but <a href="ft2-module_management.html#ft_done_library">FT_Done_Library</a> to destroy a library instance.</p>
+<p>This function is used to create a new FreeType library instance from a given memory object. It is thus possible to use libraries with distinct memory allocators within the same program. Note, however, that the used <code><a href="ft2-system_interface.html#ft_memory">FT_Memory</a></code> structure is expected to remain valid for the life of the <code><a href="ft2-base_interface.html#ft_library">FT_Library</a></code> object.</p>
+<p>Normally, you would call this function (followed by a call to <code><a href="ft2-module_management.html#ft_add_default_modules">FT_Add_Default_Modules</a></code> or a series of calls to <code><a href="ft2-module_management.html#ft_add_module">FT_Add_Module</a></code>, and a call to <code><a href="ft2-module_management.html#ft_set_default_properties">FT_Set_Default_Properties</a></code>) instead of <code><a href="ft2-base_interface.html#ft_init_freetype">FT_Init_FreeType</a></code> to initialize the FreeType library.</p>
+<p>Don't use <code><a href="ft2-base_interface.html#ft_done_freetype">FT_Done_FreeType</a></code> but <code><a href="ft2-module_management.html#ft_done_library">FT_Done_Library</a></code> to destroy a library instance.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1819,7 +1819,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>See the discussion of reference counters in the description of <a href="ft2-module_management.html#ft_reference_library">FT_Reference_Library</a>.</p>
+<p>See the discussion of reference counters in the description of <code><a href="ft2-module_management.html#ft_reference_library">FT_Reference_Library</a></code>.</p>
 <hr>
 
 <h2 id="ft_done_library">FT_Done_Library<a class="headerlink" href="#ft_done_library" title="Permanent link">&para;</a></h2>
@@ -1845,7 +1845,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>See the discussion of reference counters in the description of <a href="ft2-module_management.html#ft_reference_library">FT_Reference_Library</a>.</p>
+<p>See the discussion of reference counters in the description of <code><a href="ft2-module_management.html#ft_reference_library">FT_Reference_Library</a></code>.</p>
 <hr>
 
 <h2 id="ft_reference_library">FT_Reference_Library<a class="headerlink" href="#ft_reference_library" title="Permanent link">&para;</a></h2>
@@ -1857,8 +1857,8 @@
 </pre>
 </div>
 
-<p>A counter gets initialized to&nbsp;1 at the time an <a href="ft2-base_interface.html#ft_library">FT_Library</a> structure is created. This function increments the counter. <a href="ft2-module_management.html#ft_done_library">FT_Done_Library</a> then only destroys a library if the counter is&nbsp;1, otherwise it simply decrements the counter.</p>
-<p>This function helps in managing life-cycles of structures that reference <a href="ft2-base_interface.html#ft_library">FT_Library</a> objects.</p>
+<p>A counter gets initialized to&nbsp;1 at the time an <code><a href="ft2-base_interface.html#ft_library">FT_Library</a></code> structure is created. This function increments the counter. <code><a href="ft2-module_management.html#ft_done_library">FT_Done_Library</a></code> then only destroys a library if the counter is&nbsp;1, otherwise it simply decrements the counter.</p>
+<p>This function helps in managing life-cycles of structures that reference <code><a href="ft2-base_interface.html#ft_library">FT_Library</a></code> objects.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1912,7 +1912,7 @@
 
 <table class="fields">
 <tr><td class="val" id="root">root</td><td class="desc">
-<p>The root <a href="ft2-module_management.html#ft_module_class">FT_Module_Class</a> fields.</p>
+<p>The root <code><a href="ft2-module_management.html#ft_module_class">FT_Module_Class</a></code> fields.</p>
 </td></tr>
 <tr><td class="val" id="glyph_format">glyph_format</td><td class="desc">
 <p>The glyph image format this renderer handles.</p>
@@ -1930,7 +1930,7 @@
 <p>A method used to pass additional parameters.</p>
 </td></tr>
 <tr><td class="val" id="raster_class">raster_class</td><td class="desc">
-<p>For <a href="ft2-basic_types.html#ft_glyph_format">FT_GLYPH_FORMAT_OUTLINE</a> renderers only. This is a pointer to its raster's class.</p>
+<p>For <code><a href="ft2-basic_types.html#ft_glyph_format">FT_GLYPH_FORMAT_OUTLINE</a></code> renderers only. This is a pointer to its raster's class.</p>
 </td></tr>
 </table>
 
@@ -1964,7 +1964,7 @@
 <h4>note</h4>
 
 <p>An error will be returned if a module already exists by that name, or if the module requires a version of FreeType that is too great.</p>
-<p>To add a new renderer, simply use <a href="ft2-module_management.html#ft_add_module">FT_Add_Module</a>. To retrieve a renderer by its name, use <a href="ft2-module_management.html#ft_get_module">FT_Get_Module</a>.</p>
+<p>To add a new renderer, simply use <code><a href="ft2-module_management.html#ft_add_module">FT_Add_Module</a></code>. To retrieve a renderer by its name, use <code><a href="ft2-module_management.html#ft_get_module">FT_Get_Module</a></code>.</p>
 <hr>
 
 <h2 id="ft_set_renderer">FT_Set_Renderer<a class="headerlink" href="#ft_set_renderer" title="Permanent link">&para;</a></h2>

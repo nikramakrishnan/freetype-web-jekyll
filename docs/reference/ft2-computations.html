@@ -1405,6 +1405,7 @@
 <h1 id="computations">Computations<a class="headerlink" href="#computations" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>This section contains various functions used to perform computations on 16.16 fixed-float numbers or 2d vectors.</p>
+<p><strong>Attention</strong>: Most arithmetic functions take <code>FT_Long</code> as arguments. For historical reasons, FreeType was designed under the assumption that <code>FT_Long</code> is a 32-bit integer; results can thus be undefined if the arguments don't fit into 32 bits.</p>
 <h2 id="ft_muldiv">FT_MulDiv<a class="headerlink" href="#ft_muldiv" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <div class = "codehilite">
@@ -1677,7 +1678,7 @@
 </pre>
 </div>
 
-<p>The angle pi expressed in <a href="ft2-computations.html#ft_angle">FT_Angle</a> units.</p>
+<p>The angle pi expressed in <code><a href="ft2-computations.html#ft_angle">FT_Angle</a></code> units.</p>
 <hr>
 
 <h2 id="ft_angle_2pi">FT_ANGLE_2PI<a class="headerlink" href="#ft_angle_2pi" title="Permanent link">&para;</a></h2>
@@ -1688,7 +1689,7 @@
 </pre>
 </div>
 
-<p>The angle 2*pi expressed in <a href="ft2-computations.html#ft_angle">FT_Angle</a> units.</p>
+<p>The angle 2*pi expressed in <code><a href="ft2-computations.html#ft_angle">FT_Angle</a></code> units.</p>
 <hr>
 
 <h2 id="ft_angle_pi2">FT_ANGLE_PI2<a class="headerlink" href="#ft_angle_pi2" title="Permanent link">&para;</a></h2>
@@ -1699,7 +1700,7 @@
 </pre>
 </div>
 
-<p>The angle pi/2 expressed in <a href="ft2-computations.html#ft_angle">FT_Angle</a> units.</p>
+<p>The angle pi/2 expressed in <code><a href="ft2-computations.html#ft_angle">FT_Angle</a></code> units.</p>
 <hr>
 
 <h2 id="ft_angle_pi4">FT_ANGLE_PI4<a class="headerlink" href="#ft_angle_pi4" title="Permanent link">&para;</a></h2>
@@ -1710,7 +1711,7 @@
 </pre>
 </div>
 
-<p>The angle pi/4 expressed in <a href="ft2-computations.html#ft_angle">FT_Angle</a> units.</p>
+<p>The angle pi/4 expressed in <code><a href="ft2-computations.html#ft_angle">FT_Angle</a></code> units.</p>
 <hr>
 
 <h2 id="ft_sin">FT_Sin<a class="headerlink" href="#ft_sin" title="Permanent link">&para;</a></h2>
@@ -1736,7 +1737,7 @@
 <p>The sinus value.</p>
 <h4>note</h4>
 
-<p>If you need both the sinus and cosinus for a given angle, use the function <a href="ft2-computations.html#ft_vector_unit">FT_Vector_Unit</a>.</p>
+<p>If you need both the sinus and cosinus for a given angle, use the function <code><a href="ft2-computations.html#ft_vector_unit">FT_Vector_Unit</a></code>.</p>
 <hr>
 
 <h2 id="ft_cos">FT_Cos<a class="headerlink" href="#ft_cos" title="Permanent link">&para;</a></h2>
@@ -1762,7 +1763,7 @@
 <p>The cosinus value.</p>
 <h4>note</h4>
 
-<p>If you need both the sinus and cosinus for a given angle, use the function <a href="ft2-computations.html#ft_vector_unit">FT_Vector_Unit</a>.</p>
+<p>If you need both the sinus and cosinus for a given angle, use the function <code><a href="ft2-computations.html#ft_vector_unit">FT_Vector_Unit</a></code>.</p>
 <hr>
 
 <h2 id="ft_tan">FT_Tan<a class="headerlink" href="#ft_tan" title="Permanent link">&para;</a></h2>

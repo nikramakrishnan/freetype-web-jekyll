@@ -1259,7 +1259,7 @@
 </pre>
 </div>
 
-<p>A handle to a list record (see <a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a>).</p>
+<p>A handle to a list record (see <code><a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a></code>).</p>
 <hr>
 
 <h2 id="ft_listnode">FT_ListNode<a class="headerlink" href="#ft_listnode" title="Permanent link">&para;</a></h2>
@@ -1270,7 +1270,7 @@
 </pre>
 </div>
 
-<p>Many elements and objects in FreeType are listed through an <a href="ft2-list_processing.html#ft_list">FT_List</a> record (see <a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a>). As its name suggests, an FT_ListNode is a handle to a single list element.</p>
+<p>Many elements and objects in FreeType are listed through an <code><a href="ft2-list_processing.html#ft_list">FT_List</a></code> record (see <code><a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a></code>). As its name suggests, an FT_ListNode is a handle to a single list element.</p>
 <hr>
 
 <h2 id="ft_listrec">FT_ListRec<a class="headerlink" href="#ft_listrec" title="Permanent link">&para;</a></h2>
@@ -1500,7 +1500,7 @@
 </pre>
 </div>
 
-<p>An FT_List iterator function that is called during a list parse by <a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a>.</p>
+<p>An FT_List iterator function that is called during a list parse by <code><a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1508,7 +1508,7 @@
 <p>The current iteration list node.</p>
 </td></tr>
 <tr><td class="val" id="user">user</td><td class="desc">
-<p>A typeless pointer passed to <a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a>. Can be used to point to the iteration's state.</p>
+<p>A typeless pointer passed to <code><a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a></code>. Can be used to point to the iteration's state.</p>
 </td></tr>
 </table>
 
@@ -1546,7 +1546,7 @@
 
 <h4>note</h4>
 
-<p>This function expects that all nodes added by <a href="ft2-list_processing.html#ft_list_add">FT_List_Add</a> or <a href="ft2-list_processing.html#ft_list_insert">FT_List_Insert</a> have been dynamically allocated.</p>
+<p>This function expects that all nodes added by <code><a href="ft2-list_processing.html#ft_list_add">FT_List_Add</a></code> or <code><a href="ft2-list_processing.html#ft_list_insert">FT_List_Insert</a></code> have been dynamically allocated.</p>
 <hr>
 
 <h2 id="ft_list_destructor">FT_List_Destructor<a class="headerlink" href="#ft_list_destructor" title="Permanent link">&para;</a></h2>
@@ -1560,7 +1560,7 @@
 </pre>
 </div>
 
-<p>An <a href="ft2-list_processing.html#ft_list">FT_List</a> iterator function that is called during a list finalization by <a href="ft2-list_processing.html#ft_list_finalize">FT_List_Finalize</a> to destroy all elements in a given list.</p>
+<p>An <code><a href="ft2-list_processing.html#ft_list">FT_List</a></code> iterator function that is called during a list finalization by <code><a href="ft2-list_processing.html#ft_list_finalize">FT_List_Finalize</a></code> to destroy all elements in a given list.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1571,7 +1571,7 @@
 <p>The current object to destroy.</p>
 </td></tr>
 <tr><td class="val" id="user">user</td><td class="desc">
-<p>A typeless pointer passed to <a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a>. It can be used to point to the iteration's state.</p>
+<p>A typeless pointer passed to <code><a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a></code>. It can be used to point to the iteration's state.</p>
 </td></tr>
 </table>
 

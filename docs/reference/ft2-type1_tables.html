@@ -1366,7 +1366,7 @@
 </pre>
 </div>
 
-<p>A handle to a <a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a> structure.</p>
+<p>A handle to a <code><a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a></code> structure.</p>
 <hr>
 
 <h2 id="ps_privaterec">PS_PrivateRec<a class="headerlink" href="#ps_privaterec" title="Permanent link">&para;</a></h2>
@@ -1426,7 +1426,7 @@
 </pre>
 </div>
 
-<p>A handle to a <a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a> structure.</p>
+<p>A handle to a <code><a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a></code> structure.</p>
 <hr>
 
 <h2 id="cid_facedictrec">CID_FaceDictRec<a class="headerlink" href="#cid_facedictrec" title="Permanent link">&para;</a></h2>
@@ -1467,7 +1467,7 @@
 </pre>
 </div>
 
-<p>A handle to a <a href="ft2-type1_tables.html#cid_facedictrec">CID_FaceDictRec</a> structure.</p>
+<p>A handle to a <code><a href="ft2-type1_tables.html#cid_facedictrec">CID_FaceDictRec</a></code> structure.</p>
 <hr>
 
 <h2 id="cid_faceinforec">CID_FaceInfoRec<a class="headerlink" href="#cid_faceinforec" title="Permanent link">&para;</a></h2>
@@ -1516,7 +1516,7 @@
 </pre>
 </div>
 
-<p>A handle to a <a href="ft2-type1_tables.html#cid_faceinforec">CID_FaceInfoRec</a> structure.</p>
+<p>A handle to a <code><a href="ft2-type1_tables.html#cid_faceinforec">CID_FaceInfoRec</a></code> structure.</p>
 <hr>
 
 <h2 id="ft_has_ps_glyph_names">FT_Has_PS_Glyph_Names<a class="headerlink" href="#ft_has_ps_glyph_names" title="Permanent link">&para;</a></h2>
@@ -1528,8 +1528,8 @@
 </pre>
 </div>
 
-<p>Return true if a given face provides reliable PostScript glyph names. This is similar to using the <a href="ft2-base_interface.html#ft_has_glyph_names">FT_HAS_GLYPH_NAMES</a> macro, except that certain fonts (mostly TrueType) contain incorrect glyph name tables.</p>
-<p>When this function returns true, the caller is sure that the glyph names returned by <a href="ft2-base_interface.html#ft_get_glyph_name">FT_Get_Glyph_Name</a> are reliable.</p>
+<p>Return true if a given face provides reliable PostScript glyph names. This is similar to using the <code><a href="ft2-base_interface.html#ft_has_glyph_names">FT_HAS_GLYPH_NAMES</a></code> macro, except that certain fonts (mostly TrueType) contain incorrect glyph name tables.</p>
+<p>When this function returns true, the caller is sure that the glyph names returned by <code><a href="ft2-base_interface.html#ft_get_glyph_name">FT_Get_Glyph_Name</a></code> are reliable.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1553,7 +1553,7 @@
 </pre>
 </div>
 
-<p>Retrieve the <a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a> structure corresponding to a given PostScript font.</p>
+<p>Retrieve the <code><a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a></code> structure corresponding to a given PostScript font.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1575,7 +1575,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>String pointers within the <a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a> structure are owned by the face and don't need to be freed by the caller. Missing entries in the font's FontInfo dictionary are represented by NULL pointers.</p>
+<p>String pointers within the <code><a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a></code> structure are owned by the face and don't need to be freed by the caller. Missing entries in the font's FontInfo dictionary are represented by NULL pointers.</p>
 <p>If the font's format is not PostScript-based, this function will return the <code>FT_Err_Invalid_Argument</code> error code.</p>
 <hr>
 
@@ -1589,7 +1589,7 @@
 </pre>
 </div>
 
-<p>Retrieve the <a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a> structure corresponding to a given PostScript font.</p>
+<p>Retrieve the <code><a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a></code> structure corresponding to a given PostScript font.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1611,7 +1611,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>The string pointers within the <a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a> structure are owned by the face and don't need to be freed by the caller.</p>
+<p>The string pointers within the <code><a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a></code> structure are owned by the face and don't need to be freed by the caller.</p>
 <p>If the font's format is not PostScript-based, this function returns the <code>FT_Err_Invalid_Argument</code> error code.</p>
 <hr>
 
@@ -1879,7 +1879,7 @@
 </pre>
 </div>
 
-<p>An enumeration used in calls to <a href="ft2-type1_tables.html#ft_get_ps_font_value">FT_Get_PS_Font_Value</a> to identify the Type&nbsp;1 dictionary entry to retrieve.</p>
+<p>An enumeration used in calls to <code><a href="ft2-type1_tables.html#ft_get_ps_font_value">FT_Get_PS_Font_Value</a></code> to identify the Type&nbsp;1 dictionary entry to retrieve.</p>
 <h4>values</h4>
 
 <table class="fields long">
@@ -2036,7 +2036,7 @@
 </pre>
 </div>
 
-<p>This type is equivalent to <a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
+<p>This type is equivalent to <code><a href="ft2-type1_tables.html#ps_fontinforec">PS_FontInfoRec</a></code>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
 <hr>
 
 <h2 id="t1_private">T1_Private<a class="headerlink" href="#t1_private" title="Permanent link">&para;</a></h2>
@@ -2047,7 +2047,7 @@
 </pre>
 </div>
 
-<p>This type is equivalent to <a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
+<p>This type is equivalent to <code><a href="ft2-type1_tables.html#ps_privaterec">PS_PrivateRec</a></code>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
 <hr>
 
 <h2 id="cid_fontdict">CID_FontDict<a class="headerlink" href="#cid_fontdict" title="Permanent link">&para;</a></h2>
@@ -2058,7 +2058,7 @@
 </pre>
 </div>
 
-<p>This type is equivalent to <a href="ft2-type1_tables.html#cid_facedictrec">CID_FaceDictRec</a>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
+<p>This type is equivalent to <code><a href="ft2-type1_tables.html#cid_facedictrec">CID_FaceDictRec</a></code>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
 <hr>
 
 <h2 id="cid_info">CID_Info<a class="headerlink" href="#cid_info" title="Permanent link">&para;</a></h2>
@@ -2069,7 +2069,7 @@
 </pre>
 </div>
 
-<p>This type is equivalent to <a href="ft2-type1_tables.html#cid_faceinforec">CID_FaceInfoRec</a>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
+<p>This type is equivalent to <code><a href="ft2-type1_tables.html#cid_faceinforec">CID_FaceInfoRec</a></code>. It is deprecated but kept to maintain source compatibility between various versions of FreeType.</p>
 <hr>
                 
                   

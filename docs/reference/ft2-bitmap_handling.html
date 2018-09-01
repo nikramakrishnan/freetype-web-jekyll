@@ -1166,7 +1166,9 @@
 <hr />
 <h1 id="bitmap-handling">Bitmap Handling<a class="headerlink" href="#bitmap-handling" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>This section contains functions for handling <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a> objects. Note that none of the functions changes the bitmap's &lsquo;flow&rsquo; (as indicated by the sign of the &lsquo;pitch&rsquo; field in <code>FT_Bitmap</code>).</p>
+<p>This section contains functions for handling <code><a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a></code> objects, automatically adjusting the target's bitmap buffer size as needed.</p>
+<p>Note that none of the functions changes the bitmap's &lsquo;flow&rsquo; (as indicated by the sign of the &lsquo;pitch&rsquo; field in <code><a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a></code>).</p>
+<p>To set the flow, assign an appropriate positive or negative value to the &lsquo;pitch&rsquo; field of the target <code><a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a></code> object after calling <code><a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a></code> but before calling any of the other functions described here.</p>
 <h2 id="ft_bitmap_init">FT_Bitmap_Init<a class="headerlink" href="#ft_bitmap_init" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
 <div class = "codehilite">
@@ -1180,7 +1182,7 @@
 </pre>
 </div>
 
-<p>Initialize a pointer to an <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a> structure.</p>
+<p>Initialize a pointer to an <code><a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a></code> structure.</p>
 <h4>inout</h4>
 
 <table class="fields">
@@ -1228,6 +1230,9 @@
 <h4>return</h4>
 
 <p>FreeType error code. 0&nbsp;means success.</p>
+<h4>note</h4>
+
+<p><code>source-&gt;buffer</code> and <code>target-&gt;buffer</code> must neither be equal nor overlap.</p>
 <hr>
 
 <h2 id="ft_bitmap_embolden">FT_Bitmap_Embolden<a class="headerlink" href="#ft_bitmap_embolden" title="Permanent link">&para;</a></h2>
@@ -1270,9 +1275,9 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>The current implementation restricts <code>xStrength</code> to be less than or equal to&nbsp;8 if bitmap is of pixel_mode <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_MONO</a>.</p>
-<p>If you want to embolden the bitmap owned by a <a href="ft2-base_interface.html#ft_glyphslotrec">FT_GlyphSlotRec</a>, you should call <a href="ft2-bitmap_handling.html#ft_glyphslot_own_bitmap">FT_GlyphSlot_Own_Bitmap</a> on the slot first.</p>
-<p>Bitmaps in <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY2</a> and <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a>@ format are converted to <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a> format (i.e., 8bpp).</p>
+<p>The current implementation restricts <code>xStrength</code> to be less than or equal to&nbsp;8 if bitmap is of pixel_mode <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_MONO</a></code>.</p>
+<p>If you want to embolden the bitmap owned by a <code><a href="ft2-base_interface.html#ft_glyphslotrec">FT_GlyphSlotRec</a></code>, you should call <code><a href="ft2-bitmap_handling.html#ft_glyphslot_own_bitmap">FT_GlyphSlot_Own_Bitmap</a></code> on the slot first.</p>
+<p>Bitmaps in <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY2</a></code> and <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a></code>@ format are converted to <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a></code> format (i.e., 8bpp).</p>
 <hr>
 
 <h2 id="ft_bitmap_convert">FT_Bitmap_Convert<a class="headerlink" href="#ft_bitmap_convert" title="Permanent link">&para;</a></h2>
@@ -1315,9 +1320,10 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>It is possible to call <a href="ft2-bitmap_handling.html#ft_bitmap_convert">FT_Bitmap_Convert</a> multiple times without calling <a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a> (the memory is simply reallocated).</p>
-<p>Use <a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a> to finally remove the bitmap object.</p>
+<p>It is possible to call <code><a href="ft2-bitmap_handling.html#ft_bitmap_convert">FT_Bitmap_Convert</a></code> multiple times without calling <code><a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a></code> (the memory is simply reallocated).</p>
+<p>Use <code><a href="ft2-bitmap_handling.html#ft_bitmap_done">FT_Bitmap_Done</a></code> to finally remove the bitmap object.</p>
 <p>The &lsquo;library&rsquo; argument is taken to have access to FreeType's memory handling functions.</p>
+<p><code>source-&gt;buffer</code> and <code>target-&gt;buffer</code> must neither be equal nor overlap.</p>
 <hr>
 
 <h2 id="ft_bitmap_blend">FT_Bitmap_Blend<a class="headerlink" href="#ft_bitmap_blend" title="Permanent link">&para;</a></h2>
@@ -1342,7 +1348,7 @@
 <p>A handle to a library object.</p>
 </td></tr>
 <tr><td class="val" id="source">source</td><td class="desc">
-<p>The source bitmap, which can have any <a href="ft2-basic_types.html#ft_pixel_mode">FT_Pixel_Mode</a> format.</p>
+<p>The source bitmap, which can have any <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_Pixel_Mode</a></code> format.</p>
 </td></tr>
 <tr><td class="val" id="source_offset">source_offset</td><td class="desc">
 <p>The offset vector to the upper left corner of the source bitmap in 26.6 pixel format. This can be a fractional pixel value.</p>
@@ -1356,7 +1362,7 @@
 
 <table class="fields">
 <tr><td class="val" id="target">target</td><td class="desc">
-<p>A handle to an <code>FT_Bitmap</code> object. It should be either initialized as empty with a call to <a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a>, or it should be of type <a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_BGRA</a>.</p>
+<p>A handle to an <code>FT_Bitmap</code> object. It should be either initialized as empty with a call to <code><a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a></code>, or it should be of type <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_BGRA</a></code>.</p>
 </td></tr>
 <tr><td class="val" id="atarget_offset">atarget_offset</td><td class="desc">
 <p>The offset vector to the upper left corner of the target bitmap in 26.6 pixel format. It should represent an integer offset; the function will set the lowest six bits to zero to enforce that.</p>
@@ -1371,6 +1377,7 @@
 <p>This function doesn't perform clipping.</p>
 <p>The bitmap in &lsquo;target&rsquo; gets allocated or reallocated as needed; the vector <code>atarget_offset</code> is updated accordingly.</p>
 <p>In case of allocation or reallocation, the bitmap's pitch is set to &lsquo;4&nbsp;*&nbsp;width&rsquo;. Both &lsquo;source&rsquo; and &lsquo;target&rsquo; must have the same bitmap flow (as indicated by the sign of the &lsquo;pitch&rsquo; field).</p>
+<p><code>source-&gt;buffer</code> and <code>target-&gt;buffer</code> must neither be equal nor overlap.</p>
 <h4>since</h4>
 
 <p>2.10</p>
@@ -1399,7 +1406,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>This function is to be used in combination with <a href="ft2-bitmap_handling.html#ft_bitmap_embolden">FT_Bitmap_Embolden</a>.</p>
+<p>This function is to be used in combination with <code><a href="ft2-bitmap_handling.html#ft_bitmap_embolden">FT_Bitmap_Embolden</a></code>.</p>
 <hr>
 
 <h2 id="ft_bitmap_done">FT_Bitmap_Done<a class="headerlink" href="#ft_bitmap_done" title="Permanent link">&para;</a></h2>
@@ -1412,7 +1419,7 @@
 </pre>
 </div>
 
-<p>Destroy a bitmap object initialized with <a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a>.</p>
+<p>Destroy a bitmap object initialized with <code><a href="ft2-bitmap_handling.html#ft_bitmap_init">FT_Bitmap_Init</a></code>.</p>
 <h4>input</h4>
 
 <table class="fields">

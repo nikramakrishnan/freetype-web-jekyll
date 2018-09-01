@@ -1096,7 +1096,7 @@
 <hr />
 <h1 id="gasp-table">Gasp Table<a class="headerlink" href="#gasp-table" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>The function <a href="ft2-gasp_table.html#ft_get_gasp">FT_Get_Gasp</a> can be used to query a TrueType or OpenType font for specific entries in its &lsquo;gasp&rsquo; table, if any. This is mainly useful when implementing native TrueType hinting with the bytecode interpreter to duplicate the Windows text rendering results.</p>
+<p>The function <code><a href="ft2-gasp_table.html#ft_get_gasp">FT_Get_Gasp</a></code> can be used to query a TrueType or OpenType font for specific entries in its &lsquo;gasp&rsquo; table, if any. This is mainly useful when implementing native TrueType hinting with the bytecode interpreter to duplicate the Windows text rendering results.</p>
 <h2 id="ft_gasp_xxx">FT_GASP_XXX<a class="headerlink" href="#ft_gasp_xxx" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GASP_H (freetype/ftgasp.h).</p>
 <div class = "codehilite">
@@ -1109,7 +1109,7 @@
 </pre>
 </div>
 
-<p>A list of values and/or bit-flags returned by the <a href="ft2-gasp_table.html#ft_get_gasp">FT_Get_Gasp</a> function.</p>
+<p>A list of values and/or bit-flags returned by the <code><a href="ft2-gasp_table.html#ft_get_gasp">FT_Get_Gasp</a></code> function.</p>
 <h4>values</h4>
 
 <table class="fields long">
@@ -1163,10 +1163,10 @@
 
 <h4>return</h4>
 
-<p>Bit flags (see <a href="ft2-gasp_table.html#ft_gasp_xxx">FT_GASP_XXX</a>), or <a href="ft2-gasp_table.html#ft_gasp_xxx">FT_GASP_NO_TABLE</a> if there is no &lsquo;gasp&rsquo; table in the face.</p>
+<p>Bit flags (see <code><a href="ft2-gasp_table.html#ft_gasp_xxx">FT_GASP_XXX</a></code>), or <code><a href="ft2-gasp_table.html#ft_gasp_xxx">FT_GASP_NO_TABLE</a></code> if there is no &lsquo;gasp&rsquo; table in the face.</p>
 <h4>note</h4>
 
-<p>If you want to use the MM functionality of OpenType variation fonts (i.e., using <a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> and friends), call this function <strong>after</strong> setting an instance since the return values can change.</p>
+<p>If you want to use the MM functionality of OpenType variation fonts (i.e., using <code><a href="ft2-multiple_masters.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a></code> and friends), call this function <strong>after</strong> setting an instance since the return values can change.</p>
 <h4>since</h4>
 
 <p>2.3.0</p>

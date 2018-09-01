@@ -1113,7 +1113,7 @@
 <p>The source stream must be opened <em>before</em> calling this function.</p>
 <p>Calling the internal function <code>FT_Stream_Close</code> on the new stream will <strong>not</strong> call <code>FT_Stream_Close</code> on the source stream. None of the stream objects will be released to the heap.</p>
 <p>The stream implementation is very basic and resets the decompression process each time seeking backwards is needed within the stream.</p>
-<p>In certain builds of the library, bzip2 compression recognition is automatically handled when calling <a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a> or <a href="ft2-base_interface.html#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a bzip2 compressed stream from it and re-open the face with it.</p>
+<p>In certain builds of the library, bzip2 compression recognition is automatically handled when calling <code><a href="ft2-base_interface.html#ft_new_face">FT_New_Face</a></code> or <code><a href="ft2-base_interface.html#ft_open_face">FT_Open_Face</a></code>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a bzip2 compressed stream from it and re-open the face with it.</p>
 <p>This function may return <code>FT_Err_Unimplemented_Feature</code> if your build of FreeType was not compiled with bzip2 support.</p>
 <hr>
                 

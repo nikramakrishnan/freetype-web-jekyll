@@ -920,6 +920,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ft_error_string" title="FT_Error_String" class="md-nav__link">
+    FT_Error_String
+  </a>
+  
+</li>
+      
       
       
       
@@ -1047,6 +1054,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ft_error_string" title="FT_Error_String" class="md-nav__link">
+    FT_Error_String
+  </a>
+  
+</li>
+      
       
       
       
@@ -1098,7 +1112,51 @@
 
   #include FT_ERRORS_H
 </pre></div></p>
-<p>Note that <code>FT_Err_Ok</code> is <em>not</em> defined with <code>FT_ERRORDEF</code> but with <code>FT_NOERRORDEF</code>; it is always zero.</p>
+<p>An alternative to using an array is a switch statement.
+<div class="codehilite"><pre><span></span>  #undef FTERRORS_H_
+  #define FT_ERROR_START_LIST     switch ( error_code ) {
+  #define FT_ERRORDEF( e, v, s )    case v: return s;
+  #define FT_ERROR_END_LIST       }
+</pre></div></p>
+<p>If you use FT_CONFIG_OPTION_USE_MODULE_ERRORS, &lsquo;error_code&rsquo; should be replaced with &lsquo;FT_ERROR_BASE(error_code)&rsquo; in the last example.</p>
+<h2 id="ft_error_string">FT_Error_String<a class="headerlink" href="#ft_error_string" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_ERRORS_H (freetype/fterrors.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>* )
+  <b>FT_Error_String</b>( <a href="ft2-basic_types.html#ft_error">FT_Error</a>  error_code );
+
+#<span class="keyword">endif</span> /* FT_ERR_PROTOS_DEFINED */
+
+#<span class="keyword">endif</span> /* FT_INCLUDE_ERR_PROTOS */
+
+#<span class="keyword">endif</span> /* !(FTERRORS_H_ &amp;&amp; __FTERRORS_H__) */
+
+
+/* END */
+</pre>
+</div>
+
+<p>Retrieve the description of a valid FreeType error code.</p>
+<h4>input</h4>
+
+<table class="fields">
+<tr><td class="val" id="error_code">error_code</td><td class="desc">
+<p>A valid FreeType error code.</p>
+</td></tr>
+</table>
+
+<h4>return</h4>
+
+<p>A C&nbsp;string or <code>NULL</code>, if any error occurred.</p>
+<h4>note</h4>
+
+<p>FreeType has to be compiled with <code>FT_CONFIG_OPTION_ERROR_STRINGS</code> or <code>FT_DEBUG_LEVEL_ERROR</code> to get meaningful descriptions. &lsquo;error_string&rsquo; will be <code>NULL</code> otherwise.</p>
+<p>Module identification will be ignored:
+<div class="codehilite"><pre><span></span>  <span class="n">strcmp</span><span class="p">(</span> <span class="n">FT_Error_String</span><span class="p">(</span>  <span class="n">FT_Err_Unknown_File_Format</span> <span class="p">),</span>
+          <span class="n">FT_Error_String</span><span class="p">(</span> <span class="n">BDF_Err_Unknown_File_Format</span> <span class="p">)</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div></p>
+<hr>
                 
                   
                 
